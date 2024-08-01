@@ -1,0 +1,988 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+
+<!-- https -> http 리소스 호출 가능하도록 -->
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>AVE Lab</title>
+<link rel="stylesheet" href="css/default.css?ver=191202">
+<link rel="stylesheet" href="js/font-awesome/css/font-awesome.min.css?ver=191202">
+<link rel="stylesheet" href="css/slick.css?ver=191202">
+<link rel="stylesheet" href="aos%402.3.1/dist/aos.css?ver=191202">
+<link rel="stylesheet" href="npm/xeicon%402.3.3/xeicon.min.css?ver=191202">
+<link rel="stylesheet" href="https://ave.kaist.ac.kr/skin/latest/main_visual/style.css?ver=191202">
+<link rel="stylesheet" href="skin/latest/Publication/style.css?ver=191202">
+<link rel="stylesheet" href="skin/latest/News/style.css?ver=191202">
+<!--[if lte IE 8]>
+<script src="https://ave.kaist.ac.kr/js/html5.js"></script>
+<![endif]-->
+<script>
+// 자바스크립트에서 사용하는 전역변수 선언
+var g5_url       = "https://ave.kaist.ac.kr";
+var g5_bbs_url   = "https://ave.kaist.ac.kr/bbs";
+var g5_is_member = "";
+var g5_is_admin  = "";
+var g5_is_mobile = "";
+var g5_bo_table  = "";
+var g5_sca       = "";
+var g5_editor    = "";
+var g5_cookie_domain = "";
+</script>
+
+
+<!-- 트랜지션 디폴트 세팅 -->
+<script type="text/javascript">
+$(window).load(function(){
+	$(".img, .img *, a, a *").css(
+		"transition","all .6s linear",
+		"-webkit-transition","all .6s linear",
+		"-moz-transition","all .6s linear"
+	);
+});
+</script>
+
+
+
+
+
+<script src="ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/jquery.menu.js?ver=191202"></script>
+<script src="js/common.js?ver=191202"></script>
+<script src="js/wrest.js?ver=191202"></script>
+<script src="js/placeholders.min.js?ver=191202"></script>
+<script src="js/slick.min.js?ver=191202"></script>
+<script src="aos%402.3.1/dist/aos.js?ver=191202"></script>
+</head>
+<body>
+
+
+
+<script>
+	AOS.init();
+</script>
+
+<style>
+/*230126*/
+.welcome .welcome02 li { padding-bottom: 20px; letter-spacing: 0; font-size: 18px; line-height: 30px; color: #777; word-break: keep-all; margin-left: 20px; text-decoration: underline;}
+</style>
+
+
+<li?php if(defined('_index_'))="" {="" index에서만="" 실행="" include="" g5_bbs_path.'/newwin.inc.php';="" 팝업레이어="" }=""></li?php>
+
+
+
+<div class="wrap">
+	<!-- 상단메뉴 시작 { -->
+	<header>
+		<style>
+#header{position: relative;z-index: 999;background: #fff;}
+#header .top_logo{height: 90px;line-height: 90px;background: #fff;max-width:1400px;margin: 0 auto;position: relative;}
+#header .top_logo::after{display: block;clear: both;content: '';}
+#header .top_logo .left {display: flex; align-items: center; gap: 10px; float: left; justify-content: space-between; width: 100%;}
+#header .top_logo .right {display: flex; align-items: center; gap: 13px; float: right; display: none;}
+#header .top_logo .lab{float: left; }
+/*#header .top_logo .uni{float: right;}*/
+#header .top_logo .uni img{height: 50px;}
+
+.nav {position: relative; width: 100%;background: #e3e3e3;  height:60px;}
+.nav h1 {position:absolute; left:0; overflow:hidden;top: 50%;transform: translateY(-50%);}
+.nav h1 a {float:left; margin : 5px 0;}
+.nav h1 a img {width : 100%;}
+.nav h2{position:absolute; right:0; top: 50%;transform: translateY(-50%);}
+
+#header #cssmenu {max-width:1400px;margin:0 auto;z-index:999; position: relative;}
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a,
+#cssmenu #menu-button {margin: 0;padding: 0;border: 0;list-style: none;line-height: 1;display: block;position: relative;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+#cssmenu:after,
+#cssmenu > ul:after {content: ".";display: block; clear: both;visibility: hidden;line-height: 0;height: 0;}
+#cssmenu #menu-button {display: none;}
+#cssmenu > ul > li {float : left;width: 16.66%;}
+#cssmenu > ul > li > a {text-align: center;display : block;width: 100%;line-height: 60px;font-size: 22px;text-decoration: none;letter-spacing:-0.8px;font-weight : 600;color: #333;}
+#cssmenu > ul > li:hover > a {}
+#cssmenu ul ul {position: absolute;left: -9999px;}
+#cssmenu.align-right ul ul {text-align: right;}
+#cssmenu ul ul{width:100%;}
+#cssmenu ul ul li{height: 0; -webkit-transition: all .25s ease;-moz-transition: all .25s ease; -ms-transition: all .25s ease; -o-transition: all .25s ease; transition: all .25s ease;}
+#cssmenu li:hover > ul {left: 0;}
+#cssmenu li:hover > ul > li {height: auto;}
+#cssmenu ul ul ul {margin-left: 100%;top: 0;}
+#cssmenu ul ul li a {opacity: 0.9;text-align: center; padding: 18px; width: 100%; font-size: 18px; text-decoration: none; color: rgba(255,255,255,0.6); font-weight: 400; background: rgba(0,82,150,.8); line-height: 1.3;position: relative;}
+#cssmenu ul ul li a span{position: relative;-webkit-transition: .3s;-moz-transition: .3s;-ms-transition: .3s;-o-transition: .3s;transition: .3s;}
+#cssmenu ul ul li a span::before{content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); 
+	width: 9px; height: 10px; background: url('images/common/nav_arrow.png') 0 0 no-repeat; opacity: 0;}
+
+@keyframes nav_arrow{
+	from{left: 0; opacity: 0.5;}
+	to{left: -8px; opacity:1;}
+}
+
+#cssmenu ul ul li:hover > a,
+#cssmenu ul ul li a:hover {opacity: 1;background: #0a5fad;color: #fff;}
+#cssmenu ul ul li a:hover span{padding-left: 16px;}
+#cssmenu ul ul li:hover a span::before{opacity: 1; animation:nav_arrow 0.5s alternate infinite ease;}
+#cssmenu ul ul li.has-sub > a:after {position: absolute;top: 16px;right: 11px;width: 8px;height: 2px;display: block;background: #ddd;content: '';}
+#cssmenu.align-right ul ul li.has-sub > a:after {right: auto;left: 11px;}
+#cssmenu ul ul li.has-sub > a:before {position: absolute;top: 13px;right: 14px;display: block;width: 2px;height: 8px;background: #ddd;content: '';
+-webkit-transition: all .25s ease; -moz-transition: all .25s ease; -ms-transition: all .25s ease; -o-transition: all .25s ease; transition: all .25s ease;}
+#cssmenu.align-right ul ul li.has-sub > a:before {right: auto;left: 14px;}
+#cssmenu ul ul > li.has-sub:hover > a:before {top: 17px;height: 0;}
+
+.all_menu_btn{background:#005296;position: absolute;right: -60px;width: 60px;height: 60px;text-align: center;top: 0;padding: 17px 6px;line-height: 0;cursor: pointer;}
+.all_menu_btn span{width: 22px;height: 2px;margin:5px auto;display: block;background: #fff;-webkit-transition: .3s;-moz-transition: .3s;-ms-transition: .3s;-o-transition: .3s;transition: .3s;position: relative;}
+
+.all_menu_btn.on span:nth-of-type(2){width: 0;}
+.all_menu_btn.on span:nth-of-type(1){transform:rotate(45deg);top: 7px;}
+.all_menu_btn.on span:nth-of-type(3){transform:rotate(-45deg);top: -7px;}
+
+.all_menu_wr{background: #eee;border-top: 1px solid #f1f1f1;position: absolute;top: 60px;width: 100%;z-index: 5;z-index: 1000;display: none;}
+.all_menu_wr .all_nav{max-width:1400px;margin: 0 auto;text-align: center;}
+.all_menu_wr .all_nav ul::after{clear: both;display: block;content: '';}
+.all_menu_wr .all_nav > ul {padding: 30px 0 50px;}
+.all_menu_wr .all_nav > ul > li{float: left;width: 16.66%;font-size: 18px;font-weight: 500;display: inline-block;}
+.all_menu_wr .all_nav > ul > li > a{font-size: 0;}
+.all_menu_wr .all_nav ul ul {}
+.all_menu_wr .all_nav ul ul li{}
+.all_menu_wr .all_nav ul ul li a{font-size: 17px;color: #666;display: inline-block;width: 100%;font-weight: normal;padding: 7px 0;}
+.all_menu_wr .all_nav ul ul li a:hover{text-decoration: underline;color: #333;}
+
+
+/*모바일메뉴*/
+.mobileMenu{display:none; position:absolute; top:0; right:0; width:60px;height: 60px;background:#005296;z-index: 1001;padding-top: 12px;}
+.mobileMenu span {display: block; width:50%; height:2px; background:#fff; margin:7px auto;}
+
+#gnbM .mobileMenuXbt{position:absolute; top:32px; right:18px;width: 25px;}
+#gnbM .mobileMenuXbt span{width: 100%;position: relative;display: block;height: 1px;background: #444;transform:rotate(45deg)}
+#gnbM .mobileMenuXbt span.x1{transform:rotate(135deg);top: 1px;}
+
+#gnbM{display:none; position:absolute; top:0; right:-250px; width:300px; background:#e3e3e3; z-index:99999;}
+#gnbM .mUtil{padding:0 15px; height:60px; line-height:60px; font-size:17px; letter-spacing:-1px}
+#gnbM .mUtil a{color:#444;}
+#gnbM .mUtil span{margin:0 6px; color:#2572a7}
+#gnbM .gnbDiv{margin-top: 20px;}
+#gnbM .gnbDiv a{display:block;padding: 12px 8px;color: #b5c1d0;font-size: 14px; font-weight: 500;border-bottom: 1px solid #295a9a;}
+#gnbM .gnbDiv .one{padding:0 15px; font-size:16px; color:#333; border-bottom:1px solid #d9d9d9; font-weight:500;line-height:45px;}
+#gnbM .gnbDiv .one.on{color:#fff; border-bottom:1px solid #005296;background: #005296; background-size:18px 18px;}
+#gnbM .gnbDiv .two{padding:5px 20px; border-bottom:1px solid #d9d9d9;background:#005296;height : auto!important}
+#gnbM .gnbDiv .two .twoD{color:#fff;font-size:15px; border-bottom:1px solid #295a9a;line-height:44px;padding-left: 5px;}
+#gnbM .gnbDiv .two .thr{padding:15px 15px 5px; border-bottom:1px solid #d9d9d9; background:#f7f7f7}
+#gnbM .gnbDiv .two .thr .thrD{font-size:13px; color:#fff; margin-bottom:10px}
+#gnbM .gnbDiv .two .overM {    line-height:20px; padding: 10px 0;}
+.dimdBg{display:none; position:absolute; top:0; left:0; width:100%; height:; background:rgba(0,0,0,0.5); z-index:4;}
+.dimdBg.on{display: block;}
+
+
+@media (max-width : 1420px) {
+#header .top_logo{padding: 0 10px;}
+}
+
+@media (max-width : 1300px) {
+#header #cssmenu{padding-right: 60px;}
+.all_menu_wr{padding-right: 60px;}
+.all_menu_btn{right: 0;}
+}
+@media (max-width : 1200px) {
+#header .top_logo{padding: 0 10px;height: 70px;line-height: 70px;}
+#header .top_logo .lab img{height: 41px;}
+#header .top_logo .uni img{height: 38px; padding-right: 60px;}
+#header .top_logo .right {gap: 10px;}
+#header .top_logo .right .rLogo1 img {height: 41px;}
+#header .top_logo .right .rLogo2 img {height: 35px;}
+#header .top_logo .right .rLogo3 img {height: 43px;}
+
+.nav{height: 55px;}
+#cssmenu > ul > li > a{font-size: 19px;line-height: 55px;}
+#cssmenu ul ul li a{font-size: 15px;}
+.all_menu_btn{width: 55px;height: 55px;}
+.all_menu_wr{padding-right: 55px;top: 55px;}
+.all_menu_wr .all_nav ul ul li a{font-size: 15px;}
+}
+@media (max-width : 1023px){
+#header{z-index: 999;}
+#header .top_logo{height: 60px;line-height: 60px;}
+#header .top_logo .uni{float: left;margin-left: 10px;}
+#header .top_logo .left {gap: 4px;}
+#header .top_logo .lab img{height: 35px;}
+#header .top_logo .uni img{height: 34px;}
+#header .top_logo .right {display: none;}
+.nav{display: none;}
+#gnbM,.mobileMenu{display: block;}
+}
+@media (max-width:480px) {
+.mobileMenu{padding-top: 16px;}
+.mobileMenu span{width: 35%;margin: 5px auto;}
+#header .top_logo .left {gap: 0px;}
+#header .top_logo .lab img{height: 28px;}
+#header .top_logo .uni img{height: 28px;}
+}
+/* @media (max-width:320px) {
+#header .top_logo .lab img{height: 23px;}
+#header .top_logo .uni img{height: 28px;}
+} */
+
+
+</style>
+
+
+<!-- header :s -->
+<script type="text/javascript" src="js/dsso.default.js"></script>
+<div id="header">
+	<div class="top_logo">
+		<div class="left">
+			<a href="index.php.html" class="lab"><img src="images/common/h_logo1.png" alt="카이스트 AVE 연구실"></a>
+			<a href="https://www.kaist.ac.kr/kr/" target="_blank" class="uni"><img src="images/common/h_logo2.png" alt="KAIST"></a>
+		</div>
+		<div class="right">
+			<a href="https://ieee-iv.org/2024/" target="_blank class=" rlogo1"=""><img src="images/common/logo-r1.png" alt="JejuIV2024"></a>
+			<a href="#" class="rLogo2"><img src="images/common/logo-r2.png" alt="ZetaMobility"></a>
+			<a href="#" class="rLogo3"><img src="images/common/logo-r3.png" alt="The Autoware Foundation of Korea"></a>
+		</div>
+	</div>
+	<div class="nav">	
+		<div id="cssmenu">
+			<ul>
+				<li class="two"><a href="sub2_1.php.html">Research</a>
+					<ul>
+						<li><a href="sub2_1.php.html"><span>Autonomous Driving System</span></a></li>
+						<li><a href="sub2_2.php.html"><span>Learning-based E2E</span></a></li>
+						<li><a href="sub2_3.php.html"><span>Advanced Positioning Systems</span></a></li>
+						<li><a href="bbs/board.php.html?bo_table=sub2_4"><span>Projects</span></a></li>
+						<li><a href="bbs/board.php-1.html?bo_table=sub2_5"><span>Videos</span></a></li>
+					</ul>
+				</li>
+				<li class="one"><a href="bbs/board.php-2.html?bo_table=sub1_1">People</a>
+					<ul>
+						<li><a href="bbs/board.php-2.html?bo_table=sub1_1"><span>Professor</span></a></li>
+						<li><a href="bbs/board.php-3.html?bo_table=sub1_2"><span>Members</span></a></li>
+						<li><a href="bbs/board.php-4.html?bo_table=sub1_3"><span>Alumni</span></a></li>
+					</ul>
+				</li>
+				<li class="thr"><a href="bbs/board.php-5.html?bo_table=sub3_1">Publications</a>
+					<ul>
+						<li><a href="bbs/board.php-5.html?bo_table=sub3_1"><span>International Journals</span></a></li>
+						<li><a href="bbs/board.php-6.html?bo_table=sub3_2"><span>International Conferences</span></a></li>
+						<li><a href="bbs/board.php-7.html?bo_table=sub3_3"><span>Domestic Journals</span></a></li>
+						<li><a href="bbs/board.php-8.html?bo_table=sub3_4"><span>Domestic Conferences</span></a></li>
+						<li><a href="bbs/board.php-9.html?bo_table=sub3_5"><span>Patents</span></a></li>
+					</ul>
+				</li>
+				<li class="fou"><a href="bbs/board.php-10.html?bo_table=sub4_1">Lectures</a>
+					<ul>
+						<li><a href="bbs/board.php-10.html?bo_table=sub4_1"><span>Lectures</span></a></li>
+						<li><a href="bbs/board.php-11.html?bo_table=sub4_2"><span>Seminar</span></a></li>
+					</ul>
+				</li>
+				<li class="fiv"><a href="bbs/board.php-12.html?bo_table=sub5_1">Board</a>
+					<ul>
+						<li><a href="bbs/board.php-12.html?bo_table=sub5_1"><span>Lab board</span></a></li>
+						<li><a href="bbs/board.php-13.html?bo_table=sub5_2"><span>Gallery</span></a></li>
+					</ul>
+				</li>
+				<li class="fiv"><a href="sub6_1.php.html">Contact</a>
+					<ul>
+						<li><a href="sub6_1.php.html"><span>Contact</span></a></li>
+					</ul>
+				</li>
+			</ul>
+		<div class="all_menu_btn">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		</div>
+		<div class="all_menu_wr">
+			<div class="all_nav">
+			<ul>
+				<li class="one">
+					<ul>
+						<li><a href="bbs/board.php-2.html?bo_table=sub1_1"><span>Professor</span></a></li>
+						<li><a href="bbs/board.php-3.html?bo_table=sub1_2"><span>Members</span></a></li>
+						<li><a href="bbs/board.php-4.html?bo_table=sub1_3"><span>Alumni</span></a></li>
+					</ul>
+				</li>
+				<li class="two">
+					<ul>
+						<li><a href="sub2_1.php.html">Autonomous Driving System<span></span></a></li>
+						<li><a href="sub2_2.php.html">Learning-based E2E<span></span></a></li>
+						<li><a href="sub2_3.php.html">Advanced Positioning Systems<span></span></a></li>
+						<li><a href="bbs/board.php.html?bo_table=sub2_4">Projects<span></span></a></li>
+						<li><a href="bbs/board.php-1.html?bo_table=sub2_5">Videos<span></span></a></li>
+					</ul>
+				</li>
+				<li class="thr">
+					<ul>
+						<li><a href="bbs/board.php-5.html?bo_table=sub3_1"><span>International Journals</span></a></li>
+						<li><a href="bbs/board.php-6.html?bo_table=sub3_2"><span>International Conferences</span></a></li>
+						<li><a href="bbs/board.php-7.html?bo_table=sub3_3"><span>Domestic Journals</span></a></li>
+						<li><a href="bbs/board.php-8.html?bo_table=sub3_4"><span>Domestic Conferences</span></a></li>
+						<li><a href="bbs/board.php-9.html?bo_table=sub3_5"><span>Patents</span></a></li>
+					</ul>
+				</li>
+				<li class="fou">
+					<ul>
+						<li><a href="bbs/board.php-10.html?bo_table=sub4_1"><span>Lectures</span></a></li>
+						<li><a href="bbs/board.php-11.html?bo_table=sub4_2"><span>Seminar</span></a></li>
+					</ul>
+				</li>
+				<li class="fiv">
+					<ul>
+						<li><a href="bbs/board.php-12.html?bo_table=sub5_1"><span>Lab board</span></a></li>
+						<li><a href="bbs/board.php-13.html?bo_table=sub5_2"><span>Gallery</span></a></li>
+					</ul>
+				</li>
+				<li class="six">
+					<ul>
+						<li><a href="sub6_1.php.html"><span>Contact</span></a></li>
+					</ul>
+				</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+</div>
+ <script>
+      $( document ).ready( function() {
+        $( '.all_menu_btn' ).click( function() {
+          $( '.all_menu_wr' ).slideToggle();
+		  $( '.dimdBg' ).toggleClass( 'on' );
+		  $(this).toggleClass( 'on' );
+        } );
+      } );
+    </script>
+
+	<!--풀다운메뉴/모바일메뉴-->
+	<script type="text/javascript">/*모바일메뉴용*/
+		//<![CDATA[			
+		var oneNum = -1, twoNum = -1, thrNum = -1, fouNum = -1;
+		//]]>
+	</script>
+	<script type="text/javascript" src="js/menucmn.js"></script>
+
+	<!--모바일 메뉴버튼 -->
+	<a href="javascript:" class="mobileMenu">
+		<span></span>
+		<span></span>
+		<span></span>
+	</a>
+	<!--//모바일 메뉴버튼 -->
+
+	<div style="display: none;" class="twoDbg"></div><!--전체 배경영역-->
+		<p class="dimdBg"></p>
+		<!-- 모바일 gnb -->
+		<div style="height: 1234px; right: -300px;" id="gnbM">
+			<!--탑메뉴-->
+			<div class="mUtil">
+				<a href="index.php.html" style="margin-right:15px;">Home</a>
+			</div>
+			<!--//탑메뉴-->
+
+			<!--gnbDiv-->
+			<div class="gnbDiv">
+				<!--대메뉴1-->
+				<a href="javascript:" class="one">People</a>
+				<div style="display: none;" class="two">
+					<a href="bbs/board.php-2.html?bo_table=sub1_1">Professor</a>
+					<a href="bbs/board.php-3.html?bo_table=sub1_2">Members</a>
+					<a style="border-bottom: medium none;" href="bbs/board.php-4.html?bo_table=sub1_3">Alumni</a>
+				</div>
+				<!--대메뉴2-->
+				<a href="javascript:" class="one">Research</a>
+				<div style="display: none;" class="two">
+					<a href="sub2_1.php.html">Autonomous Driving System</a>
+					<a href="sub2_2.php.html">Learning-based E2E</a>
+					<a href="sub2_3.php.html">Advanced Positioning Systems</a>
+					<a href="bbs/board.php.html?bo_table=sub2_4">Projects</a>
+					<a style="border-bottom: medium none;" href="bbs/board.php-1.html?bo_table=sub2_5">Videos</a>
+				</div>
+				<!--대메뉴3-->
+				<a href="javascript:" class="one">Publication</a>
+				<div style="display: none;" class="two">
+					<a href="bbs/board.php-5.html?bo_table=sub3_1">International Journals</a>
+					<a href="bbs/board.php-6.html?bo_table=sub3_2">International Conferences</a>
+					<a href="bbs/board.php-7.html?bo_table=sub3_3">Domestic Journals</a>
+					<a href="bbs/board.php-8.html?bo_table=sub3_4">Domestic Conferences</a>
+					<a style="border-bottom: medium none;" href="bbs/board.php-9.html?bo_table=sub3_5">Patents</a>
+				</div>
+				<!--대메뉴4-->
+				<a href="javascript:" class="one">Lectures</a>
+				<div style="display: none;" class="two">
+					<a href="bbs/board.php-10.html?bo_table=sub4_1">Lectures</a>
+					<a style="border-bottom: medium none;" href="bbs/board.php-11.html?bo_table=sub4_2">Seminar</a>
+				</div>
+				<!--대메뉴5-->
+				<a href="javascript:" class="one">Board</a>
+				<div style="display: none;" class="two">
+					<a href="bbs/board.php-12.html?bo_table=sub5_1">Lab board</a>
+					<a style="border-bottom: medium none;" href="bbs/board.php-13.html?bo_table=sub5_2">Gallery</a>
+				</div>
+			</div>
+			<!--//gnbDiv-->
+			<a href="javascript:" class="mobileMenuXbt">
+				<span class="x1"></span>	
+				<span class="x2"></span>	
+			</a><!--닫기버튼-->
+		</div>
+	<!-- //모바일 gnb -->	<!-- //header -->
+	</header>
+	<!-- } 상단메뉴 끝 -->
+
+	<section id="mSlide">
+		<div class="slide-wrap">
+			
+	 
+<ul id="main-slide">
+        <li class="con">
+        <!-- <a href=""></a> -->
+        <a href="index.php.html?bo_table=main_visual&amp;wr_id=25&amp;no=1"></a>
+		<div class="cons">
+			<div class="img-wrap">
+				<img src="data/file/main_visual/thumb-2000838388_JUMkSFL8_f0dd174fb6ca6524bbc039581691b69892d582ae_1100x580.png" alt="">			</div>
+			<div class="txt-container">
+				<div class="txt-wrap">
+					<!-- <h3>Welcome to Autonomous Vehicles and Embedded systems (AVE, [ ˈæv.ə.nuː ]) Lab!</h3> -->
+					<h3>
+						<p><span style="color: rgb(0, 82, 150);"><span style="color: rgb(0, 0, 0);">Welcome to</span>&nbsp;Autonomous Vehicles and Embedded systems (AVE, [ ˈæv.ə.nuː ])</span>&nbsp;<span style="color: rgb(96, 182, 33);">Lab!</span>&nbsp;<br></p>					</h3>
+					<h4><span class="textJournal">AVE Lab strives to pioneer the forefront of AI-driven advancements tailored specifically for autonomous vehicles, <br> encompassing the realms of perception, planning, control, and localization technologies.</span>
+					</h4><h5>
+				</h5></div>
+			</div>
+		</div>
+    </li>
+        <li class="con">
+        <!-- <a href=""></a> -->
+        <a href="sub2_1_2.php.html?bo_table=main_visual&amp;wr_id=24&amp;no=1"></a>
+		<div class="cons">
+			<div class="img-wrap">
+				<img src="data/file/main_visual/2000838388_bypcu8AQ_fdf6a1ace35868d77edd0587273c8786656958db.gif" alt="">			</div>
+			<div class="txt-container">
+				<div class="txt-wrap">
+					<!-- <h3>Perception for Autonomous Driving</h3> -->
+					<h3>
+						Perception for Autonomous Driving					</h3>
+					<h4><span class="textJournal">We are developing a comprehensive perception system robust in all conditions by integrating various sensors  <br> including 4D Radar, which excels even in adverse weather conditions.</span>
+					</h4><h5>
+				</h5></div>
+			</div>
+		</div>
+    </li>
+        <li class="con">
+        <!-- <a href=""></a> -->
+        <a href="sub2_2.php.html?bo_table=main_visual&amp;wr_id=23&amp;no=1"></a>
+		<div class="cons">
+			<div class="img-wrap">
+				<img src="data/file/main_visual/2000838388_8YSEoyj2_cabea96753d8d4ffb34b28e0cd5191d14250d9f8.gif" alt="">			</div>
+			<div class="txt-container">
+				<div class="txt-wrap">
+					<!-- <h3>Large AI Model based End-to-End Autonomous Driving</h3> -->
+					<h3>
+						Large AI Model based End-to-End Autonomous Driving					</h3>
+					<h4><span class="textJournal">We are developing a robust Large AI Model based End-to-End Autonomous Driving System, adept at handling Unexpected Novel Situations (UNS). We are also studying Sim2Real techniques for real world applications</span>
+					</h4><h5>
+				</h5></div>
+			</div>
+		</div>
+    </li>
+        <li class="con">
+        <!-- <a href=""></a> -->
+        <a href="sub2_3.php.html?bo_table=main_visual&amp;wr_id=22&amp;no=1"></a>
+		<div class="cons">
+			<div class="img-wrap">
+				<img src="data/file/main_visual/thumb-2000838388_2yXF8JRc_72a6d8bd41bc8057b5a9e4d10c5623e459cb61fa_1100x580.jpg" alt="">			</div>
+			<div class="txt-container">
+				<div class="txt-wrap">
+					<!-- <h3>Localization for Autonomous Driving</h3> -->
+					<h3>
+						Localization for Autonomous Driving					</h3>
+					<h4><span class="textJournal">We're innovating a next-gen localization system to address multipath and interference challenges. <br> Additionally, we're researching geo-localization techniques for GPS-denied environments.</span>
+					</h4><h5>
+				</h5></div>
+			</div>
+		</div>
+    </li>
+        <li class="con">
+        <!-- <a href=""></a> -->
+        <a href="index.php.html?bo_table=main_visual&amp;wr_id=21&amp;no=1"></a>
+		<div class="cons">
+			<div class="img-wrap">
+				<img src="data/file/main_visual/thumb-2415451410_aQZrCXgT_bc32ed2b693e7a64bf9b75bd1318a07b8a57c4df_1100x580.png" alt="">			</div>
+			<div class="txt-container">
+				<div class="txt-wrap">
+					<!-- <h3>Embedded AI for Autonomous Driving</h3> -->
+					<h3>
+						Embedded AI for Autonomous Driving					</h3>
+					<h4><span class="textJournal">We aim to develop embedded techniques to enable on-device AI, making the commercialization of autonomous driving feasible.</span>
+					</h4><h5>
+				</h5></div>
+			</div>
+		</div>
+    </li>
+        <li class="con">
+        <!-- <a href=""></a> -->
+        <a href="sub2_1.php.html?bo_table=main_visual&amp;wr_id=20&amp;no=1"></a>
+		<div class="cons">
+			<div class="img-wrap">
+				<img src="data/file/main_visual/2000838388_pGa8Fuvj_95d244094ec2b5a57758909073587f4e7a42ff90.gif" alt="">			</div>
+			<div class="txt-container">
+				<div class="txt-wrap">
+					<!-- <h3>Next-Generation Full-Stack Platform for Autonomous Driving</h3> -->
+					<h3>
+						Next-Generation Full-Stack Platform for Autonomous Driving					</h3>
+					<h4><span class="textJournal">Our goal is to attain a full-stack solution for autonomous driving. <br> We are also planning to research on embedded systems, LLMs, and open-source platforms specialized for autonomous driving.</span>
+					</h4><h5>
+				</h5></div>
+			</div>
+		</div>
+    </li>
+            </ul>
+
+			<div class="main-slide-btn">
+                <i class="xi-angle-left main-prev"></i>
+                <i class="xi-angle-right main-next"></i>
+            </div>
+        </div>
+		
+		<!-- main-slide 스크립트  -->
+		<script>
+			$('#main-slide').slick({
+				infinite: true,
+				// speed: 300,
+				slidesToShow: 1,
+				adaptiveHeight: true,
+				autoplay: true,
+				autoplaySpeed: 5000,
+				draggable: true,
+				arrows: false,
+				dots: true,
+				cssEase: 'ease-out',
+				responsive: [
+					{
+						breakpoint: 1340,
+						settings: {
+							slidesToShow: 1,
+							arrows: true,
+							prevArrow: $('.main-prev'),
+							nextArrow: $('.main-next'),
+						},
+					},
+				],
+			});
+
+			// 옵션 바깥에
+			function updateSlideControlText() {
+				$("#main-slide #slick-slide-control00").text("Welcome to AVE Lab");
+				$("#main-slide #slick-slide-control01").text("Perception");
+				$("#main-slide #slick-slide-control02").text("End-to-End");
+				$("#main-slide #slick-slide-control03").text("Localization");
+				$("#main-slide #slick-slide-control04").text("Embedded AI");
+				$("#main-slide #slick-slide-control05").text("Goal & Future");
+			}
+
+			updateSlideControlText();
+
+			// $(window).on("resize", updateSlideControlText);
+
+			$(window).on("resize", function() {
+			// 일정 시간 후에 텍스트 변경 함수를 호출, 리사이즈 완료된 후에 적용되도록 함
+			clearTimeout(window.resizeTimer);
+			window.resizeTimer = setTimeout(updateSlideControlText, 0);
+			});
+		</script>
+	</section>
+
+
+	<section id="content">
+
+		<article class="vipub">
+			<div class="area pubnews-wrap">
+				<div class="public" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="800">
+					<div class="mc_tit">
+						<h3>Publications<a href="bbs/board.php-5.html?bo_table=sub3_1"><span></span><span></span><span></span></a></h3>
+					</div>
+					
+
+	<div class="mp_con">
+		<div class="mp_slide">
+
+					<div class="mp_box">
+				<a href="bbs/board.php-14.html?bo_table=sub3_main&amp;wr_id=11"></a>
+				<div class="mp_img">
+					<img src="data/file/sub3_main/thumb-2415451410_ro2YTmXP_879aa410638da35328826c2482cb8bbcd8fa3171_220x300.png" alt="">				</div>
+				<div class="mp_txt">
+					<ul>
+						<li><h5>2024</h5></li>
+						<li><h3>RTNH+: Enhanced 4D Radar Object Detection Network using Two-Level Preprocessing and Vertical Encodin…</h3></li>
+						<li><p><span class="text_author">Seung-Hyun Kong†, Dong-Hee Paek†, Sangyeong Lee</span>						<span class="text_vol">IEEE Transactions on Intelligent Vehicles [SCIE, IF 14.0, JCR Top 2.3%]</span>,
+						<span class="text_journal"><i>2024</i></span></p></li>
+						<li><a href="bbs/board.php-14.html?bo_table=sub3_main&amp;wr_id=11"><img src="images/main/pub_plus.png" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+						<div class="mp_box">
+				<a href="bbs/board.php-15.html?bo_table=sub3_main&amp;wr_id=10"></a>
+				<div class="mp_img">
+					<img src="data/file/sub3_main/thumb-2415451452_GwkHjWfR_a6992786e8a98d40bf416dbc8067f9ef69c78e4e_220x300.png" alt="">				</div>
+				<div class="mp_txt">
+					<ul>
+						<li><h5>2022</h5></li>
+						<li><h3>K-Radar: 4D Radar Object Detection for Urban Roads and Highways in Various Weather Conditions</h3></li>
+						<li><p><span class="text_author">Dong-Hee Paek, Seung-Hyun Kong, Kevin Tirta Wijaya</span>						<span class="text_vol">Advances in Neural Information Processing Systems (NeurIPS) Datasets and Benchmarks</span>,
+						<span class="text_journal"><i>2022</i></span></p></li>
+						<li><a href="bbs/board.php-15.html?bo_table=sub3_main&amp;wr_id=10"><img src="images/main/pub_plus.png" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+						<div class="mp_box">
+				<a href="bbs/board.php-16.html?bo_table=sub3_main&amp;wr_id=9"></a>
+				<div class="mp_img">
+					<img src="data/file/sub3_main/thumb-2415451452_ot1F49Td_ba10471aa2717c8a53ad618b2ad4e733267ad859_220x300.png" alt="">				</div>
+				<div class="mp_txt">
+					<ul>
+						<li><h5>2022</h5></li>
+						<li><h3>K-Lane: Lidar Lane Dataset and Benchmark for Urban Roads and Highways</h3></li>
+						<li><p><span class="text_author">Dong-Hee Paek, Seung-Hyun Kong, Kevin Tirta Wijaya</span>						<span class="text_vol">IEEE/CVF Computer Vision and Pattern Recognition (CVPR) Workshop on Autonomous Driving</span>,
+						<span class="text_journal"><i>2022</i></span></p></li>
+						<li><a href="bbs/board.php-16.html?bo_table=sub3_main&amp;wr_id=9"><img src="images/main/pub_plus.png" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+						<div class="mp_box">
+				<a href="bbs/board.php-17.html?bo_table=sub3_main&amp;wr_id=5"></a>
+				<div class="mp_img">
+					<img src="data/file/sub3_main/thumb-2415444834_EPKqfd5N_9d036ba0bcee1b4dd16d1055301afb2d8016d83f_220x300.png" alt="">				</div>
+				<div class="mp_txt">
+					<ul>
+						<li><h5>2022</h5></li>
+						<li><h3>Segmented Encoding for Sim2Real of RL-based End-to-End Autonomous Driving</h3></li>
+						<li><p><span class="text_author">Seung-Hwan Chung, Seung-Hyun Kong, I Made Aswin Nahrendra, Sanjae Cho</span>						<span class="text_vol">IEEE Intelligent Vehicles Symposium (IV)</span>,
+						<span class="text_journal"><i>2022</i></span></p></li>
+						<li><a href="bbs/board.php-17.html?bo_table=sub3_main&amp;wr_id=5"><img src="images/main/pub_plus.png" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+						<div class="mp_box">
+				<a href="bbs/board.php-18.html?bo_table=sub3_main&amp;wr_id=4"></a>
+				<div class="mp_img">
+					<img src="data/file/sub3_main/thumb-2415444834_ufkwEJFv_777bb00eea36375837d32ed64c2f4949507f0f14_220x300.png" alt="">				</div>
+				<div class="mp_txt">
+					<ul>
+						<li><h5>2022</h5></li>
+						<li><h3>The Autonomous Vehicles and Electronics Lab [ITS Research Lab]</h3></li>
+						<li><p><span class="text_author">Yisheng Lv</span>						<span class="text_vol">IEEE Intelligent Transportation Systems Magazine</span>,
+						<span class="text_journal"><i>2022 July/August</i></span></p></li>
+						<li><a href="bbs/board.php-18.html?bo_table=sub3_main&amp;wr_id=4"><img src="images/main/pub_plus.png" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+						<div class="mp_box">
+				<a href="bbs/board.php-19.html?bo_table=sub3_main&amp;wr_id=3"></a>
+				<div class="mp_img">
+					<img src="data/file/sub3_main/thumb-2415444834_tRBl16MP_77a8deba7e13ea1dbc7e5c8eb6f8ca1d5fb60f60_220x300.png" alt="">				</div>
+				<div class="mp_txt">
+					<ul>
+						<li><h5>2022</h5></li>
+						<li><h3>GPS First Arrival Path Detection Network using MLP-Mixers</h3></li>
+						<li><p><span class="text_author">Seung-Hyun Kong†, Sangjae Cho†, Euiho Kim*</span>						<span class="text_vol">IEEE Transaction on Wireless Communications [SCI, IF 7.016], vol. 21, no. 9, pp. 7764-7777</span>,
+						<span class="text_journal"><i>September 2022</i></span></p></li>
+						<li><a href="bbs/board.php-19.html?bo_table=sub3_main&amp;wr_id=3"><img src="images/main/pub_plus.png" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+						<div class="mp_box">
+				<a href="bbs/board.php-20.html?bo_table=sub3_main&amp;wr_id=6"></a>
+				<div class="mp_img">
+					<img src="data/file/sub3_main/thumb-2415444834_LhEKJTal_6297d6f72e594a59c356d558d2e8378b6bd825ca_220x300.jpg" alt="">				</div>
+				<div class="mp_txt">
+					<ul>
+						<li><h5>2021</h5></li>
+						<li><h3>Enhanced Off-Policy Reinforcement Learning with Focused Experience Replay</h3></li>
+						<li><p><span class="text_author">Seung-Hyun Kong, I Made Aswin Nahrendra, Dong-Hee Paek</span>						<span class="text_vol">IEEE Access [SCIE, IF 3.476, Top 48.17%], vol. 9, pp. 93152-93164</span>,
+						<span class="text_journal"><i>May 2021</i></span></p></li>
+						<li><a href="bbs/board.php-20.html?bo_table=sub3_main&amp;wr_id=6"><img src="images/main/pub_plus.png" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+						<div class="mp_box">
+				<a href="bbs/board.php-21.html?bo_table=sub3_main&amp;wr_id=7"></a>
+				<div class="mp_img">
+					<img src="data/file/sub3_main/thumb-2415444834_e9ajTFdQ_d4114ca18e62d3b1fd1697307cc1c9825ac77d66_220x300.jpg" alt="">				</div>
+				<div class="mp_txt">
+					<ul>
+						<li><h5>2019</h5></li>
+						<li><h3>Automatic Recognition of General LPI Radar Waveform using SSD and Supplementary Classifier</h3></li>
+						<li><p><span class="text_author">Linh Manh Hoang; Minjun Kim; Seung-Hyun Kong</span>						<span class="text_vol">IEEE Trans. on Signal Processing [SCI, IF 5.028, Top 13.53%]</span>,
+						<span class="text_journal"><i>May 2019</i></span></p></li>
+						<li><a href="bbs/board.php-21.html?bo_table=sub3_main&amp;wr_id=7"><img src="images/main/pub_plus.png" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+						<div class="mp_box">
+				<a href="bbs/board.php-22.html?bo_table=sub3_main&amp;wr_id=8"></a>
+				<div class="mp_img">
+					<img src="data/file/sub3_main/thumb-2415444834_bJOfxhkr_342a0db9a17a44f7d99571b0f294d4f5e8b32b7a_220x300.jpg" alt="">				</div>
+				<div class="mp_txt">
+					<ul>
+						<li><h5>2018</h5></li>
+						<li><h3>Automatic LPI Radar Waveform Recognition using CNN</h3></li>
+						<li><p><span class="text_author">Seung-Hyun Kong; Minjun Kim; Linh Manh Hoang; Eunhui Kim</span>						<span class="text_vol">IEEE Access  [SCIE, IF 3.244, JCR Top 20.77%]</span>,
+						<span class="text_journal"><i>January 2018</i></span></p></li>
+						<li><a href="bbs/board.php-22.html?bo_table=sub3_main&amp;wr_id=8"><img src="images/main/pub_plus.png" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+								
+		</div>
+		<script>
+			$('.mp_slide').slick({
+				arrows: true,
+				fade: false,
+				dots: false,
+				autoplay: true,
+				speed:1500,
+				infinite:true,
+				autoplaySpeed: 3000,
+				easing: 'easeInOutQuint',
+				pauseOnHover:false
+			});
+		</script>
+	</div>
+					<!-- 
+
+	<div class="mp_con">
+		<div class="mp_slide">
+
+					<div class="mp_box">
+				<a href="https://ave.kaist.ac.kr/bbs/board.php?bo_table=sub3_1&amp;wr_id=52"></a>
+				<div class="mp_img">
+					<img src="https://ave.kaist.ac.kr/data/file/sub3_1/thumb-2415451410_pBuMP8vR_0a403d6f6f46de31c36db7783c0cdbca79d3a6d7_220x300.png" alt="" >				</div>
+				<div class="mp_txt">
+					<ul>
+						<li><h5>2024</h5></li>
+						<li><h3>RTNH+: Enhanced 4D Radar Object Detection Network using Two-Level Preprocessing and Vertical Encodin…</h3></li>
+						<li><p><span class="text_author">Seung-Hyun Kong†*, Dong-Hee Paek†, Sangyeong Lee</span>						<span class="text_vol">IEEE Transactions on Intelligent Vehicles [SCIE, IF 14.0, JCR Top 2.3%]</span>,
+						<span class="text_journal"><i>2024</i></span></p></li>
+						<li><a href="https://ave.kaist.ac.kr/bbs/board.php?bo_table=sub3_1&amp;wr_id=52"><img src="https://ave.kaist.ac.kr/images/main/pub_plus.png" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+						<div class="mp_box">
+				<a href="https://ave.kaist.ac.kr/bbs/board.php?bo_table=sub3_1&amp;wr_id=47"></a>
+				<div class="mp_img">
+					<img src="https://ave.kaist.ac.kr/data/file/sub3_1/thumb-2415451410_DmtTRrJC_71f0982546cd8117ccbc60bce9d440cadfe4f753_220x300.png" alt="" >				</div>
+				<div class="mp_txt">
+					<ul>
+						<li><h5>2024</h5></li>
+						<li><h3>Bayesian Approximation-based Trajectory Prediction and Tracking for 4D Radar</h3></li>
+						<li><p><span class="text_author">Dong-In Kim, Dong-Hee Paek, Seung-Hyun Kong*</span>						<span class="text_vol">In preparation for IEEE Transactions on Intelligent Transportation Systems</span>,
+						</p></li>
+						<li><a href="https://ave.kaist.ac.kr/bbs/board.php?bo_table=sub3_1&amp;wr_id=47"><img src="https://ave.kaist.ac.kr/images/main/pub_plus.png" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+						<div class="mp_box">
+				<a href="https://ave.kaist.ac.kr/bbs/board.php?bo_table=sub3_1&amp;wr_id=42"></a>
+				<div class="mp_img">
+					<img src="https://ave.kaist.ac.kr/data/file/sub3_1/thumb-2415451410_m8lrUeBx_24fa5d04da16a2ab3ade3a1f44df672273490469_220x300.png" alt="" >				</div>
+				<div class="mp_txt">
+					<ul>
+						<li><h5>2022</h5></li>
+						<li><h3>The Autonomous Vehicles and Electronics Lab [ITS Research Lab]</h3></li>
+						<li><p><span class="text_author">Yisheng Lv</span>						<span class="text_vol">IEEE Intelligent Transportation Systems Magazine</span>,
+						<span class="text_journal"><i>2022 July/August</i></span></p></li>
+						<li><a href="https://ave.kaist.ac.kr/bbs/board.php?bo_table=sub3_1&amp;wr_id=42"><img src="https://ave.kaist.ac.kr/images/main/pub_plus.png" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+						<div class="mp_box">
+				<a href="https://ave.kaist.ac.kr/bbs/board.php?bo_table=sub3_1&amp;wr_id=32"></a>
+				<div class="mp_img">
+					<img src="https://ave.kaist.ac.kr/data/file/sub3_1/thumb-1890075728_U9bGZO1S_aa3facfc0cfd46254f7e7b1cf78e94d8905c9980_220x300.png" alt="" >				</div>
+				<div class="mp_txt">
+					<ul>
+						<li><h5>2022</h5></li>
+						<li><h3>GPS First Arrival Path Detection Network based on MLP-Mixers</h3></li>
+						<li><p><span class="text_author">Seung-Hyun Kong†, Sangjae Cho†, Euiho Kim*</span>						<span class="text_vol">IEEE Transactions on Wireless Communications [SCIE, IF 10.4, JCR Top 5.6%], vol. 21, issue. 9, pp. 7764-7777</span>,
+						<span class="text_journal"><i>September 2022</i></span></p></li>
+						<li><a href="https://ave.kaist.ac.kr/bbs/board.php?bo_table=sub3_1&amp;wr_id=32"><img src="https://ave.kaist.ac.kr/images/main/pub_plus.png" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+						<div class="mp_box">
+				<a href="https://ave.kaist.ac.kr/bbs/board.php?bo_table=sub3_1&amp;wr_id=29"></a>
+				<div class="mp_img">
+					<img src="https://ave.kaist.ac.kr/data/file/sub3_1/thumb-2415452358_wLUWEhls_460cb810dbd228f3f305af34cc9f4c5984adbc6b_220x300.jpg" alt="" >				</div>
+				<div class="mp_txt">
+					<ul>
+						<li><h5>2021</h5></li>
+						<li><h3>Enhanced Off-Policy Reinforcement Learning with Focused Experience Replay</h3></li>
+						<li><p><span class="text_author">Seung-Hyun Kong*, I Made Aswin Nahrendra, Dong-Hee Paek</span>						<span class="text_vol">IEEE Access [SCIE, IF 3.476, JCR Top 48.17%, SJR 0.927], vol. 9, pp. 93152-93164</span>,
+						<span class="text_journal"><i>May 2021</i></span></p></li>
+						<li><a href="https://ave.kaist.ac.kr/bbs/board.php?bo_table=sub3_1&amp;wr_id=29"><img src="https://ave.kaist.ac.kr/images/main/pub_plus.png" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+						<div class="mp_box">
+				<a href="https://ave.kaist.ac.kr/bbs/board.php?bo_table=sub3_1&amp;wr_id=23"></a>
+				<div class="mp_img">
+					<img src="https://ave.kaist.ac.kr/data/file/sub3_1/thumb-2415452358_oTOvEQHa_2fcc19e5e9f8cbd52c04ce44caf4fd5e0f19417c_220x300.jpg" alt="" >				</div>
+				<div class="mp_txt">
+					<ul>
+						<li><h5>2018</h5></li>
+						<li><h3>Automatic LPI Radar Waveform Recognition using CNN</h3></li>
+						<li><p><span class="text_author">Seung-Hyun Kong*, Minjun Kim, Linh Manh Hoang, Eunhui Kim</span>						<span class="text_vol">IEEE Access  [SCIE, IF 3.244, JCR Top 20.77%, SJR 0.609]</span>,
+						<span class="text_journal"><i>January 2018</i></span></p></li>
+						<li><a href="https://ave.kaist.ac.kr/bbs/board.php?bo_table=sub3_1&amp;wr_id=23"><img src="https://ave.kaist.ac.kr/images/main/pub_plus.png" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+								
+		</div>
+		<script>
+			$('.mp_slide').slick({
+				arrows: true,
+				fade: false,
+				dots: false,
+				autoplay: true,
+				speed:1500,
+				infinite:true,
+				autoplaySpeed: 3000,
+				easing: 'easeInOutQuint',
+				pauseOnHover:false
+			});
+		</script>
+	</div>
+ -->
+				</div>
+				<div class="news" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="800">
+					<div class="mc_tit">
+						<h3>Gallery<a href="bbs/board.php-13.html?bo_table=sub5_2"><span></span><span></span><span></span></a></h3>
+					</div>
+					
+<div class="ne_con">
+
+			<div class="ne_box">
+			<a href="bbs/board.php-23.html?bo_table=sub5_2&amp;wr_id=66"></a>
+			<ul>
+				<li><img src="data/editor/2406/thumb-b2bfc523b0517aebb3794e8429ef3044_1718301852_4694_327x180.jpg" alt=""></li>
+				<li><h5>IEEE IV 2024 현장 운영</h5></li>
+				<li><h6><br style="clear:both;">&nbsp;…</h6></li>
+				<li><p><i class="xi-time-o"></i>2024-06-14 </p></li>
+			</ul>
+		</div>
+			<div class="ne_box">
+			<a href="bbs/board.php-24.html?bo_table=sub5_2&amp;wr_id=65"></a>
+			<ul>
+				<li><img src="data/editor/2406/thumb-b2bfc523b0517aebb3794e8429ef3044_1718262079_7116_327x180.jpg" alt=""></li>
+				<li><h5>조상재 박사 디펜스 기념 행사 및 회식</h5></li>
+				<li><h6><br>
+<br>
+
+<br>
+<br style=""></h6></li>
+				<li><p><i class="xi-time-o"></i>2024-06-13 </p></li>
+			</ul>
+		</div>
+		</div>
+
+					
+				</div>
+			</div>
+		</article>
+
+		<article class="activity">
+			<div class="act-wrap" data-aos="fade-up" data-aos-duration="1200">
+				<div class="mc_tit">
+					<h3>External Activities</h3>
+				</div>
+
+				<div class="banner-wrap">
+					<ul>
+						<li>
+							<a href="https://zetamobility-company.imweb.me/" target="_blank"></a>
+							<img src="images/main/exac01.png" alt="ZETA MOBILITY">
+							<div class="hover-txt">
+							<p>We established a startup company to commercialize our technology and revolutionize the autonomous driving market.</p>
+							</div>
+						</li>
+						<li>
+							<a href="https://awk.imweb.me/" target="_blank"></a>
+							<img src="images/main/exac02.png" alt="THE AUTOWARE FOUNDATION OF KOREA">
+							<div class="hover-txt">
+							<p>We established The Autoware Foundation of Korea on behalf of a consortium of professors from over 20 universities in Korea participating in Autoware development.</p>
+							</div>
+						</li>
+						<li>
+							<a href="https://ieee-iv.org/2024/welcome-message/" target="_blank"></a>
+							<img src="images/main/exac03.png" alt="jeju IV 2024 35th IEEE Intelligent Vehicles Symposium">
+							<div class="hover-txt">
+							<p>We successfully organized, <br>managed, and hosted the IEEE Intelligent Vehicles Symposium 2024, in Jeju Island, South Korea in June 2024.</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</article>
+	</section>
+
+	<footer>
+		<div class="area">
+			<div class="f_logo">
+				<img src="images/common/f_logo.png" alt="">
+			</div>
+			<div class="f_txt">
+				<p>The Cho Chun Shik Graduate School of Mobility, KAIST<br>
+				Munji-ro, Yuseong-gu, Daejeon 193, South Korea<br>
+				Tel : +82-42-350-1285 Email : avelab@kaist.ac.kr</p>
+				<h6>Copyright ⓒ 2021 AVE Lab All rights Reserved. <a href="http://dsso.kr/" target="_blank">designed by dsso.kr</a></h6>
+			</div>
+		</div>
+	</footer>
+
+</div>
+
+
+
+
+
+ 
+
+
+
+
+<!-- } 하단 끝 -->
+
+<script>
+$(function() {
+    // 폰트 리사이즈 쿠키있으면 실행
+    font_resize("container", get_cookie("ck_font_resize_rmv_class"), get_cookie("ck_font_resize_add_class"));
+});
+</script>
+
+
+
+<!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+<!--[if lte IE 7]>
+<script>
+$(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+        $(this).css("z-index", count);
+        $(this).css("position", "relative");
+        count = count - 1;
+    });
+});
+</script>
+<![endif]-->
+
+
+</body>
+</html>

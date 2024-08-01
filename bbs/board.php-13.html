@@ -1,0 +1,1198 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+
+<!-- https -> http 리소스 호출 가능하도록 -->
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>Gallery 1 페이지 | AVE Lab</title>
+<link rel="stylesheet" href="../css/default.css?ver=191202">
+<link rel="stylesheet" href="../js/font-awesome/css/font-awesome.min.css?ver=191202">
+<link rel="stylesheet" href="../css/slick.css?ver=191202">
+<link rel="stylesheet" href="../aos%402.3.1/dist/aos.css?ver=191202">
+<link rel="stylesheet" href="../npm/xeicon%402.3.3/xeicon.min.css?ver=191202">
+<link rel="stylesheet" href="../skin/board/gallery/style.css?ver=191202">
+<!--[if lte IE 8]>
+<script src="https://ave.kaist.ac.kr/js/html5.js"></script>
+<![endif]-->
+<script>
+// 자바스크립트에서 사용하는 전역변수 선언
+var g5_url       = "https://ave.kaist.ac.kr";
+var g5_bbs_url   = "https://ave.kaist.ac.kr/bbs";
+var g5_is_member = "";
+var g5_is_admin  = "";
+var g5_is_mobile = "";
+var g5_bo_table  = "sub5_2";
+var g5_sca       = "";
+var g5_editor    = "smarteditor2";
+var g5_cookie_domain = "";
+</script>
+
+
+<!-- 트랜지션 디폴트 세팅 -->
+<script type="text/javascript">
+$(window).load(function(){
+	$(".img, .img *, a, a *").css(
+		"transition","all .6s linear",
+		"-webkit-transition","all .6s linear",
+		"-moz-transition","all .6s linear"
+	);
+});
+</script>
+
+
+
+
+
+<script src="../ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/jquery.menu.js?ver=191202"></script>
+<script src="../js/common.js?ver=191202"></script>
+<script src="../js/wrest.js?ver=191202"></script>
+<script src="../js/placeholders.min.js?ver=191202"></script>
+<script src="../js/slick.min.js?ver=191202"></script>
+<script src="../aos%402.3.1/dist/aos.js?ver=191202"></script>
+</head>
+<body>
+
+
+
+<script>
+	AOS.init();
+</script>
+
+
+
+<div class="wrap">
+
+	<!-- 상단메뉴 시작 { -->
+	<header>
+		<style>
+#header{position: relative;z-index: 999;background: #fff;}
+#header .top_logo{height: 90px;line-height: 90px;background: #fff;max-width:1400px;margin: 0 auto;position: relative;}
+#header .top_logo::after{display: block;clear: both;content: '';}
+#header .top_logo .left {display: flex; align-items: center; gap: 10px; float: left; justify-content: space-between; width: 100%;}
+#header .top_logo .right {display: flex; align-items: center; gap: 13px; float: right; display: none;}
+#header .top_logo .lab{float: left; }
+/*#header .top_logo .uni{float: right;}*/
+#header .top_logo .uni img{height: 50px;}
+
+.nav {position: relative; width: 100%;background: #e3e3e3;  height:60px;}
+.nav h1 {position:absolute; left:0; overflow:hidden;top: 50%;transform: translateY(-50%);}
+.nav h1 a {float:left; margin : 5px 0;}
+.nav h1 a img {width : 100%;}
+.nav h2{position:absolute; right:0; top: 50%;transform: translateY(-50%);}
+
+#header #cssmenu {max-width:1400px;margin:0 auto;z-index:999; position: relative;}
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a,
+#cssmenu #menu-button {margin: 0;padding: 0;border: 0;list-style: none;line-height: 1;display: block;position: relative;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+#cssmenu:after,
+#cssmenu > ul:after {content: ".";display: block; clear: both;visibility: hidden;line-height: 0;height: 0;}
+#cssmenu #menu-button {display: none;}
+#cssmenu > ul > li {float : left;width: 16.66%;}
+#cssmenu > ul > li > a {text-align: center;display : block;width: 100%;line-height: 60px;font-size: 22px;text-decoration: none;letter-spacing:-0.8px;font-weight : 600;color: #333;}
+#cssmenu > ul > li:hover > a {}
+#cssmenu ul ul {position: absolute;left: -9999px;}
+#cssmenu.align-right ul ul {text-align: right;}
+#cssmenu ul ul{width:100%;}
+#cssmenu ul ul li{height: 0; -webkit-transition: all .25s ease;-moz-transition: all .25s ease; -ms-transition: all .25s ease; -o-transition: all .25s ease; transition: all .25s ease;}
+#cssmenu li:hover > ul {left: 0;}
+#cssmenu li:hover > ul > li {height: auto;}
+#cssmenu ul ul ul {margin-left: 100%;top: 0;}
+#cssmenu ul ul li a {opacity: 0.9;text-align: center; padding: 18px; width: 100%; font-size: 18px; text-decoration: none; color: rgba(255,255,255,0.6); font-weight: 400; background: rgba(0,82,150,.8); line-height: 1.3;position: relative;}
+#cssmenu ul ul li a span{position: relative;-webkit-transition: .3s;-moz-transition: .3s;-ms-transition: .3s;-o-transition: .3s;transition: .3s;}
+#cssmenu ul ul li a span::before{content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); 
+	width: 9px; height: 10px; background: url('../images/common/nav_arrow.png') 0 0 no-repeat; opacity: 0;}
+
+@keyframes nav_arrow{
+	from{left: 0; opacity: 0.5;}
+	to{left: -8px; opacity:1;}
+}
+
+#cssmenu ul ul li:hover > a,
+#cssmenu ul ul li a:hover {opacity: 1;background: #0a5fad;color: #fff;}
+#cssmenu ul ul li a:hover span{padding-left: 16px;}
+#cssmenu ul ul li:hover a span::before{opacity: 1; animation:nav_arrow 0.5s alternate infinite ease;}
+#cssmenu ul ul li.has-sub > a:after {position: absolute;top: 16px;right: 11px;width: 8px;height: 2px;display: block;background: #ddd;content: '';}
+#cssmenu.align-right ul ul li.has-sub > a:after {right: auto;left: 11px;}
+#cssmenu ul ul li.has-sub > a:before {position: absolute;top: 13px;right: 14px;display: block;width: 2px;height: 8px;background: #ddd;content: '';
+-webkit-transition: all .25s ease; -moz-transition: all .25s ease; -ms-transition: all .25s ease; -o-transition: all .25s ease; transition: all .25s ease;}
+#cssmenu.align-right ul ul li.has-sub > a:before {right: auto;left: 14px;}
+#cssmenu ul ul > li.has-sub:hover > a:before {top: 17px;height: 0;}
+
+.all_menu_btn{background:#005296;position: absolute;right: -60px;width: 60px;height: 60px;text-align: center;top: 0;padding: 17px 6px;line-height: 0;cursor: pointer;}
+.all_menu_btn span{width: 22px;height: 2px;margin:5px auto;display: block;background: #fff;-webkit-transition: .3s;-moz-transition: .3s;-ms-transition: .3s;-o-transition: .3s;transition: .3s;position: relative;}
+
+.all_menu_btn.on span:nth-of-type(2){width: 0;}
+.all_menu_btn.on span:nth-of-type(1){transform:rotate(45deg);top: 7px;}
+.all_menu_btn.on span:nth-of-type(3){transform:rotate(-45deg);top: -7px;}
+
+.all_menu_wr{background: #eee;border-top: 1px solid #f1f1f1;position: absolute;top: 60px;width: 100%;z-index: 5;z-index: 1000;display: none;}
+.all_menu_wr .all_nav{max-width:1400px;margin: 0 auto;text-align: center;}
+.all_menu_wr .all_nav ul::after{clear: both;display: block;content: '';}
+.all_menu_wr .all_nav > ul {padding: 30px 0 50px;}
+.all_menu_wr .all_nav > ul > li{float: left;width: 16.66%;font-size: 18px;font-weight: 500;display: inline-block;}
+.all_menu_wr .all_nav > ul > li > a{font-size: 0;}
+.all_menu_wr .all_nav ul ul {}
+.all_menu_wr .all_nav ul ul li{}
+.all_menu_wr .all_nav ul ul li a{font-size: 17px;color: #666;display: inline-block;width: 100%;font-weight: normal;padding: 7px 0;}
+.all_menu_wr .all_nav ul ul li a:hover{text-decoration: underline;color: #333;}
+
+
+/*모바일메뉴*/
+.mobileMenu{display:none; position:absolute; top:0; right:0; width:60px;height: 60px;background:#005296;z-index: 1001;padding-top: 12px;}
+.mobileMenu span {display: block; width:50%; height:2px; background:#fff; margin:7px auto;}
+
+#gnbM .mobileMenuXbt{position:absolute; top:32px; right:18px;width: 25px;}
+#gnbM .mobileMenuXbt span{width: 100%;position: relative;display: block;height: 1px;background: #444;transform:rotate(45deg)}
+#gnbM .mobileMenuXbt span.x1{transform:rotate(135deg);top: 1px;}
+
+#gnbM{display:none; position:absolute; top:0; right:-250px; width:300px; background:#e3e3e3; z-index:99999;}
+#gnbM .mUtil{padding:0 15px; height:60px; line-height:60px; font-size:17px; letter-spacing:-1px}
+#gnbM .mUtil a{color:#444;}
+#gnbM .mUtil span{margin:0 6px; color:#2572a7}
+#gnbM .gnbDiv{margin-top: 20px;}
+#gnbM .gnbDiv a{display:block;padding: 12px 8px;color: #b5c1d0;font-size: 14px; font-weight: 500;border-bottom: 1px solid #295a9a;}
+#gnbM .gnbDiv .one{padding:0 15px; font-size:16px; color:#333; border-bottom:1px solid #d9d9d9; font-weight:500;line-height:45px;}
+#gnbM .gnbDiv .one.on{color:#fff; border-bottom:1px solid #005296;background: #005296; background-size:18px 18px;}
+#gnbM .gnbDiv .two{padding:5px 20px; border-bottom:1px solid #d9d9d9;background:#005296;height : auto!important}
+#gnbM .gnbDiv .two .twoD{color:#fff;font-size:15px; border-bottom:1px solid #295a9a;line-height:44px;padding-left: 5px;}
+#gnbM .gnbDiv .two .thr{padding:15px 15px 5px; border-bottom:1px solid #d9d9d9; background:#f7f7f7}
+#gnbM .gnbDiv .two .thr .thrD{font-size:13px; color:#fff; margin-bottom:10px}
+#gnbM .gnbDiv .two .overM {    line-height:20px; padding: 10px 0;}
+.dimdBg{display:none; position:absolute; top:0; left:0; width:100%; height:; background:rgba(0,0,0,0.5); z-index:4;}
+.dimdBg.on{display: block;}
+
+
+@media (max-width : 1420px) {
+#header .top_logo{padding: 0 10px;}
+}
+
+@media (max-width : 1300px) {
+#header #cssmenu{padding-right: 60px;}
+.all_menu_wr{padding-right: 60px;}
+.all_menu_btn{right: 0;}
+}
+@media (max-width : 1200px) {
+#header .top_logo{padding: 0 10px;height: 70px;line-height: 70px;}
+#header .top_logo .lab img{height: 41px;}
+#header .top_logo .uni img{height: 38px; padding-right: 60px;}
+#header .top_logo .right {gap: 10px;}
+#header .top_logo .right .rLogo1 img {height: 41px;}
+#header .top_logo .right .rLogo2 img {height: 35px;}
+#header .top_logo .right .rLogo3 img {height: 43px;}
+
+.nav{height: 55px;}
+#cssmenu > ul > li > a{font-size: 19px;line-height: 55px;}
+#cssmenu ul ul li a{font-size: 15px;}
+.all_menu_btn{width: 55px;height: 55px;}
+.all_menu_wr{padding-right: 55px;top: 55px;}
+.all_menu_wr .all_nav ul ul li a{font-size: 15px;}
+}
+@media (max-width : 1023px){
+#header{z-index: 999;}
+#header .top_logo{height: 60px;line-height: 60px;}
+#header .top_logo .uni{float: left;margin-left: 10px;}
+#header .top_logo .left {gap: 4px;}
+#header .top_logo .lab img{height: 35px;}
+#header .top_logo .uni img{height: 34px;}
+#header .top_logo .right {display: none;}
+.nav{display: none;}
+#gnbM,.mobileMenu{display: block;}
+}
+@media (max-width:480px) {
+.mobileMenu{padding-top: 16px;}
+.mobileMenu span{width: 35%;margin: 5px auto;}
+#header .top_logo .left {gap: 0px;}
+#header .top_logo .lab img{height: 28px;}
+#header .top_logo .uni img{height: 28px;}
+}
+/* @media (max-width:320px) {
+#header .top_logo .lab img{height: 23px;}
+#header .top_logo .uni img{height: 28px;}
+} */
+
+
+</style>
+
+
+<!-- header :s -->
+<script type="text/javascript" src="../js/dsso.default.js"></script>
+<div id="header">
+	<div class="top_logo">
+		<div class="left">
+			<a href="../index.php.html" class="lab"><img src="../images/common/h_logo1.png" alt="카이스트 AVE 연구실"></a>
+			<a href="https://www.kaist.ac.kr/kr/" target="_blank" class="uni"><img src="../images/common/h_logo2.png" alt="KAIST"></a>
+		</div>
+		<div class="right">
+			<a href="https://ieee-iv.org/2024/" target="_blank class=" rlogo1"=""><img src="../images/common/logo-r1.png" alt="JejuIV2024"></a>
+			<a href="#" class="rLogo2"><img src="../images/common/logo-r2.png" alt="ZetaMobility"></a>
+			<a href="#" class="rLogo3"><img src="../images/common/logo-r3.png" alt="The Autoware Foundation of Korea"></a>
+		</div>
+	</div>
+	<div class="nav">	
+		<div id="cssmenu">
+			<ul>
+				<li class="two"><a href="../sub2_1.php.html">Research</a>
+					<ul>
+						<li><a href="../sub2_1.php.html"><span>Autonomous Driving System</span></a></li>
+						<li><a href="../sub2_2.php.html"><span>Learning-based E2E</span></a></li>
+						<li><a href="../sub2_3.php.html"><span>Advanced Positioning Systems</span></a></li>
+						<li><a href="board.php.html?bo_table=sub2_4"><span>Projects</span></a></li>
+						<li><a href="board.php-1.html?bo_table=sub2_5"><span>Videos</span></a></li>
+					</ul>
+				</li>
+				<li class="one"><a href="board.php-2.html?bo_table=sub1_1">People</a>
+					<ul>
+						<li><a href="board.php-2.html?bo_table=sub1_1"><span>Professor</span></a></li>
+						<li><a href="board.php-3.html?bo_table=sub1_2"><span>Members</span></a></li>
+						<li><a href="board.php-4.html?bo_table=sub1_3"><span>Alumni</span></a></li>
+					</ul>
+				</li>
+				<li class="thr"><a href="board.php-5.html?bo_table=sub3_1">Publications</a>
+					<ul>
+						<li><a href="board.php-5.html?bo_table=sub3_1"><span>International Journals</span></a></li>
+						<li><a href="board.php-6.html?bo_table=sub3_2"><span>International Conferences</span></a></li>
+						<li><a href="board.php-7.html?bo_table=sub3_3"><span>Domestic Journals</span></a></li>
+						<li><a href="board.php-8.html?bo_table=sub3_4"><span>Domestic Conferences</span></a></li>
+						<li><a href="board.php-9.html?bo_table=sub3_5"><span>Patents</span></a></li>
+					</ul>
+				</li>
+				<li class="fou"><a href="board.php-10.html?bo_table=sub4_1">Lectures</a>
+					<ul>
+						<li><a href="board.php-10.html?bo_table=sub4_1"><span>Lectures</span></a></li>
+						<li><a href="board.php-11.html?bo_table=sub4_2"><span>Seminar</span></a></li>
+					</ul>
+				</li>
+				<li class="fiv"><a href="board.php-12.html?bo_table=sub5_1">Board</a>
+					<ul>
+						<li><a href="board.php-12.html?bo_table=sub5_1"><span>Lab board</span></a></li>
+						<li><a href="board.php-13.html?bo_table=sub5_2"><span>Gallery</span></a></li>
+					</ul>
+				</li>
+				<li class="fiv"><a href="../sub6_1.php.html">Contact</a>
+					<ul>
+						<li><a href="../sub6_1.php.html"><span>Contact</span></a></li>
+					</ul>
+				</li>
+			</ul>
+		<div class="all_menu_btn">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		</div>
+		<div class="all_menu_wr">
+			<div class="all_nav">
+			<ul>
+				<li class="one">
+					<ul>
+						<li><a href="board.php-2.html?bo_table=sub1_1"><span>Professor</span></a></li>
+						<li><a href="board.php-3.html?bo_table=sub1_2"><span>Members</span></a></li>
+						<li><a href="board.php-4.html?bo_table=sub1_3"><span>Alumni</span></a></li>
+					</ul>
+				</li>
+				<li class="two">
+					<ul>
+						<li><a href="../sub2_1.php.html">Autonomous Driving System<span></span></a></li>
+						<li><a href="../sub2_2.php.html">Learning-based E2E<span></span></a></li>
+						<li><a href="../sub2_3.php.html">Advanced Positioning Systems<span></span></a></li>
+						<li><a href="board.php.html?bo_table=sub2_4">Projects<span></span></a></li>
+						<li><a href="board.php-1.html?bo_table=sub2_5">Videos<span></span></a></li>
+					</ul>
+				</li>
+				<li class="thr">
+					<ul>
+						<li><a href="board.php-5.html?bo_table=sub3_1"><span>International Journals</span></a></li>
+						<li><a href="board.php-6.html?bo_table=sub3_2"><span>International Conferences</span></a></li>
+						<li><a href="board.php-7.html?bo_table=sub3_3"><span>Domestic Journals</span></a></li>
+						<li><a href="board.php-8.html?bo_table=sub3_4"><span>Domestic Conferences</span></a></li>
+						<li><a href="board.php-9.html?bo_table=sub3_5"><span>Patents</span></a></li>
+					</ul>
+				</li>
+				<li class="fou">
+					<ul>
+						<li><a href="board.php-10.html?bo_table=sub4_1"><span>Lectures</span></a></li>
+						<li><a href="board.php-11.html?bo_table=sub4_2"><span>Seminar</span></a></li>
+					</ul>
+				</li>
+				<li class="fiv">
+					<ul>
+						<li><a href="board.php-12.html?bo_table=sub5_1"><span>Lab board</span></a></li>
+						<li><a href="board.php-13.html?bo_table=sub5_2"><span>Gallery</span></a></li>
+					</ul>
+				</li>
+				<li class="six">
+					<ul>
+						<li><a href="../sub6_1.php.html"><span>Contact</span></a></li>
+					</ul>
+				</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+</div>
+ <script>
+      $( document ).ready( function() {
+        $( '.all_menu_btn' ).click( function() {
+          $( '.all_menu_wr' ).slideToggle();
+		  $( '.dimdBg' ).toggleClass( 'on' );
+		  $(this).toggleClass( 'on' );
+        } );
+      } );
+    </script>
+
+	<!--풀다운메뉴/모바일메뉴-->
+	<script type="text/javascript">/*모바일메뉴용*/
+		//<![CDATA[			
+		var oneNum = -1, twoNum = -1, thrNum = -1, fouNum = -1;
+		//]]>
+	</script>
+	<script type="text/javascript" src="../js/menucmn.js"></script>
+
+	<!--모바일 메뉴버튼 -->
+	<a href="javascript:" class="mobileMenu">
+		<span></span>
+		<span></span>
+		<span></span>
+	</a>
+	<!--//모바일 메뉴버튼 -->
+
+	<div style="display: none;" class="twoDbg"></div><!--전체 배경영역-->
+		<p class="dimdBg"></p>
+		<!-- 모바일 gnb -->
+		<div style="height: 1234px; right: -300px;" id="gnbM">
+			<!--탑메뉴-->
+			<div class="mUtil">
+				<a href="../index.php.html" style="margin-right:15px;">Home</a>
+			</div>
+			<!--//탑메뉴-->
+
+			<!--gnbDiv-->
+			<div class="gnbDiv">
+				<!--대메뉴1-->
+				<a href="javascript:" class="one">People</a>
+				<div style="display: none;" class="two">
+					<a href="board.php-2.html?bo_table=sub1_1">Professor</a>
+					<a href="board.php-3.html?bo_table=sub1_2">Members</a>
+					<a style="border-bottom: medium none;" href="board.php-4.html?bo_table=sub1_3">Alumni</a>
+				</div>
+				<!--대메뉴2-->
+				<a href="javascript:" class="one">Research</a>
+				<div style="display: none;" class="two">
+					<a href="../sub2_1.php.html">Autonomous Driving System</a>
+					<a href="../sub2_2.php.html">Learning-based E2E</a>
+					<a href="../sub2_3.php.html">Advanced Positioning Systems</a>
+					<a href="board.php.html?bo_table=sub2_4">Projects</a>
+					<a style="border-bottom: medium none;" href="board.php-1.html?bo_table=sub2_5">Videos</a>
+				</div>
+				<!--대메뉴3-->
+				<a href="javascript:" class="one">Publication</a>
+				<div style="display: none;" class="two">
+					<a href="board.php-5.html?bo_table=sub3_1">International Journals</a>
+					<a href="board.php-6.html?bo_table=sub3_2">International Conferences</a>
+					<a href="board.php-7.html?bo_table=sub3_3">Domestic Journals</a>
+					<a href="board.php-8.html?bo_table=sub3_4">Domestic Conferences</a>
+					<a style="border-bottom: medium none;" href="board.php-9.html?bo_table=sub3_5">Patents</a>
+				</div>
+				<!--대메뉴4-->
+				<a href="javascript:" class="one">Lectures</a>
+				<div style="display: none;" class="two">
+					<a href="board.php-10.html?bo_table=sub4_1">Lectures</a>
+					<a style="border-bottom: medium none;" href="board.php-11.html?bo_table=sub4_2">Seminar</a>
+				</div>
+				<!--대메뉴5-->
+				<a href="javascript:" class="one">Board</a>
+				<div style="display: none;" class="two">
+					<a href="board.php-12.html?bo_table=sub5_1">Lab board</a>
+					<a style="border-bottom: medium none;" href="board.php-13.html?bo_table=sub5_2">Gallery</a>
+				</div>
+			</div>
+			<!--//gnbDiv-->
+			<a href="javascript:" class="mobileMenuXbt">
+				<span class="x1"></span>	
+				<span class="x2"></span>	
+			</a><!--닫기버튼-->
+		</div>
+	<!-- //모바일 gnb -->	<!-- //header -->
+	</header>
+	<!-- } 상단메뉴 끝 -->
+
+	<section id="s_visual">
+		<!-- <div class="s_visual_bg"><img src="https://ave.kaist.ac.kr/images/sub/s_visual.jpg" alt=""></div> -->
+		<div class="sv_txt">
+			<h3>
+									Board							</h3>
+			<!-- <p><b>A</b>utonomous <b>VE</b>hicles and robotics <b>L</b>ab</p> -->
+		</div>
+	</section>
+
+	<!--서브메뉴-->
+	<div class="sub_menu">
+		<style type="text/css">
+/* 페이지인식-메인 */
+#page5 #menu02 > .box5_5_2{font-weight: 600; color: #005296;}
+#page5 #menu02 > .box5_5_2:after{content: ''; position: absolute; left: 50%; bottom: -3px; transform: translate(-50%, 0); width: 9px; height: 5px; background: #005296; z-index: 10;}
+</style>
+
+
+<script>
+$(document).ready(function(){
+    $(".btn_s_menu").click(function(){
+        $(".s_menu").toggle();
+    });
+
+	$(".vNav>ul>li").each(function(idx){
+		var line = $(".sub_menu .line");
+		var aThis = $(".vNav>ul>li").eq(idx);
+		aThis.on("mouseover", function(){
+			line.stop().animate({opacity:1, left:aThis.position().left+"px", width:aThis.children("a").innerWidth()+"px"},300);
+		});
+		aThis.on("mouseleave", function(){
+				line.stop().animate({opacity:"0", width:0},300);
+		});
+	});
+});
+</script>
+
+<div class="vNav" id="page5">
+	<ul>
+		<li id="menu01"><a href="board.php-12.html?bo_table=sub5_1" class="box5_5_1">Lab board</a></li>
+		<li id="menu02" class='active'><a href="board.php-13.html?bo_table=sub5_2" class="box5_5_2">Gallery</a></li>
+	</ul>
+</div>
+
+
+ <div class="m_sub_menu">
+    <button type="button" class="btn_s_menu">
+      <span title="Gallery 1 페이지">Gallery</span> <i class="arrow right"></i>
+    </button>
+    <ul class="s_menu">
+		<li id="menu01"><a href="board.php-12.html?bo_table=sub5_1" class="box5_5_1">Lab board</a></li>
+		<li id="menu02" class='active'><a href="board.php-13.html?bo_table=sub5_2" class="box5_5_2">Gallery</a></li>
+	</ul>
+  </div>	</div>
+
+	<section id="s_content">
+		<div class="s_area">
+			<div class="s_tit" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="800">
+				<h3 class="big">
+											Gallery									</h3>
+			</div>
+
+<!-- 게시판 목록 시작 { -->
+<div id="bo_gall" style="width:100%">
+
+    
+    <form name="fboardlist" id="fboardlist" action="https://ave.kaist.ac.kr/bbs/board_list_update.php" onsubmit="return fboardlist_submit(this);" method="post">
+    <input type="hidden" name="bo_table" value="sub5_2">
+    <input type="hidden" name="sfl" value="">
+    <input type="hidden" name="stx" value="">
+    <input type="hidden" name="spt" value="">
+    <input type="hidden" name="sst" value="wr_datetime desc">
+    <input type="hidden" name="sod" value="">
+    <input type="hidden" name="page" value="1">
+    <input type="hidden" name="sw" value="">
+
+    <!-- 게시판 페이지 정보 및 버튼 시작 { -->
+    <div id="bo_btn_top">
+        <div id="bo_list_total">
+            <span>Total 62건</span>
+            1 페이지
+        </div>
+
+            </div>
+    <!-- } 게시판 페이지 정보 및 버튼 끝 -->
+
+    
+    <ul id="gall_ul" class="gall_row">
+                <li class="gall_li col-gn-4">
+            <div class="gall_box">
+                <div class="gall_chk chk_box">
+	                	                <span class="sound_only">
+	                    62	                </span>
+                </div>
+                <div class="gall_con">
+                    <div class="gall_img">
+                        <a href="board.php-23.html?bo_table=sub5_2&amp;wr_id=66">
+                        <img src="../data/editor/2406/thumb-b2bfc523b0517aebb3794e8429ef3044_1718301852_4694_202x150.jpg" alt="">                        </a>
+                    </div>
+					<div class="gall_txt">
+						<div class="gall_text_href">
+														<a href="board.php-23.html?bo_table=sub5_2&amp;wr_id=66" class="bo_tit">
+								
+																<!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+							
+								IEEE IV 2024 현장 운영                      
+																							 </a>
+							
+						</div>
+						
+						<div></div>
+
+						<div class="gall_info">
+							<span class="gall_date"><span class="sound_only">작성일 </span>2024-06-14</span>
+							<!--<span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 149</span>-->
+						</div>
+						<div class="gall_option">
+														           
+						</div>
+					</div>
+                    
+                </div>
+            </div>
+        </li>
+                <li class="gall_li col-gn-4">
+            <div class="gall_box">
+                <div class="gall_chk chk_box">
+	                	                <span class="sound_only">
+	                    61	                </span>
+                </div>
+                <div class="gall_con">
+                    <div class="gall_img">
+                        <a href="board.php-24.html?bo_table=sub5_2&amp;wr_id=65">
+                        <img src="../data/editor/2406/thumb-b2bfc523b0517aebb3794e8429ef3044_1718262079_7116_202x150.jpg" alt="">                        </a>
+                    </div>
+					<div class="gall_txt">
+						<div class="gall_text_href">
+														<a href="board.php-24.html?bo_table=sub5_2&amp;wr_id=65" class="bo_tit">
+								
+																<!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+							
+								조상재 박사 디펜스 기념 행사 및 회식                      
+																							 </a>
+							
+						</div>
+						
+						<div></div>
+
+						<div class="gall_info">
+							<span class="gall_date"><span class="sound_only">작성일 </span>2024-06-13</span>
+							<!--<span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 131</span>-->
+						</div>
+						<div class="gall_option">
+														           
+						</div>
+					</div>
+                    
+                </div>
+            </div>
+        </li>
+                <li class="gall_li col-gn-4">
+            <div class="gall_box">
+                <div class="gall_chk chk_box">
+	                	                <span class="sound_only">
+	                    60	                </span>
+                </div>
+                <div class="gall_con">
+                    <div class="gall_img">
+                        <a href="board.php-297.html?bo_table=sub5_2&amp;wr_id=64">
+                        <img src="../data/editor/2405/thumb-6520ec278443b2716cb5f35763c4bc1c_1715705686_8614_202x150.jpg" alt="">                        </a>
+                    </div>
+					<div class="gall_txt">
+						<div class="gall_text_href">
+														<a href="board.php-297.html?bo_table=sub5_2&amp;wr_id=64" class="bo_tit">
+								
+																<!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+							
+								2024 스승의 날                      
+																							 </a>
+							
+						</div>
+						
+						<div></div>
+
+						<div class="gall_info">
+							<span class="gall_date"><span class="sound_only">작성일 </span>2024-05-15</span>
+							<!--<span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 271</span>-->
+						</div>
+						<div class="gall_option">
+														           
+						</div>
+					</div>
+                    
+                </div>
+            </div>
+        </li>
+                <li class="gall_li col-gn-4">
+            <div class="gall_box">
+                <div class="gall_chk chk_box">
+	                	                <span class="sound_only">
+	                    59	                </span>
+                </div>
+                <div class="gall_con">
+                    <div class="gall_img">
+                        <a href="board.php-298.html?bo_table=sub5_2&amp;wr_id=63">
+                        <img src="../data/editor/2404/thumb-9aafdd6382c6c6d431b076aee3dba610_1713881705_2385_202x150.jpg" alt="">                        </a>
+                    </div>
+					<div class="gall_txt">
+						<div class="gall_text_href">
+														<a href="board.php-298.html?bo_table=sub5_2&amp;wr_id=63" class="bo_tit">
+								
+																<!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+							
+								CACCu 기술시연 항공촬영                      
+																							 </a>
+							
+						</div>
+						
+						<div></div>
+
+						<div class="gall_info">
+							<span class="gall_date"><span class="sound_only">작성일 </span>2024-04-23</span>
+							<!--<span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 256</span>-->
+						</div>
+						<div class="gall_option">
+														           
+						</div>
+					</div>
+                    
+                </div>
+            </div>
+        </li>
+                <li class="gall_li col-gn-4 box_clear">
+            <div class="gall_box">
+                <div class="gall_chk chk_box">
+	                	                <span class="sound_only">
+	                    58	                </span>
+                </div>
+                <div class="gall_con">
+                    <div class="gall_img">
+                        <a href="board.php-299.html?bo_table=sub5_2&amp;wr_id=62">
+                        <img src="../data/editor/2404/thumb-7c7fc79b0298115516f5d0309c659f2c_1713794627_133_202x150.jpg" alt="">                        </a>
+                    </div>
+					<div class="gall_txt">
+						<div class="gall_text_href">
+														<a href="board.php-299.html?bo_table=sub5_2&amp;wr_id=62" class="bo_tit">
+								
+																<!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+							
+								INRIA 기관 방문 출장 (프랑스 코트다쥐르 주)                      
+																							 </a>
+							
+						</div>
+						
+						<div></div>
+
+						<div class="gall_info">
+							<span class="gall_date"><span class="sound_only">작성일 </span>2024-04-22</span>
+							<!--<span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 105</span>-->
+						</div>
+						<div class="gall_option">
+														           
+						</div>
+					</div>
+                    
+                </div>
+            </div>
+        </li>
+                <li class="gall_li col-gn-4">
+            <div class="gall_box">
+                <div class="gall_chk chk_box">
+	                	                <span class="sound_only">
+	                    57	                </span>
+                </div>
+                <div class="gall_con">
+                    <div class="gall_img">
+                        <a href="board.php-300.html?bo_table=sub5_2&amp;wr_id=61">
+                        <img src="../data/editor/2403/thumb-c60db006c1b20fd7e0f8b6cbdbc9db88_1709627955_6942_202x150.jpg" alt="">                        </a>
+                    </div>
+					<div class="gall_txt">
+						<div class="gall_text_href">
+														<a href="board.php-300.html?bo_table=sub5_2&amp;wr_id=61" class="bo_tit">
+								
+																<!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+							
+								2024 학위수여식 (김동인 석사, 선민혁 석사)                      
+																							 </a>
+							
+						</div>
+						
+						<div></div>
+
+						<div class="gall_info">
+							<span class="gall_date"><span class="sound_only">작성일 </span>2024-03-05</span>
+							<!--<span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 213</span>-->
+						</div>
+						<div class="gall_option">
+														           
+						</div>
+					</div>
+                    
+                </div>
+            </div>
+        </li>
+                <li class="gall_li col-gn-4">
+            <div class="gall_box">
+                <div class="gall_chk chk_box">
+	                	                <span class="sound_only">
+	                    56	                </span>
+                </div>
+                <div class="gall_con">
+                    <div class="gall_img">
+                        <a href="board.php-301.html?bo_table=sub5_2&amp;wr_id=60">
+                        <img src="../data/editor/2402/thumb-1a5faad08f41aa5a8bf9f968d550ad3e_1707889140_0833_202x150.jpg" alt="">                        </a>
+                    </div>
+					<div class="gall_txt">
+						<div class="gall_text_href">
+														<a href="board.php-301.html?bo_table=sub5_2&amp;wr_id=60" class="bo_tit">
+								
+																<!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+							
+								2024 KAIST Globalization Excellence Lab 선정, 글로벌 리더십 포상 수상 기념 단체사진 촬영                      
+																							 </a>
+							
+						</div>
+						
+						<div></div>
+
+						<div class="gall_info">
+							<span class="gall_date"><span class="sound_only">작성일 </span>2024-02-14</span>
+							<!--<span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 282</span>-->
+						</div>
+						<div class="gall_option">
+														           
+						</div>
+					</div>
+                    
+                </div>
+            </div>
+        </li>
+                <li class="gall_li col-gn-4">
+            <div class="gall_box">
+                <div class="gall_chk chk_box">
+	                	                <span class="sound_only">
+	                    55	                </span>
+                </div>
+                <div class="gall_con">
+                    <div class="gall_img">
+                        <a href="board.php-302.html?bo_table=sub5_2&amp;wr_id=59">
+                        <img src="../data/editor/2401/thumb-fefb9e3cae2f0bd4fc1d0bae2059ebf8_1706706538_6198_202x150.jpg" alt="">                        </a>
+                    </div>
+					<div class="gall_txt">
+						<div class="gall_text_href">
+														<a href="board.php-302.html?bo_table=sub5_2&amp;wr_id=59" class="bo_tit">
+								
+																<!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+							
+								연구실 연구용 차량 단체사진                      
+																							 </a>
+							
+						</div>
+						
+						<div></div>
+
+						<div class="gall_info">
+							<span class="gall_date"><span class="sound_only">작성일 </span>2024-01-31</span>
+							<!--<span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 195</span>-->
+						</div>
+						<div class="gall_option">
+														           
+						</div>
+					</div>
+                    
+                </div>
+            </div>
+        </li>
+                <li class="gall_li col-gn-4 box_clear">
+            <div class="gall_box">
+                <div class="gall_chk chk_box">
+	                	                <span class="sound_only">
+	                    54	                </span>
+                </div>
+                <div class="gall_con">
+                    <div class="gall_img">
+                        <a href="board.php-303.html?bo_table=sub5_2&amp;wr_id=58">
+                        <img src="../data/editor/2312/thumb-2d531f51d76161e87d4896b1585a7710_1701935548_7395_202x150.jpg" alt="">                        </a>
+                    </div>
+					<div class="gall_txt">
+						<div class="gall_text_href">
+														<a href="board.php-303.html?bo_table=sub5_2&amp;wr_id=58" class="bo_tit">
+								
+																<!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+							
+								2023 교수님 생신 축하                      
+																							 </a>
+							
+						</div>
+						
+						<div></div>
+
+						<div class="gall_info">
+							<span class="gall_date"><span class="sound_only">작성일 </span>2023-12-07</span>
+							<!--<span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 319</span>-->
+						</div>
+						<div class="gall_option">
+														           
+						</div>
+					</div>
+                    
+                </div>
+            </div>
+        </li>
+                <li class="gall_li col-gn-4">
+            <div class="gall_box">
+                <div class="gall_chk chk_box">
+	                	                <span class="sound_only">
+	                    53	                </span>
+                </div>
+                <div class="gall_con">
+                    <div class="gall_img">
+                        <a href="board.php-304.html?bo_table=sub5_2&amp;wr_id=57">
+                        <img src="../data/editor/2310/thumb-2d531f51d76161e87d4896b1585a7710_1698052188_9336_202x150.png" alt="">                        </a>
+                    </div>
+					<div class="gall_txt">
+						<div class="gall_text_href">
+														<a href="board.php-304.html?bo_table=sub5_2&amp;wr_id=57" class="bo_tit">
+								
+																<!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+							
+								2023 추계 연구실 야유회                      
+																							 </a>
+							
+						</div>
+						
+						<div></div>
+
+						<div class="gall_info">
+							<span class="gall_date"><span class="sound_only">작성일 </span>2023-10-23</span>
+							<!--<span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 337</span>-->
+						</div>
+						<div class="gall_option">
+														           
+						</div>
+					</div>
+                    
+                </div>
+            </div>
+        </li>
+                <li class="gall_li col-gn-4">
+            <div class="gall_box">
+                <div class="gall_chk chk_box">
+	                	                <span class="sound_only">
+	                    52	                </span>
+                </div>
+                <div class="gall_con">
+                    <div class="gall_img">
+                        <a href="board.php-305.html?bo_table=sub5_2&amp;wr_id=56">
+                        <img src="../data/editor/2310/thumb-2d531f51d76161e87d4896b1585a7710_1696838650_0186_202x150.jpg" alt="">                        </a>
+                    </div>
+					<div class="gall_txt">
+						<div class="gall_text_href">
+														<a href="board.php-305.html?bo_table=sub5_2&amp;wr_id=56" class="bo_tit">
+								
+																<!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+							
+								현대자율주행챌린지 참가용 차량 래핑                      
+																							 </a>
+							
+						</div>
+						
+						<div></div>
+
+						<div class="gall_info">
+							<span class="gall_date"><span class="sound_only">작성일 </span>2023-10-09</span>
+							<!--<span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 306</span>-->
+						</div>
+						<div class="gall_option">
+														           
+						</div>
+					</div>
+                    
+                </div>
+            </div>
+        </li>
+                <li class="gall_li col-gn-4">
+            <div class="gall_box">
+                <div class="gall_chk chk_box">
+	                	                <span class="sound_only">
+	                    51	                </span>
+                </div>
+                <div class="gall_con">
+                    <div class="gall_img">
+                        <a href="board.php-306.html?bo_table=sub5_2&amp;wr_id=54">
+                        <img src="../data/editor/2310/thumb-2d531f51d76161e87d4896b1585a7710_1696408665_2702_202x150.jpg" alt="">                        </a>
+                    </div>
+					<div class="gall_txt">
+						<div class="gall_text_href">
+														<a href="board.php-306.html?bo_table=sub5_2&amp;wr_id=54" class="bo_tit">
+								
+																<!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+							
+								IEEE ITSC 2023 출장 (스페인 빌바오)                      
+																							 </a>
+							
+						</div>
+						
+						<div></div>
+
+						<div class="gall_info">
+							<span class="gall_date"><span class="sound_only">작성일 </span>2023-10-04</span>
+							<!--<span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 234</span>-->
+						</div>
+						<div class="gall_option">
+														           
+						</div>
+					</div>
+                    
+                </div>
+            </div>
+        </li>
+                <li class="gall_li col-gn-4 box_clear">
+            <div class="gall_box">
+                <div class="gall_chk chk_box">
+	                	                <span class="sound_only">
+	                    50	                </span>
+                </div>
+                <div class="gall_con">
+                    <div class="gall_img">
+                        <a href="board.php-307.html?bo_table=sub5_2&amp;wr_id=52">
+                        <img src="../data/editor/2308/thumb-1368a0f064cd1b1e9608be7b0237477c_1692618005_579_202x150.jpg" alt="">                        </a>
+                    </div>
+					<div class="gall_txt">
+						<div class="gall_text_href">
+														<a href="board.php-307.html?bo_table=sub5_2&amp;wr_id=52" class="bo_tit">
+								
+																<!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+							
+								2023 하계 연구실 회식                      
+																							 </a>
+							
+						</div>
+						
+						<div></div>
+
+						<div class="gall_info">
+							<span class="gall_date"><span class="sound_only">작성일 </span>2023-08-21</span>
+							<!--<span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 369</span>-->
+						</div>
+						<div class="gall_option">
+														           
+						</div>
+					</div>
+                    
+                </div>
+            </div>
+        </li>
+                <li class="gall_li col-gn-4">
+            <div class="gall_box">
+                <div class="gall_chk chk_box">
+	                	                <span class="sound_only">
+	                    49	                </span>
+                </div>
+                <div class="gall_con">
+                    <div class="gall_img">
+                        <a href="board.php-308.html?bo_table=sub5_2&amp;wr_id=49">
+                        <img src="../data/editor/2307/thumb-c950aa09b0eb4e13b0a66815ddcd0d52_1688990054_2886_202x150.jpg" alt="">                        </a>
+                    </div>
+					<div class="gall_txt">
+						<div class="gall_text_href">
+														<a href="board.php-308.html?bo_table=sub5_2&amp;wr_id=49" class="bo_tit">
+								
+																<!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+							
+								현대자율주행챌린지 2차 기술교류회                      
+																							 </a>
+							
+						</div>
+						
+						<div></div>
+
+						<div class="gall_info">
+							<span class="gall_date"><span class="sound_only">작성일 </span>2023-07-10</span>
+							<!--<span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 424</span>-->
+						</div>
+						<div class="gall_option">
+														           
+						</div>
+					</div>
+                    
+                </div>
+            </div>
+        </li>
+                <li class="gall_li col-gn-4">
+            <div class="gall_box">
+                <div class="gall_chk chk_box">
+	                	                <span class="sound_only">
+	                    48	                </span>
+                </div>
+                <div class="gall_con">
+                    <div class="gall_img">
+                        <a href="board.php-309.html?bo_table=sub5_2&amp;wr_id=53">
+                        <img src="../data/editor/2309/thumb-2d531f51d76161e87d4896b1585a7710_1695026021_4941_202x150.png" alt="">                        </a>
+                    </div>
+					<div class="gall_txt">
+						<div class="gall_text_href">
+														<a href="board.php-309.html?bo_table=sub5_2&amp;wr_id=53" class="bo_tit">
+								
+																<!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+							
+								현대자율주행챌린지 3차 기술교류회                      
+																							 </a>
+							
+						</div>
+						
+						<div></div>
+
+						<div class="gall_info">
+							<span class="gall_date"><span class="sound_only">작성일 </span>2023-07-10</span>
+							<!--<span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 352</span>-->
+						</div>
+						<div class="gall_option">
+														           
+						</div>
+					</div>
+                    
+                </div>
+            </div>
+        </li>
+                <li class="gall_li col-gn-4">
+            <div class="gall_box">
+                <div class="gall_chk chk_box">
+	                	                <span class="sound_only">
+	                    47	                </span>
+                </div>
+                <div class="gall_con">
+                    <div class="gall_img">
+                        <a href="board.php-310.html?bo_table=sub5_2&amp;wr_id=47">
+                        <img src="../data/editor/2307/thumb-c950aa09b0eb4e13b0a66815ddcd0d52_1688913023_8084_202x150.jpg" alt="">                        </a>
+                    </div>
+					<div class="gall_txt">
+						<div class="gall_text_href">
+														<a href="board.php-310.html?bo_table=sub5_2&amp;wr_id=47" class="bo_tit">
+								
+																<!-- 갤러리 댓글기능 사용시 주석을 제거하세요. -->
+							
+								IEEE IV 2023 출장 (알래스카 앵커리지)                      
+																							 </a>
+							
+						</div>
+						
+						<div></div>
+
+						<div class="gall_info">
+							<span class="gall_date"><span class="sound_only">작성일 </span>2023-07-09</span>
+							<!--<span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> 309</span>-->
+						</div>
+						<div class="gall_option">
+														           
+						</div>
+					</div>
+                    
+                </div>
+            </div>
+        </li>
+                    </ul>
+	
+	<!-- 페이지 -->
+	<nav class="pg_wrap"><span class="pg"><span class="sound_only">열린</span><strong class="pg_current">1</strong><span class="sound_only">페이지</span>
+<a href="board.php-311.html?bo_table=sub5_2&amp;page=2" class="pg_page">2<span class="sound_only">페이지</span></a>
+<a href="board.php-312.html?bo_table=sub5_2&amp;page=3" class="pg_page">3<span class="sound_only">페이지</span></a>
+<a href="board.php-313.html?bo_table=sub5_2&amp;page=4" class="pg_page">4<span class="sound_only">페이지</span></a>
+<a href="board.php-313.html?bo_table=sub5_2&amp;page=4" class="pg_page pg_end">맨끝</a>
+</span></nav>	<!-- 페이지 -->
+	
+	  
+    </form>
+
+     <!-- 게시판 검색 시작 { -->
+        <fieldset class="bo_sch">
+            <h3>검색</h3>
+            <form name="fsearch" method="get">
+            <input type="hidden" name="bo_table" value="sub5_2">
+            <input type="hidden" name="sca" value="">
+            <input type="hidden" name="sop" value="and">
+            <label for="sfl" class="sound_only">검색대상</label>
+            <select name="sfl" id="sfl">
+                <option value="wr_subject">제목</option><option value="wr_content">내용</option><option value="wr_subject||wr_content">제목+내용</option><option value="wr_name,1">글쓴이</option><option value="wr_name,0">글쓴이(코)</option>            </select>
+            <div class="sch_bar">
+            <label for="stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
+                <input type="text" name="stx" value="" required="" id="stx" class="sch_input" size="25" maxlength="20" placeholder=" 검색어를 입력해주세요">
+                <button type="submit" value="검색" class="sch_btn"><i class="fa fa-search" aria-hidden="true"></i><span class="sound_only">검색</span></button>
+            </div>
+            </form>
+        </fieldset>
+    <!-- } 게시판 검색 끝 --> 
+</div>
+
+
+<!-- } 게시판 목록 끝 -->
+
+
+
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="area">
+			<div class="f_logo">
+				<img src="../images/common/f_logo.png" alt="">
+			</div>
+			<div class="f_txt">
+				<p>The Cho Chun Shik Graduate School of Mobility, KAIST<br>
+				Munji-ro, Yuseong-gu, Daejeon 193, South Korea<br>
+				Tel : +82-42-350-1285 Email : avelab@kaist.ac.kr</p>
+				<h6>Copyright ⓒ 2021 AVE Lab All rights Reserved. <a href="http://dsso.kr/" target="_blank">designed by dsso.kr</a></h6>
+			</div>
+		</div>
+	</footer>
+
+</div>
+
+
+
+<button type="button" id="top_btn">
+	<i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sound_only">상단으로</span>
+</button>
+<script>
+$(function() {
+	$("#top_btn").on("click", function() {
+		$("html, body").animate({scrollTop:0}, '500');
+		return false;
+	});
+});
+</script>
+
+
+
+
+<!-- } 하단 끝 -->
+
+<script>
+$(function() {
+    // 폰트 리사이즈 쿠키있으면 실행
+    font_resize("container", get_cookie("ck_font_resize_rmv_class"), get_cookie("ck_font_resize_add_class"));
+});
+</script>
+
+
+
+<!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+<!--[if lte IE 7]>
+<script>
+$(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+        $(this).css("z-index", count);
+        $(this).css("position", "relative");
+        count = count - 1;
+    });
+});
+</script>
+<![endif]-->
+
+
+</body>
+</html>
+
+<!-- 사용스킨 : gallery -->

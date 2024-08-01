@@ -1,0 +1,1084 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+
+<!-- https -> http 리소스 호출 가능하도록 -->
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>Projects 1 페이지 | AVE Lab</title>
+<link rel="stylesheet" href="../css/default.css?ver=191202">
+<link rel="stylesheet" href="../js/font-awesome/css/font-awesome.min.css?ver=191202">
+<link rel="stylesheet" href="../css/slick.css?ver=191202">
+<link rel="stylesheet" href="../aos%402.3.1/dist/aos.css?ver=191202">
+<link rel="stylesheet" href="../npm/xeicon%402.3.3/xeicon.min.css?ver=191202">
+<link rel="stylesheet" href="../skin/board/project/style.css?ver=191202">
+<!--[if lte IE 8]>
+<script src="https://ave.kaist.ac.kr/js/html5.js"></script>
+<![endif]-->
+<script>
+// 자바스크립트에서 사용하는 전역변수 선언
+var g5_url       = "https://ave.kaist.ac.kr";
+var g5_bbs_url   = "https://ave.kaist.ac.kr/bbs";
+var g5_is_member = "";
+var g5_is_admin  = "";
+var g5_is_mobile = "";
+var g5_bo_table  = "sub2_4";
+var g5_sca       = "";
+var g5_editor    = "smarteditor2";
+var g5_cookie_domain = "";
+</script>
+
+
+<!-- 트랜지션 디폴트 세팅 -->
+<script type="text/javascript">
+$(window).load(function(){
+	$(".img, .img *, a, a *").css(
+		"transition","all .6s linear",
+		"-webkit-transition","all .6s linear",
+		"-moz-transition","all .6s linear"
+	);
+});
+</script>
+
+
+
+
+
+<script src="../ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/jquery.menu.js?ver=191202"></script>
+<script src="../js/common.js?ver=191202"></script>
+<script src="../js/wrest.js?ver=191202"></script>
+<script src="../js/placeholders.min.js?ver=191202"></script>
+<script src="../js/slick.min.js?ver=191202"></script>
+<script src="../aos%402.3.1/dist/aos.js?ver=191202"></script>
+</head>
+<body>
+
+
+
+<script>
+	AOS.init();
+</script>
+
+
+
+<div class="wrap">
+
+	<!-- 상단메뉴 시작 { -->
+	<header>
+		<style>
+#header{position: relative;z-index: 999;background: #fff;}
+#header .top_logo{height: 90px;line-height: 90px;background: #fff;max-width:1400px;margin: 0 auto;position: relative;}
+#header .top_logo::after{display: block;clear: both;content: '';}
+#header .top_logo .left {display: flex; align-items: center; gap: 10px; float: left; justify-content: space-between; width: 100%;}
+#header .top_logo .right {display: flex; align-items: center; gap: 13px; float: right; display: none;}
+#header .top_logo .lab{float: left; }
+/*#header .top_logo .uni{float: right;}*/
+#header .top_logo .uni img{height: 50px;}
+
+.nav {position: relative; width: 100%;background: #e3e3e3;  height:60px;}
+.nav h1 {position:absolute; left:0; overflow:hidden;top: 50%;transform: translateY(-50%);}
+.nav h1 a {float:left; margin : 5px 0;}
+.nav h1 a img {width : 100%;}
+.nav h2{position:absolute; right:0; top: 50%;transform: translateY(-50%);}
+
+#header #cssmenu {max-width:1400px;margin:0 auto;z-index:999; position: relative;}
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a,
+#cssmenu #menu-button {margin: 0;padding: 0;border: 0;list-style: none;line-height: 1;display: block;position: relative;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+#cssmenu:after,
+#cssmenu > ul:after {content: ".";display: block; clear: both;visibility: hidden;line-height: 0;height: 0;}
+#cssmenu #menu-button {display: none;}
+#cssmenu > ul > li {float : left;width: 16.66%;}
+#cssmenu > ul > li > a {text-align: center;display : block;width: 100%;line-height: 60px;font-size: 22px;text-decoration: none;letter-spacing:-0.8px;font-weight : 600;color: #333;}
+#cssmenu > ul > li:hover > a {}
+#cssmenu ul ul {position: absolute;left: -9999px;}
+#cssmenu.align-right ul ul {text-align: right;}
+#cssmenu ul ul{width:100%;}
+#cssmenu ul ul li{height: 0; -webkit-transition: all .25s ease;-moz-transition: all .25s ease; -ms-transition: all .25s ease; -o-transition: all .25s ease; transition: all .25s ease;}
+#cssmenu li:hover > ul {left: 0;}
+#cssmenu li:hover > ul > li {height: auto;}
+#cssmenu ul ul ul {margin-left: 100%;top: 0;}
+#cssmenu ul ul li a {opacity: 0.9;text-align: center; padding: 18px; width: 100%; font-size: 18px; text-decoration: none; color: rgba(255,255,255,0.6); font-weight: 400; background: rgba(0,82,150,.8); line-height: 1.3;position: relative;}
+#cssmenu ul ul li a span{position: relative;-webkit-transition: .3s;-moz-transition: .3s;-ms-transition: .3s;-o-transition: .3s;transition: .3s;}
+#cssmenu ul ul li a span::before{content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); 
+	width: 9px; height: 10px; background: url('../images/common/nav_arrow.png') 0 0 no-repeat; opacity: 0;}
+
+@keyframes nav_arrow{
+	from{left: 0; opacity: 0.5;}
+	to{left: -8px; opacity:1;}
+}
+
+#cssmenu ul ul li:hover > a,
+#cssmenu ul ul li a:hover {opacity: 1;background: #0a5fad;color: #fff;}
+#cssmenu ul ul li a:hover span{padding-left: 16px;}
+#cssmenu ul ul li:hover a span::before{opacity: 1; animation:nav_arrow 0.5s alternate infinite ease;}
+#cssmenu ul ul li.has-sub > a:after {position: absolute;top: 16px;right: 11px;width: 8px;height: 2px;display: block;background: #ddd;content: '';}
+#cssmenu.align-right ul ul li.has-sub > a:after {right: auto;left: 11px;}
+#cssmenu ul ul li.has-sub > a:before {position: absolute;top: 13px;right: 14px;display: block;width: 2px;height: 8px;background: #ddd;content: '';
+-webkit-transition: all .25s ease; -moz-transition: all .25s ease; -ms-transition: all .25s ease; -o-transition: all .25s ease; transition: all .25s ease;}
+#cssmenu.align-right ul ul li.has-sub > a:before {right: auto;left: 14px;}
+#cssmenu ul ul > li.has-sub:hover > a:before {top: 17px;height: 0;}
+
+.all_menu_btn{background:#005296;position: absolute;right: -60px;width: 60px;height: 60px;text-align: center;top: 0;padding: 17px 6px;line-height: 0;cursor: pointer;}
+.all_menu_btn span{width: 22px;height: 2px;margin:5px auto;display: block;background: #fff;-webkit-transition: .3s;-moz-transition: .3s;-ms-transition: .3s;-o-transition: .3s;transition: .3s;position: relative;}
+
+.all_menu_btn.on span:nth-of-type(2){width: 0;}
+.all_menu_btn.on span:nth-of-type(1){transform:rotate(45deg);top: 7px;}
+.all_menu_btn.on span:nth-of-type(3){transform:rotate(-45deg);top: -7px;}
+
+.all_menu_wr{background: #eee;border-top: 1px solid #f1f1f1;position: absolute;top: 60px;width: 100%;z-index: 5;z-index: 1000;display: none;}
+.all_menu_wr .all_nav{max-width:1400px;margin: 0 auto;text-align: center;}
+.all_menu_wr .all_nav ul::after{clear: both;display: block;content: '';}
+.all_menu_wr .all_nav > ul {padding: 30px 0 50px;}
+.all_menu_wr .all_nav > ul > li{float: left;width: 16.66%;font-size: 18px;font-weight: 500;display: inline-block;}
+.all_menu_wr .all_nav > ul > li > a{font-size: 0;}
+.all_menu_wr .all_nav ul ul {}
+.all_menu_wr .all_nav ul ul li{}
+.all_menu_wr .all_nav ul ul li a{font-size: 17px;color: #666;display: inline-block;width: 100%;font-weight: normal;padding: 7px 0;}
+.all_menu_wr .all_nav ul ul li a:hover{text-decoration: underline;color: #333;}
+
+
+/*모바일메뉴*/
+.mobileMenu{display:none; position:absolute; top:0; right:0; width:60px;height: 60px;background:#005296;z-index: 1001;padding-top: 12px;}
+.mobileMenu span {display: block; width:50%; height:2px; background:#fff; margin:7px auto;}
+
+#gnbM .mobileMenuXbt{position:absolute; top:32px; right:18px;width: 25px;}
+#gnbM .mobileMenuXbt span{width: 100%;position: relative;display: block;height: 1px;background: #444;transform:rotate(45deg)}
+#gnbM .mobileMenuXbt span.x1{transform:rotate(135deg);top: 1px;}
+
+#gnbM{display:none; position:absolute; top:0; right:-250px; width:300px; background:#e3e3e3; z-index:99999;}
+#gnbM .mUtil{padding:0 15px; height:60px; line-height:60px; font-size:17px; letter-spacing:-1px}
+#gnbM .mUtil a{color:#444;}
+#gnbM .mUtil span{margin:0 6px; color:#2572a7}
+#gnbM .gnbDiv{margin-top: 20px;}
+#gnbM .gnbDiv a{display:block;padding: 12px 8px;color: #b5c1d0;font-size: 14px; font-weight: 500;border-bottom: 1px solid #295a9a;}
+#gnbM .gnbDiv .one{padding:0 15px; font-size:16px; color:#333; border-bottom:1px solid #d9d9d9; font-weight:500;line-height:45px;}
+#gnbM .gnbDiv .one.on{color:#fff; border-bottom:1px solid #005296;background: #005296; background-size:18px 18px;}
+#gnbM .gnbDiv .two{padding:5px 20px; border-bottom:1px solid #d9d9d9;background:#005296;height : auto!important}
+#gnbM .gnbDiv .two .twoD{color:#fff;font-size:15px; border-bottom:1px solid #295a9a;line-height:44px;padding-left: 5px;}
+#gnbM .gnbDiv .two .thr{padding:15px 15px 5px; border-bottom:1px solid #d9d9d9; background:#f7f7f7}
+#gnbM .gnbDiv .two .thr .thrD{font-size:13px; color:#fff; margin-bottom:10px}
+#gnbM .gnbDiv .two .overM {    line-height:20px; padding: 10px 0;}
+.dimdBg{display:none; position:absolute; top:0; left:0; width:100%; height:; background:rgba(0,0,0,0.5); z-index:4;}
+.dimdBg.on{display: block;}
+
+
+@media (max-width : 1420px) {
+#header .top_logo{padding: 0 10px;}
+}
+
+@media (max-width : 1300px) {
+#header #cssmenu{padding-right: 60px;}
+.all_menu_wr{padding-right: 60px;}
+.all_menu_btn{right: 0;}
+}
+@media (max-width : 1200px) {
+#header .top_logo{padding: 0 10px;height: 70px;line-height: 70px;}
+#header .top_logo .lab img{height: 41px;}
+#header .top_logo .uni img{height: 38px; padding-right: 60px;}
+#header .top_logo .right {gap: 10px;}
+#header .top_logo .right .rLogo1 img {height: 41px;}
+#header .top_logo .right .rLogo2 img {height: 35px;}
+#header .top_logo .right .rLogo3 img {height: 43px;}
+
+.nav{height: 55px;}
+#cssmenu > ul > li > a{font-size: 19px;line-height: 55px;}
+#cssmenu ul ul li a{font-size: 15px;}
+.all_menu_btn{width: 55px;height: 55px;}
+.all_menu_wr{padding-right: 55px;top: 55px;}
+.all_menu_wr .all_nav ul ul li a{font-size: 15px;}
+}
+@media (max-width : 1023px){
+#header{z-index: 999;}
+#header .top_logo{height: 60px;line-height: 60px;}
+#header .top_logo .uni{float: left;margin-left: 10px;}
+#header .top_logo .left {gap: 4px;}
+#header .top_logo .lab img{height: 35px;}
+#header .top_logo .uni img{height: 34px;}
+#header .top_logo .right {display: none;}
+.nav{display: none;}
+#gnbM,.mobileMenu{display: block;}
+}
+@media (max-width:480px) {
+.mobileMenu{padding-top: 16px;}
+.mobileMenu span{width: 35%;margin: 5px auto;}
+#header .top_logo .left {gap: 0px;}
+#header .top_logo .lab img{height: 28px;}
+#header .top_logo .uni img{height: 28px;}
+}
+/* @media (max-width:320px) {
+#header .top_logo .lab img{height: 23px;}
+#header .top_logo .uni img{height: 28px;}
+} */
+
+
+</style>
+
+
+<!-- header :s -->
+<script type="text/javascript" src="../js/dsso.default.js"></script>
+<div id="header">
+	<div class="top_logo">
+		<div class="left">
+			<a href="../index.php.html" class="lab"><img src="../images/common/h_logo1.png" alt="카이스트 AVE 연구실"></a>
+			<a href="https://www.kaist.ac.kr/kr/" target="_blank" class="uni"><img src="../images/common/h_logo2.png" alt="KAIST"></a>
+		</div>
+		<div class="right">
+			<a href="https://ieee-iv.org/2024/" target="_blank class=" rlogo1"=""><img src="../images/common/logo-r1.png" alt="JejuIV2024"></a>
+			<a href="#" class="rLogo2"><img src="../images/common/logo-r2.png" alt="ZetaMobility"></a>
+			<a href="#" class="rLogo3"><img src="../images/common/logo-r3.png" alt="The Autoware Foundation of Korea"></a>
+		</div>
+	</div>
+	<div class="nav">	
+		<div id="cssmenu">
+			<ul>
+				<li class="two"><a href="../sub2_1.php.html">Research</a>
+					<ul>
+						<li><a href="../sub2_1.php.html"><span>Autonomous Driving System</span></a></li>
+						<li><a href="../sub2_2.php.html"><span>Learning-based E2E</span></a></li>
+						<li><a href="../sub2_3.php.html"><span>Advanced Positioning Systems</span></a></li>
+						<li><a href="board.php.html?bo_table=sub2_4"><span>Projects</span></a></li>
+						<li><a href="board.php-1.html?bo_table=sub2_5"><span>Videos</span></a></li>
+					</ul>
+				</li>
+				<li class="one"><a href="board.php-2.html?bo_table=sub1_1">People</a>
+					<ul>
+						<li><a href="board.php-2.html?bo_table=sub1_1"><span>Professor</span></a></li>
+						<li><a href="board.php-3.html?bo_table=sub1_2"><span>Members</span></a></li>
+						<li><a href="board.php-4.html?bo_table=sub1_3"><span>Alumni</span></a></li>
+					</ul>
+				</li>
+				<li class="thr"><a href="board.php-5.html?bo_table=sub3_1">Publications</a>
+					<ul>
+						<li><a href="board.php-5.html?bo_table=sub3_1"><span>International Journals</span></a></li>
+						<li><a href="board.php-6.html?bo_table=sub3_2"><span>International Conferences</span></a></li>
+						<li><a href="board.php-7.html?bo_table=sub3_3"><span>Domestic Journals</span></a></li>
+						<li><a href="board.php-8.html?bo_table=sub3_4"><span>Domestic Conferences</span></a></li>
+						<li><a href="board.php-9.html?bo_table=sub3_5"><span>Patents</span></a></li>
+					</ul>
+				</li>
+				<li class="fou"><a href="board.php-10.html?bo_table=sub4_1">Lectures</a>
+					<ul>
+						<li><a href="board.php-10.html?bo_table=sub4_1"><span>Lectures</span></a></li>
+						<li><a href="board.php-11.html?bo_table=sub4_2"><span>Seminar</span></a></li>
+					</ul>
+				</li>
+				<li class="fiv"><a href="board.php-12.html?bo_table=sub5_1">Board</a>
+					<ul>
+						<li><a href="board.php-12.html?bo_table=sub5_1"><span>Lab board</span></a></li>
+						<li><a href="board.php-13.html?bo_table=sub5_2"><span>Gallery</span></a></li>
+					</ul>
+				</li>
+				<li class="fiv"><a href="../sub6_1.php.html">Contact</a>
+					<ul>
+						<li><a href="../sub6_1.php.html"><span>Contact</span></a></li>
+					</ul>
+				</li>
+			</ul>
+		<div class="all_menu_btn">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		</div>
+		<div class="all_menu_wr">
+			<div class="all_nav">
+			<ul>
+				<li class="one">
+					<ul>
+						<li><a href="board.php-2.html?bo_table=sub1_1"><span>Professor</span></a></li>
+						<li><a href="board.php-3.html?bo_table=sub1_2"><span>Members</span></a></li>
+						<li><a href="board.php-4.html?bo_table=sub1_3"><span>Alumni</span></a></li>
+					</ul>
+				</li>
+				<li class="two">
+					<ul>
+						<li><a href="../sub2_1.php.html">Autonomous Driving System<span></span></a></li>
+						<li><a href="../sub2_2.php.html">Learning-based E2E<span></span></a></li>
+						<li><a href="../sub2_3.php.html">Advanced Positioning Systems<span></span></a></li>
+						<li><a href="board.php.html?bo_table=sub2_4">Projects<span></span></a></li>
+						<li><a href="board.php-1.html?bo_table=sub2_5">Videos<span></span></a></li>
+					</ul>
+				</li>
+				<li class="thr">
+					<ul>
+						<li><a href="board.php-5.html?bo_table=sub3_1"><span>International Journals</span></a></li>
+						<li><a href="board.php-6.html?bo_table=sub3_2"><span>International Conferences</span></a></li>
+						<li><a href="board.php-7.html?bo_table=sub3_3"><span>Domestic Journals</span></a></li>
+						<li><a href="board.php-8.html?bo_table=sub3_4"><span>Domestic Conferences</span></a></li>
+						<li><a href="board.php-9.html?bo_table=sub3_5"><span>Patents</span></a></li>
+					</ul>
+				</li>
+				<li class="fou">
+					<ul>
+						<li><a href="board.php-10.html?bo_table=sub4_1"><span>Lectures</span></a></li>
+						<li><a href="board.php-11.html?bo_table=sub4_2"><span>Seminar</span></a></li>
+					</ul>
+				</li>
+				<li class="fiv">
+					<ul>
+						<li><a href="board.php-12.html?bo_table=sub5_1"><span>Lab board</span></a></li>
+						<li><a href="board.php-13.html?bo_table=sub5_2"><span>Gallery</span></a></li>
+					</ul>
+				</li>
+				<li class="six">
+					<ul>
+						<li><a href="../sub6_1.php.html"><span>Contact</span></a></li>
+					</ul>
+				</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+</div>
+ <script>
+      $( document ).ready( function() {
+        $( '.all_menu_btn' ).click( function() {
+          $( '.all_menu_wr' ).slideToggle();
+		  $( '.dimdBg' ).toggleClass( 'on' );
+		  $(this).toggleClass( 'on' );
+        } );
+      } );
+    </script>
+
+	<!--풀다운메뉴/모바일메뉴-->
+	<script type="text/javascript">/*모바일메뉴용*/
+		//<![CDATA[			
+		var oneNum = -1, twoNum = -1, thrNum = -1, fouNum = -1;
+		//]]>
+	</script>
+	<script type="text/javascript" src="../js/menucmn.js"></script>
+
+	<!--모바일 메뉴버튼 -->
+	<a href="javascript:" class="mobileMenu">
+		<span></span>
+		<span></span>
+		<span></span>
+	</a>
+	<!--//모바일 메뉴버튼 -->
+
+	<div style="display: none;" class="twoDbg"></div><!--전체 배경영역-->
+		<p class="dimdBg"></p>
+		<!-- 모바일 gnb -->
+		<div style="height: 1234px; right: -300px;" id="gnbM">
+			<!--탑메뉴-->
+			<div class="mUtil">
+				<a href="../index.php.html" style="margin-right:15px;">Home</a>
+			</div>
+			<!--//탑메뉴-->
+
+			<!--gnbDiv-->
+			<div class="gnbDiv">
+				<!--대메뉴1-->
+				<a href="javascript:" class="one">People</a>
+				<div style="display: none;" class="two">
+					<a href="board.php-2.html?bo_table=sub1_1">Professor</a>
+					<a href="board.php-3.html?bo_table=sub1_2">Members</a>
+					<a style="border-bottom: medium none;" href="board.php-4.html?bo_table=sub1_3">Alumni</a>
+				</div>
+				<!--대메뉴2-->
+				<a href="javascript:" class="one">Research</a>
+				<div style="display: none;" class="two">
+					<a href="../sub2_1.php.html">Autonomous Driving System</a>
+					<a href="../sub2_2.php.html">Learning-based E2E</a>
+					<a href="../sub2_3.php.html">Advanced Positioning Systems</a>
+					<a href="board.php.html?bo_table=sub2_4">Projects</a>
+					<a style="border-bottom: medium none;" href="board.php-1.html?bo_table=sub2_5">Videos</a>
+				</div>
+				<!--대메뉴3-->
+				<a href="javascript:" class="one">Publication</a>
+				<div style="display: none;" class="two">
+					<a href="board.php-5.html?bo_table=sub3_1">International Journals</a>
+					<a href="board.php-6.html?bo_table=sub3_2">International Conferences</a>
+					<a href="board.php-7.html?bo_table=sub3_3">Domestic Journals</a>
+					<a href="board.php-8.html?bo_table=sub3_4">Domestic Conferences</a>
+					<a style="border-bottom: medium none;" href="board.php-9.html?bo_table=sub3_5">Patents</a>
+				</div>
+				<!--대메뉴4-->
+				<a href="javascript:" class="one">Lectures</a>
+				<div style="display: none;" class="two">
+					<a href="board.php-10.html?bo_table=sub4_1">Lectures</a>
+					<a style="border-bottom: medium none;" href="board.php-11.html?bo_table=sub4_2">Seminar</a>
+				</div>
+				<!--대메뉴5-->
+				<a href="javascript:" class="one">Board</a>
+				<div style="display: none;" class="two">
+					<a href="board.php-12.html?bo_table=sub5_1">Lab board</a>
+					<a style="border-bottom: medium none;" href="board.php-13.html?bo_table=sub5_2">Gallery</a>
+				</div>
+			</div>
+			<!--//gnbDiv-->
+			<a href="javascript:" class="mobileMenuXbt">
+				<span class="x1"></span>	
+				<span class="x2"></span>	
+			</a><!--닫기버튼-->
+		</div>
+	<!-- //모바일 gnb -->	<!-- //header -->
+	</header>
+	<!-- } 상단메뉴 끝 -->
+
+	<section id="s_visual">
+		<!-- <div class="s_visual_bg"><img src="https://ave.kaist.ac.kr/images/sub/s_visual.jpg" alt=""></div> -->
+		<div class="sv_txt">
+			<h3>
+									Research							</h3>
+			<!-- <p><b>A</b>utonomous <b>VE</b>hicles and robotics <b>L</b>ab</p> -->
+		</div>
+	</section>
+
+	<!--서브메뉴-->
+	<div class="sub_menu">
+		<style type="text/css">
+/* 페이지인식-메인 */
+#page2 #menu04 > .box2_2_4{font-weight: 600; color: #005296;}
+#page2 #menu04 > .box2_2_4:after{content: ''; position: absolute; left: 50%; bottom: -3px; transform: translate(-50%, 0); width: 9px; height: 5px; background: #005296; z-index: 10;}
+
+.sub_menu .vNav ul li{padding: 0 20px;}
+</style>
+
+
+<script>
+$(document).ready(function(){
+    $(".btn_s_menu").click(function(){
+        $(".s_menu").toggle();
+    });
+
+	$(".vNav>ul>li").each(function(idx){
+		var line = $(".sub_menu .line");
+		var aThis = $(".vNav>ul>li").eq(idx);
+		aThis.on("mouseover", function(){
+			line.stop().animate({opacity:1, left:aThis.position().left+"px", width:aThis.children("a").innerWidth()+"px"},300);
+		});
+		aThis.on("mouseleave", function(){
+				line.stop().animate({opacity:"0", width:0},300);
+		});
+	});
+});
+</script>
+
+
+<div class="vNav" id="page2">
+	<ul>
+		<li id="menu01"><a href="../sub2_1.php.html" class="box2_2_1">Autonomous Driving System</a></li>
+		<li id="menu02"><a href="../sub2_2.php.html" class="box2_2_2">Learning-based E2E</a></li>
+		<li id="menu03"><a href="../sub2_3.php.html" class="box2_2_3">Advanced Positioning Systems</a></li>
+		<li id="menu04" class='active'><a href="board.php.html?bo_table=sub2_4" class="box2_2_4">Projects</a></li>
+		<li id="menu05"><a href="board.php-1.html?bo_table=sub2_5" class="box2_2_5">Videos</a></li>
+	</ul>
+</div>
+
+
+ <div class="m_sub_menu">
+    <button type="button" class="btn_s_menu">
+      <span title="Projects 1 페이지">Projects</span> <i class="arrow right"></i>
+    </button>
+    <ul class="s_menu">
+		<li id="menu01"><a href="../sub2_1.php.html" class="box2_2_1">Autonomous Driving System</a></li>
+		<li id="menu02"><a href="../sub2_2.php.html" class="box2_2_2">Learning-based E2E</a></li>
+		<li id="menu03"><a href="../sub2_3.php.html" class="box2_2_3">Advanced Positioning Systems</a></li>
+		<li id="menu04" class='active'><a href="board.php.html?bo_table=sub2_4" class="box2_2_4">Projects</a></li>
+		<li id="menu05"><a href="board.php-1.html?bo_table=sub2_5" class="box2_2_5">Videos</a></li>
+	</ul>
+  </div>	</div>
+
+	<section id="s_content">
+		<div class="s_area">
+			<div class="s_tit" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="800">
+				<h3 class="big">
+											Projects									</h3>
+			</div>
+<!-- 게시판 목록 시작 { -->
+<div id="bo_list" style="width:100%">
+
+           
+
+
+    <form name="fboardlist" id="fboardlist" action="./board_list_update.php" onsubmit="return fboardlist_submit(this);" method="post">
+    <input type="hidden" name="bo_table" value="sub2_4">
+    <input type="hidden" name="sfl" value="">
+    <input type="hidden" name="stx" value="">
+    <input type="hidden" name="spt" value="">
+    <input type="hidden" name="sca" value="">
+    <input type="hidden" name="sst" value="wr_datetime desc">
+    <input type="hidden" name="sod" value="">
+    <input type="hidden" name="page" value="1">
+    <input type="hidden" name="sw" value="">
+
+
+    <!-- 게시판 페이지 정보 및 버튼 시작 { -->
+    <div id="bo_btn_top">
+        <div id="bo_list_total">
+            <span>Total 32건</span>
+            1 페이지
+        </div>
+
+            </div>
+    <!-- } 게시판 페이지 정보 및 버튼 끝 -->
+
+
+
+
+<div id="rch_proj">
+	<ul class="proj_list">
+
+        
+		<li class="projbx">
+			<div class="titlebx">
+				<p class="no">project 32 <!-- <span class="state"></span> --></p>
+				<a class="subj" href="board.php-800.html?bo_table=sub2_4&amp;wr_id=44&amp;page=1">실주행 4D 레이더 데이터셋 구축 및 전처리 기술 개발</a>
+				<p class="img">
+				<!-- 썸네일 -->
+					<img src="../data/file/sub2_4/thumb-2415451410_lSoFxhpP_c7d409b2e5f25281c1768f77b8c34b995d92ce38_202x150.png" alt="" width="320px" height="230px;">
+					<!-- // 썸네일 -->
+				</p>
+			</div>
+			<div class="cntbx">
+				<div class="info">
+										<dl>
+						<dt>주관기관</dt>
+						<dd>(주)현대엔지비</dd>
+					</dl>
+															<dl>
+						<dt>연구기간</dt>
+						<dd>2024.03.25~2025.03.24</dd>
+					</dl>
+														</div>
+				<p class="txt">다양한 기상환경(악천후 포함)에서 도로 위 객체 탐지를 위한 대용량 4D 레이다 멀티 모달 데이터셋을 구축하고, 고해상도 4D 레이다 데이터를 위한 새로운 전처리 기술을 개발한다. 데이터셋 구축을 하는 과정에서 시간 및 비용 감축을 위해 Semi-오토라벨링 기술을 추가로 개발한다. (총 2.7억원)</p>
+						
+			</div>
+		</li>
+
+
+        
+		<li class="projbx">
+			<div class="titlebx">
+				<p class="no">project 31 <!-- <span class="state"></span> --></p>
+				<a class="subj" href="board.php-801.html?bo_table=sub2_4&amp;wr_id=43&amp;page=1">Global Innovation Network Programme (GINP) : Robotics and Ar…</a>
+				<p class="img">
+				<!-- 썸네일 -->
+					<img src="../data/editor/2402/thumb-de2e22ebfec15b0bf4ee2f1590dbcc16_1707381583_8309_202x150.png" alt="" width="320px" height="230px;">
+					<!-- // 썸네일 -->
+				</p>
+			</div>
+			<div class="cntbx">
+				<div class="info">
+										<dl>
+						<dt>주관기관</dt>
+						<dd>Danish Agency for Higher Education and Science (덴마크 고등교육과학청)</dd>
+					</dl>
+															<dl>
+						<dt>연구기간</dt>
+						<dd>2024.01.01~2025.12.31</dd>
+					</dl>
+														</div>
+				<p class="txt">본 프로젝트는 로봇, AI 및 자동화를 중심으로 한국과 덴마크의 연구자들이 교류하며, 새로운 연구 분야를 탐색하고, 사회에 기여할 수 있는 로보틱스 기술을 개발하는 것을 목표로 한다. 제조 산업, 의료 로봇공학, 노인 간호용 로봇 등의 주제를 포함하며, 로봇 시스템의 모델링, 계획 및 제어, 컴퓨터 비전, 인간-로봇 상호 작용, 인공지능을 중심으로 공동 연구를 수행한다.</p>
+						
+			</div>
+		</li>
+
+
+        
+		<li class="projbx">
+			<div class="titlebx">
+				<p class="no">project 30 <!-- <span class="state"></span> --></p>
+				<a class="subj" href="board.php-802.html?bo_table=sub2_4&amp;wr_id=39&amp;page=1">자율주행을 위한 인공지능 기반의 고급 인지 시스템 개발</a>
+				<p class="img">
+				<!-- 썸네일 -->
+					<img src="../data/file/sub2_4/thumb-37_copy_39_2415444924_749e6vIg_cd6c534e4c550f0113ea18e1ae689dfc29051641_202x150.png" alt="" width="320px" height="230px;">
+					<!-- // 썸네일 -->
+				</p>
+			</div>
+			<div class="cntbx">
+				<div class="info">
+										<dl>
+						<dt>주관기관</dt>
+						<dd>INRIA (프랑스 국립 디지털 과학 기술 연구소)</dd>
+					</dl>
+															<dl>
+						<dt>연구기간</dt>
+						<dd>2023.04.01~2025.12.31</dd>
+					</dl>
+														</div>
+				<p class="txt">본&nbsp;프로젝트는&nbsp;도심에서&nbsp;자율주행차의&nbsp;안전한&nbsp;운행을&nbsp;위해&nbsp;변화하는&nbsp;환경에서도&nbsp;강건한&nbsp;상황&nbsp;인지&nbsp;시스템을&nbsp;개발하는&nbsp;것을&nbsp;목표로&nbsp;한다.&nbsp;이를&nbsp;위해,&nbsp;라이다,&nbsp;카메라&nbsp;등의&nbsp;센서들을&nbsp;활용하여&nbsp;주변환경&nbsp;데이터들을&nbsp;획득하고&nbsp;주변&nbsp;객체의&nbsp;정확한&nbsp;상태(위치,&nbsp;방향,&nbsp;속도)를&nbsp;추정하기&nbsp;위한&nbsp;센서&nbsp;융합&nbsp;연구를&nbsp;수행한다.&nbsp;그리고&nbsp;데이터/인공지능&nbsp;기반&nbsp;종단간&nbsp;인지&nbsp;기술(AVE Lab&nbsp;담당)과&nbsp;모델&nbsp;기반&nbsp;인지&nbsp;기술(수식&nbsp;모델&nbsp;기반의&nbsp;휴리스틱한&nbsp…</p>
+						
+			</div>
+		</li>
+
+
+        
+		<li class="projbx">
+			<div class="titlebx">
+				<p class="no">project 29 <!-- <span class="state"></span> --></p>
+				<a class="subj" href="board.php-803.html?bo_table=sub2_4&amp;wr_id=3&amp;page=1">예상 못한 상황에 빠르게 적응하는 메타-강화학습기반 End-to-end 자율주행 기술 연구</a>
+				<p class="img">
+				<!-- 썸네일 -->
+					<img src="../data/file/sub2_4/thumb-2949334807_fcUnvbeC_68ec6eea275e7f7834f773c0026c1e8574683dbf_202x150.jpg" alt="" width="320px" height="230px;">
+					<!-- // 썸네일 -->
+				</p>
+			</div>
+			<div class="cntbx">
+				<div class="info">
+										<dl>
+						<dt>주관기관</dt>
+						<dd>한국연구재단</dd>
+					</dl>
+															<dl>
+						<dt>연구기간</dt>
+						<dd>2021.04.01~2026.12.31</dd>
+					</dl>
+														</div>
+				<p class="txt">자율주행 자동차가 제어&nbsp;이상이 발생하는 예상하지 못한 상황(UNS; Unexpected&nbsp;Novel Situation)을 스스로 대처하기 위해, UNS를 탐지하는&nbsp;인공지능과 UNS에 적절한&nbsp;주행&nbsp;정책을 실시간으로 학습 및 주행제어하는 메타&nbsp;강화학습기반 자율주행 인공지능을 개발한다. (총 20억원)</p>
+						
+			</div>
+		</li>
+
+
+        
+		<li class="projbx">
+			<div class="titlebx">
+				<p class="no">project 28 <!-- <span class="state"></span> --></p>
+				<a class="subj" href="board.php-804.html?bo_table=sub2_4&amp;wr_id=4&amp;page=1">자율주행을 위한 인공지능 기반의 4D 레이다 객체 인식 기술 개발</a>
+				<p class="img">
+				<!-- 썸네일 -->
+					<img src="../data/file/sub2_4/thumb-1887789891_e5QmM2kq_7af713050409119ef3d57be815520439ca8dbe92_202x150.png" alt="" width="320px" height="230px;">
+					<!-- // 썸네일 -->
+				</p>
+			</div>
+			<div class="cntbx">
+				<div class="info">
+										<dl>
+						<dt>주관기관</dt>
+						<dd>과학기술정보통신부</dd>
+					</dl>
+															<dl>
+						<dt>연구기간</dt>
+						<dd>2021.04.01~2022.12.31</dd>
+					</dl>
+														</div>
+				<p class="txt">세계 최초로 4D&nbsp;이미지 레이다(Radar)&nbsp;센서에 적용되는 자율주행을 위한 인공지능(AI: Artificial Intelligence)&nbsp;기반의 객체 인식 기술을 개발하는 것을 목표로 한다. 4륜차와 같이&nbsp;RCS(Radar cross section; 레이다 반사 면적)가 큰 객체뿐만 아니라,&nbsp;보행자 및&nbsp;2륜차와 같이&nbsp;RCS가 작은 객체를 포함한 도로상의 주요 객체를 모두 인식하는 레이다 인공지능을 개발한다.&nbsp;또한&nbsp;대용량 데이터를 확보하여 원활한 연구 진행이 가능하도록, Lidar&nbsp;인공지능을 레이다 데이터와 연계하여 실시간 라벨링(labeling)된 레이다 데이터를 확보하는 레이다&nbsp;Auto-Labeling&nbsp;인공지능을 개발한다. (총 7억원)&nbsp;</p>
+						
+			</div>
+		</li>
+
+
+        
+		<li class="projbx">
+			<div class="titlebx">
+				<p class="no">project 27 <!-- <span class="state"></span> --></p>
+				<a class="subj" href="board.php-805.html?bo_table=sub2_4&amp;wr_id=5&amp;page=1">현실 세계에서 변화하는 상황에 따라 지속적으로 자가 개선하는 인공지능 기술 개발</a>
+				<p class="img">
+				<!-- 썸네일 -->
+					<img src="../data/file/sub2_4/thumb-2949334807_GUy4jqMo_f62587faf380be13647167a0635028e390833b54_202x150.jpg" alt="" width="320px" height="230px;">
+					<!-- // 썸네일 -->
+				</p>
+			</div>
+			<div class="cntbx">
+				<div class="info">
+										<dl>
+						<dt>주관기관</dt>
+						<dd>과학기술정보통신부</dd>
+					</dl>
+															<dl>
+						<dt>연구기간</dt>
+						<dd>2020.04.01 ~2023.12.31</dd>
+					</dl>
+														</div>
+				<p class="txt">자율주행 인공지능이 학습하지 않은&nbsp;무경험∙비정상 상황에서도 신뢰도 있는 주행을 하기 위해, 운전자의 주행 방식을 모방하는 모방학습 기반 자율주행 인공지능을 개발하고, 모방학습 결과를 기반으로 학습하지 않은&nbsp;무경험∙비정상 상황에서 적응하여 적절한 주행 정책을 학습하는 강화학습 기반 종단간 자율주행 인공지능을 개발한다. (총 7억원)</p>
+						
+			</div>
+		</li>
+
+
+        
+		<li class="projbx">
+			<div class="titlebx">
+				<p class="no">project 26 <!-- <span class="state"></span> --></p>
+				<a class="subj" href="board.php-806.html?bo_table=sub2_4&amp;wr_id=6&amp;page=1">Constant Envelope Modulation 기법을 위한 다중위성 항법신호 개발</a>
+				<p class="img">
+				<!-- 썸네일 -->
+					<img src="../data/file/sub2_4/thumb-2415452358_i23yB9NU_daac33fa97b168fd4dc12bb64a267460a8418051_202x150.png" alt="" width="320px" height="230px;">
+					<!-- // 썸네일 -->
+				</p>
+			</div>
+			<div class="cntbx">
+				<div class="info">
+										<dl>
+						<dt>주관기관</dt>
+						<dd>ETRI 한국전자통신연구원</dd>
+					</dl>
+															<dl>
+						<dt>연구기간</dt>
+						<dd>2021.06.17~2021.11.30</dd>
+					</dl>
+														</div>
+				<p class="txt">한반도를 커버하는 정지궤도 및 지구 동기 경사궤도 위성으로 구성된 지역항법 시스템을 위해 측위 성능과 잡음 환경에서 신호의 성능을 향상시키고, 동시에 constant envelope을 만족하면서 다중신호를 송출할 수 있는 신호 변조 기법을 개발한다.</p>
+						
+			</div>
+		</li>
+
+
+        
+		<li class="projbx">
+			<div class="titlebx">
+				<p class="no">project 25 <!-- <span class="state"></span> --></p>
+				<a class="subj" href="board.php-807.html?bo_table=sub2_4&amp;wr_id=7&amp;page=1">B2B 마케팅 전문가 교육 (자율주행 프로젝트)</a>
+				<p class="img">
+				<!-- 썸네일 -->
+					<img src="../data/file/sub2_4/thumb-2415452358_tiye4s0J_2195dc9e9afc8de3e401e3461d82acaa0df6c8a7_202x150.jpg" alt="" width="320px" height="230px;">
+					<!-- // 썸네일 -->
+				</p>
+			</div>
+			<div class="cntbx">
+				<div class="info">
+										<dl>
+						<dt>주관기관</dt>
+						<dd>LG인화원</dd>
+					</dl>
+															<dl>
+						<dt>연구기간</dt>
+						<dd>2020/2021</dd>
+					</dl>
+														</div>
+				<p class="txt">자율주행 관련 B2B 시장 확대를 위해, B2B 마케팅 전문가들에게 최신 자율주행 트렌드와 실제 자율주행 핵심 요소기술(인지, 위치, 경로 계획, 제어 등)을 교육하고, 자율주행 경진대회를 열어 실제 자율주행 프로세스를 경험해보는 기회를 제공한다.</p>
+						
+			</div>
+		</li>
+
+
+        
+		<li class="projbx">
+			<div class="titlebx">
+				<p class="no">project 24 <!-- <span class="state"></span> --></p>
+				<a class="subj" href="board.php-808.html?bo_table=sub2_4&amp;wr_id=8&amp;page=1">A-GNSS 측위 알고리즘 고도화 및 상용화 연구</a>
+				<p class="img">
+				<!-- 썸네일 -->
+					<img src="../data/file/sub2_4/thumb-2415451564_Eis4Zo7v_38df7ef5dc60ab636f9ddfd5598b81b4feb087d9_202x150.jpg" alt="" width="320px" height="230px;">
+					<!-- // 썸네일 -->
+				</p>
+			</div>
+			<div class="cntbx">
+				<div class="info">
+										<dl>
+						<dt>주관기관</dt>
+						<dd>(주)아크로퓨처</dd>
+					</dl>
+															<dl>
+						<dt>연구기간</dt>
+						<dd>2018~2020</dd>
+					</dl>
+														</div>
+				<p class="txt">MS-Assisted GNSS(GPS, Glonass, Beidou, Galileo-모든 Global Satellite Navigation System을 활용) 시스템의 핵심 측위 알고리즘(도움정보 생성, 핵심 측위 알고리즘, DGNSS 보정정보 생성 및 보정)을 개발하고, 개발된 알고리즘을&nbsp; KT 상용망에서 서비스하는 것을 목표로 한다.</p>
+						
+			</div>
+		</li>
+
+
+        
+		<li class="projbx">
+			<div class="titlebx">
+				<p class="no">project 23 <!-- <span class="state"></span> --></p>
+				<a class="subj" href="board.php-809.html?bo_table=sub2_4&amp;wr_id=9&amp;page=1">지역항법 신호성능향상방법 연구</a>
+				<p class="img">
+				<!-- 썸네일 -->
+					<img src="../data/file/sub2_4/thumb-2415452358_cqiv5hLZ_c78061cc82154618f1c378b6fa30ceb67cecd984_202x150.png" alt="" width="320px" height="230px;">
+					<!-- // 썸네일 -->
+				</p>
+			</div>
+			<div class="cntbx">
+				<div class="info">
+										<dl>
+						<dt>주관기관</dt>
+						<dd>한국전자통신연구원</dd>
+					</dl>
+															<dl>
+						<dt>연구기간</dt>
+						<dd>2020</dd>
+					</dl>
+														</div>
+				<p class="txt">국가 인프라 구축의 일환인 한국형 위성항법시스템 개발을 위한 새로운 GNSS 신호 설계 기법을 연구한다. 제시하는 신호는 L1/L6/S 대역의 다른 GNSS 신호와의 간섭을 최소화하면서 도시영역에서 주로 발생하는 멀티패스 채널환경과 잡음에 강인한 새로운 변조기법을 개발하는 것과, GNSS 측위 환경에 최적화 된 메시지 구조를 설계하는 것을 목표로 한다.</p>
+						
+			</div>
+		</li>
+
+
+        
+		<li class="projbx">
+			<div class="titlebx">
+				<p class="no">project 22 <!-- <span class="state"></span> --></p>
+				<a class="subj" href="board.php-810.html?bo_table=sub2_4&amp;wr_id=10&amp;page=1">BK21플러스사업 - 미래교통 시스템 사업팀</a>
+				<p class="img">
+				<!-- 썸네일 -->
+					<img src="../data/file/sub2_4/thumb-2415452358_C5UtJp6F_fc724f58620d0444dcc947926af5d7712ce3d497_202x150.jpg" alt="" width="320px" height="230px;">
+					<!-- // 썸네일 -->
+				</p>
+			</div>
+			<div class="cntbx">
+				<div class="info">
+										<dl>
+						<dt>주관기관</dt>
+						<dd>한국연구재단</dd>
+					</dl>
+															<dl>
+						<dt>연구기간</dt>
+						<dd>2016~2020</dd>
+					</dl>
+														</div>
+				<p class="txt">미래교통시스템&nbsp;연구는&nbsp;자율주행자동차와&nbsp;같은&nbsp;스마트자동차시스템과&nbsp;전기동력&nbsp;및&nbsp;교통안전&nbsp;극대화를&nbsp;위한&nbsp;지속가능형&nbsp;교통시스템&nbsp;및&nbsp;대형정보(Big&nbsp;Data)에&nbsp;기반한&nbsp;신호체계&nbsp;등의&nbsp;고효율 교통운영시스템&nbsp;등&nbsp;3대&nbsp;핵심시스템이다.&nbsp;스마트교통/지속가능형교통/고효율 교통운영시스템&nbsp;등&nbsp;3대&nbsp;핵심시스템의&nbsp;선도적&nbsp;연구를&nbsp;위한&nbsp;3대&nbsp;학문&nbsp;분야를&nbsp;융합하는&nbsp;파이(π)형&nbsp;교육&nbsp;체계를&nbsp;개발하여&nbsp;세계&nbsp;TOP대학&nbsp;졸업생&nbsp;수준의&nbsp;미래&nbsp;인재&nbsp;양성을&nbsp;목표로&nbsp;한다.</p>
+						
+			</div>
+		</li>
+
+
+        
+		<li class="projbx">
+			<div class="titlebx">
+				<p class="no">project 21 <!-- <span class="state"></span> --></p>
+				<a class="subj" href="board.php-811.html?bo_table=sub2_4&amp;wr_id=11&amp;page=1">자율주행을 위한 차세대 교차로 시스템</a>
+				<p class="img">
+				<!-- 썸네일 -->
+					<img src="../data/file/sub2_4/thumb-2415452358_6D2sFv5n_4ee4ee7e4b9858e7f3e9191f01710b4634fb943c_202x150.jpg" alt="" width="320px" height="230px;">
+					<!-- // 썸네일 -->
+				</p>
+			</div>
+			<div class="cntbx">
+				<div class="info">
+										<dl>
+						<dt>주관기관</dt>
+						<dd>한국연구재단</dd>
+					</dl>
+															<dl>
+						<dt>연구기간</dt>
+						<dd>2017~2019</dd>
+					</dl>
+														</div>
+				<p class="txt">도심의 밀집된 건물들로 인하여 측위 오차가 발생하는 음영지역에서 자율주행 차량이 안전하게 교차로를 통과하는 알고리즘을 개발한다. 교차로를 진입하는 차량들과 교차로 주변 교통 환경 정보를 실시간으로 교차로에 진입하는 CAV(Connected Automated Vehicle)에게 전달하는 V2X 기술 개발 및 교차로 주변 교통 환경 정보를 실시간으로 파악하여 교차로에 진입하는 CAV들의 주행을 강화학습으로 제어하는 기술을 개발한다.</p>
+						
+			</div>
+		</li>
+
+
+        
+		<li class="projbx">
+			<div class="titlebx">
+				<p class="no">project 20 <!-- <span class="state"></span> --></p>
+				<a class="subj" href="board.php-812.html?bo_table=sub2_4&amp;wr_id=14&amp;page=1">Network 측위 알고리즘 연구</a>
+				<p class="img">
+				<!-- 썸네일 -->
+					<img src="../data/file/sub2_4/thumb-2415451564_apgJzH1n_df1e47d51f9fb1d0aeb25e4e8f6929b06425fae1_202x150.jpg" alt="" width="320px" height="230px;">
+					<!-- // 썸네일 -->
+				</p>
+			</div>
+			<div class="cntbx">
+				<div class="info">
+										<dl>
+						<dt>주관기관</dt>
+						<dd>(주) 아크로퓨처</dd>
+					</dl>
+															<dl>
+						<dt>연구기간</dt>
+						<dd>2018</dd>
+					</dl>
+														</div>
+				<p class="txt">본 연구는 LTE Fingerprint에 대한 측위 기술을 개발하는 것으로, 세부적으로는 기지국/중계기 DB 구축 시스템 설계, 다중 주파수에서의 다중 하향 링크 정보를 이용한 Fingerprint 측위 알고리즘 개발을 포함하고 있다. 개발된 기술은 실제 실험을 통해 GPS 측위 정보 없이 KAIST 교내 및 광화문-인사동일대에서 평균 30m내외의 성능을 보여주고 있으며, 현재 KT에서 서비스되고 있다.&nbsp;</p>
+						
+			</div>
+		</li>
+
+
+        
+		<li class="projbx">
+			<div class="titlebx">
+				<p class="no">project 19 <!-- <span class="state"></span> --></p>
+				<a class="subj" href="board.php-813.html?bo_table=sub2_4&amp;wr_id=15&amp;page=1">차세대 위성항법 수신기의 결정적 압축센싱 기반 초고속 신호획득 기술 개발</a>
+				<p class="img">
+				<!-- 썸네일 -->
+					<img src="../data/file/sub2_4/thumb-2415452358_QfZ1qXte_5decacec8fd3fa164a8f2310ff0fac3210c240db_202x150.jpg" alt="" width="320px" height="230px;">
+					<!-- // 썸네일 -->
+				</p>
+			</div>
+			<div class="cntbx">
+				<div class="info">
+										<dl>
+						<dt>주관기관</dt>
+						<dd>한국연구재단</dd>
+					</dl>
+															<dl>
+						<dt>연구기간</dt>
+						<dd>2014~2018</dd>
+					</dl>
+														</div>
+				<p class="txt">차세대 GNSS의 초고속 신호탐지에 특화된 결정적 압축센싱 기술(Deterministic Compressed Sensing)을 개발하여 신호 탐색 시간과 하드웨어 소요를 3배 이상으로 단축하는 획기적인 초고속 신호 탐지 기술을 연구 개발한다.</p>
+						
+			</div>
+		</li>
+
+
+        
+		<li class="projbx">
+			<div class="titlebx">
+				<p class="no">project 18 <!-- <span class="state"></span> --></p>
+				<a class="subj" href="board.php-814.html?bo_table=sub2_4&amp;wr_id=36&amp;page=1">저피탐 레이더 인자분석</a>
+				<p class="img">
+				<!-- 썸네일 -->
+					<img src="../data/file/sub2_4/thumb-2415451564_pHYrFTeG_7a3fb9fed030292f001bc61d650db14ce9565f9d_202x150.jpg" alt="" width="320px" height="230px;">
+					<!-- // 썸네일 -->
+				</p>
+			</div>
+			<div class="cntbx">
+				<div class="info">
+										<dl>
+						<dt>주관기관</dt>
+						<dd>국방과학연구소</dd>
+					</dl>
+															<dl>
+						<dt>연구기간</dt>
+						<dd>2013~2015 / 2016~2018</dd>
+					</dl>
+														</div>
+				<p class="txt">1단계: 저피탐 레이더를 분석하여, 레이더 변조 방식 별 신호 탐지 알고리즘을 연구한다. / 2단계: 1단계에서 개발한 저피탐 레이더 신호 탐지 알고리즘을 기반으로 저피탐 레이더 신호 특징인자 추출 알고리즘 연구하고&nbsp; 하드웨어 소프트웨어 통합 설계 시뮬레이터를 개발한다.&nbsp;</p>
+						
+			</div>
+		</li>
+
+
+                
+	</ul>
+</div>
+
+
+
+<div class="mobileShow">
+
+</div>
+
+    </form>
+
+	 
+
+   
+   
+    <!-- 게시판 검색 시작 { -->
+    <div class="bo_sch_wrap">	
+        <fieldset class="bo_sch">
+            <h3>검색</h3>
+            <form name="fsearch" method="get">
+            <input type="hidden" name="bo_table" value="sub2_4">
+            <input type="hidden" name="sca" value="">
+            <input type="hidden" name="sop" value="and">
+            <label for="sfl" class="sound_only">검색대상</label>
+            <select name="sfl" id="sfl">
+                <option value="wr_subject">제목</option><option value="wr_content">내용</option><option value="wr_subject||wr_content">제목+내용</option><option value="wr_name,1">글쓴이</option><option value="wr_name,0">글쓴이(코)</option>            </select>
+            <label for="stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
+            <div class="sch_bar">
+                <input type="text" name="stx" value="" required="" id="stx" class="sch_input" size="25" maxlength="20" placeholder="검색어를 입력해주세요">
+                <button type="submit" value="검색" class="sch_btn"><i class="fa fa-search" aria-hidden="true"></i><span class="sound_only">검색</span></button>
+            </div>
+            <button type="button" class="bo_sch_cls"><i class="fa fa-times" aria-hidden="true"></i><span class="sound_only">닫기</span></button>
+            </form>
+        </fieldset>
+        <div class="bo_sch_bg"></div>
+    </div>
+    <script>
+        // 게시판 검색
+        $(".btn_bo_sch").on("click", function() {
+            $(".bo_sch_wrap").toggle();
+        })
+        $('.bo_sch_bg, .bo_sch_cls').click(function(){
+            $('.bo_sch_wrap').hide();
+        });
+    </script>
+    <!-- } 게시판 검색 끝 -->
+    
+</div>
+
+
+
+
+<!-- 페이지 -->
+<nav class="pg_wrap"><span class="pg"><span class="sound_only">열린</span><strong class="pg_current">1</strong><span class="sound_only">페이지</span>
+<a href="board.php-40.html?bo_table=sub2_4&amp;page=2" class="pg_page">2<span class="sound_only">페이지</span></a>
+<a href="board.php-41.html?bo_table=sub2_4&amp;page=3" class="pg_page">3<span class="sound_only">페이지</span></a>
+<a href="board.php-41.html?bo_table=sub2_4&amp;page=3" class="pg_page pg_end">맨끝</a>
+</span></nav>
+
+<!-- } 게시판 목록 끝 -->
+
+
+
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="area">
+			<div class="f_logo">
+				<img src="../images/common/f_logo.png" alt="">
+			</div>
+			<div class="f_txt">
+				<p>The Cho Chun Shik Graduate School of Mobility, KAIST<br>
+				Munji-ro, Yuseong-gu, Daejeon 193, South Korea<br>
+				Tel : +82-42-350-1285 Email : avelab@kaist.ac.kr</p>
+				<h6>Copyright ⓒ 2021 AVE Lab All rights Reserved. <a href="http://dsso.kr/" target="_blank">designed by dsso.kr</a></h6>
+			</div>
+		</div>
+	</footer>
+
+</div>
+
+
+
+<button type="button" id="top_btn">
+	<i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sound_only">상단으로</span>
+</button>
+<script>
+$(function() {
+	$("#top_btn").on("click", function() {
+		$("html, body").animate({scrollTop:0}, '500');
+		return false;
+	});
+});
+</script>
+
+
+
+
+<!-- } 하단 끝 -->
+
+<script>
+$(function() {
+    // 폰트 리사이즈 쿠키있으면 실행
+    font_resize("container", get_cookie("ck_font_resize_rmv_class"), get_cookie("ck_font_resize_add_class"));
+});
+</script>
+
+
+
+<!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+<!--[if lte IE 7]>
+<script>
+$(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+        $(this).css("z-index", count);
+        $(this).css("position", "relative");
+        count = count - 1;
+    });
+});
+</script>
+<![endif]-->
+
+
+</body>
+</html>
+
+<!-- 사용스킨 : project -->

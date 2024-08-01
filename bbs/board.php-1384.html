@@ -1,0 +1,714 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+
+<!-- https -> http 리소스 호출 가능하도록 -->
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>[랩 세미나] 여름방학 세미나 진행 상황 > Lab board | AVE Lab</title>
+<link rel="stylesheet" href="../css/default.css?ver=191202">
+<link rel="stylesheet" href="../js/font-awesome/css/font-awesome.min.css?ver=191202">
+<link rel="stylesheet" href="../css/slick.css?ver=191202">
+<link rel="stylesheet" href="../aos%402.3.1/dist/aos.css?ver=191202">
+<link rel="stylesheet" href="../npm/xeicon%402.3.3/xeicon.min.css?ver=191202">
+<link rel="stylesheet" href="../skin/board/lab_board/style.css?ver=191202">
+<!--[if lte IE 8]>
+<script src="https://ave.kaist.ac.kr/js/html5.js"></script>
+<![endif]-->
+<script>
+// 자바스크립트에서 사용하는 전역변수 선언
+var g5_url       = "https://ave.kaist.ac.kr";
+var g5_bbs_url   = "https://ave.kaist.ac.kr/bbs";
+var g5_is_member = "";
+var g5_is_admin  = "";
+var g5_is_mobile = "";
+var g5_bo_table  = "sub5_1";
+var g5_sca       = "";
+var g5_editor    = "smarteditor2";
+var g5_cookie_domain = "";
+</script>
+
+
+<!-- 트랜지션 디폴트 세팅 -->
+<script type="text/javascript">
+$(window).load(function(){
+	$(".img, .img *, a, a *").css(
+		"transition","all .6s linear",
+		"-webkit-transition","all .6s linear",
+		"-moz-transition","all .6s linear"
+	);
+});
+</script>
+
+
+
+
+
+<script src="../ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/jquery.menu.js?ver=191202"></script>
+<script src="../js/common.js?ver=191202"></script>
+<script src="../js/wrest.js?ver=191202"></script>
+<script src="../js/placeholders.min.js?ver=191202"></script>
+<script src="../js/slick.min.js?ver=191202"></script>
+<script src="../aos%402.3.1/dist/aos.js?ver=191202"></script>
+</head>
+<body>
+
+
+
+<script>
+	AOS.init();
+</script>
+
+
+
+<div class="wrap">
+
+	<!-- 상단메뉴 시작 { -->
+	<header>
+		<style>
+#header{position: relative;z-index: 999;background: #fff;}
+#header .top_logo{height: 90px;line-height: 90px;background: #fff;max-width:1400px;margin: 0 auto;position: relative;}
+#header .top_logo::after{display: block;clear: both;content: '';}
+#header .top_logo .left {display: flex; align-items: center; gap: 10px; float: left; justify-content: space-between; width: 100%;}
+#header .top_logo .right {display: flex; align-items: center; gap: 13px; float: right; display: none;}
+#header .top_logo .lab{float: left; }
+/*#header .top_logo .uni{float: right;}*/
+#header .top_logo .uni img{height: 50px;}
+
+.nav {position: relative; width: 100%;background: #e3e3e3;  height:60px;}
+.nav h1 {position:absolute; left:0; overflow:hidden;top: 50%;transform: translateY(-50%);}
+.nav h1 a {float:left; margin : 5px 0;}
+.nav h1 a img {width : 100%;}
+.nav h2{position:absolute; right:0; top: 50%;transform: translateY(-50%);}
+
+#header #cssmenu {max-width:1400px;margin:0 auto;z-index:999; position: relative;}
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a,
+#cssmenu #menu-button {margin: 0;padding: 0;border: 0;list-style: none;line-height: 1;display: block;position: relative;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+#cssmenu:after,
+#cssmenu > ul:after {content: ".";display: block; clear: both;visibility: hidden;line-height: 0;height: 0;}
+#cssmenu #menu-button {display: none;}
+#cssmenu > ul > li {float : left;width: 16.66%;}
+#cssmenu > ul > li > a {text-align: center;display : block;width: 100%;line-height: 60px;font-size: 22px;text-decoration: none;letter-spacing:-0.8px;font-weight : 600;color: #333;}
+#cssmenu > ul > li:hover > a {}
+#cssmenu ul ul {position: absolute;left: -9999px;}
+#cssmenu.align-right ul ul {text-align: right;}
+#cssmenu ul ul{width:100%;}
+#cssmenu ul ul li{height: 0; -webkit-transition: all .25s ease;-moz-transition: all .25s ease; -ms-transition: all .25s ease; -o-transition: all .25s ease; transition: all .25s ease;}
+#cssmenu li:hover > ul {left: 0;}
+#cssmenu li:hover > ul > li {height: auto;}
+#cssmenu ul ul ul {margin-left: 100%;top: 0;}
+#cssmenu ul ul li a {opacity: 0.9;text-align: center; padding: 18px; width: 100%; font-size: 18px; text-decoration: none; color: rgba(255,255,255,0.6); font-weight: 400; background: rgba(0,82,150,.8); line-height: 1.3;position: relative;}
+#cssmenu ul ul li a span{position: relative;-webkit-transition: .3s;-moz-transition: .3s;-ms-transition: .3s;-o-transition: .3s;transition: .3s;}
+#cssmenu ul ul li a span::before{content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); 
+	width: 9px; height: 10px; background: url('../images/common/nav_arrow.png') 0 0 no-repeat; opacity: 0;}
+
+@keyframes nav_arrow{
+	from{left: 0; opacity: 0.5;}
+	to{left: -8px; opacity:1;}
+}
+
+#cssmenu ul ul li:hover > a,
+#cssmenu ul ul li a:hover {opacity: 1;background: #0a5fad;color: #fff;}
+#cssmenu ul ul li a:hover span{padding-left: 16px;}
+#cssmenu ul ul li:hover a span::before{opacity: 1; animation:nav_arrow 0.5s alternate infinite ease;}
+#cssmenu ul ul li.has-sub > a:after {position: absolute;top: 16px;right: 11px;width: 8px;height: 2px;display: block;background: #ddd;content: '';}
+#cssmenu.align-right ul ul li.has-sub > a:after {right: auto;left: 11px;}
+#cssmenu ul ul li.has-sub > a:before {position: absolute;top: 13px;right: 14px;display: block;width: 2px;height: 8px;background: #ddd;content: '';
+-webkit-transition: all .25s ease; -moz-transition: all .25s ease; -ms-transition: all .25s ease; -o-transition: all .25s ease; transition: all .25s ease;}
+#cssmenu.align-right ul ul li.has-sub > a:before {right: auto;left: 14px;}
+#cssmenu ul ul > li.has-sub:hover > a:before {top: 17px;height: 0;}
+
+.all_menu_btn{background:#005296;position: absolute;right: -60px;width: 60px;height: 60px;text-align: center;top: 0;padding: 17px 6px;line-height: 0;cursor: pointer;}
+.all_menu_btn span{width: 22px;height: 2px;margin:5px auto;display: block;background: #fff;-webkit-transition: .3s;-moz-transition: .3s;-ms-transition: .3s;-o-transition: .3s;transition: .3s;position: relative;}
+
+.all_menu_btn.on span:nth-of-type(2){width: 0;}
+.all_menu_btn.on span:nth-of-type(1){transform:rotate(45deg);top: 7px;}
+.all_menu_btn.on span:nth-of-type(3){transform:rotate(-45deg);top: -7px;}
+
+.all_menu_wr{background: #eee;border-top: 1px solid #f1f1f1;position: absolute;top: 60px;width: 100%;z-index: 5;z-index: 1000;display: none;}
+.all_menu_wr .all_nav{max-width:1400px;margin: 0 auto;text-align: center;}
+.all_menu_wr .all_nav ul::after{clear: both;display: block;content: '';}
+.all_menu_wr .all_nav > ul {padding: 30px 0 50px;}
+.all_menu_wr .all_nav > ul > li{float: left;width: 16.66%;font-size: 18px;font-weight: 500;display: inline-block;}
+.all_menu_wr .all_nav > ul > li > a{font-size: 0;}
+.all_menu_wr .all_nav ul ul {}
+.all_menu_wr .all_nav ul ul li{}
+.all_menu_wr .all_nav ul ul li a{font-size: 17px;color: #666;display: inline-block;width: 100%;font-weight: normal;padding: 7px 0;}
+.all_menu_wr .all_nav ul ul li a:hover{text-decoration: underline;color: #333;}
+
+
+/*모바일메뉴*/
+.mobileMenu{display:none; position:absolute; top:0; right:0; width:60px;height: 60px;background:#005296;z-index: 1001;padding-top: 12px;}
+.mobileMenu span {display: block; width:50%; height:2px; background:#fff; margin:7px auto;}
+
+#gnbM .mobileMenuXbt{position:absolute; top:32px; right:18px;width: 25px;}
+#gnbM .mobileMenuXbt span{width: 100%;position: relative;display: block;height: 1px;background: #444;transform:rotate(45deg)}
+#gnbM .mobileMenuXbt span.x1{transform:rotate(135deg);top: 1px;}
+
+#gnbM{display:none; position:absolute; top:0; right:-250px; width:300px; background:#e3e3e3; z-index:99999;}
+#gnbM .mUtil{padding:0 15px; height:60px; line-height:60px; font-size:17px; letter-spacing:-1px}
+#gnbM .mUtil a{color:#444;}
+#gnbM .mUtil span{margin:0 6px; color:#2572a7}
+#gnbM .gnbDiv{margin-top: 20px;}
+#gnbM .gnbDiv a{display:block;padding: 12px 8px;color: #b5c1d0;font-size: 14px; font-weight: 500;border-bottom: 1px solid #295a9a;}
+#gnbM .gnbDiv .one{padding:0 15px; font-size:16px; color:#333; border-bottom:1px solid #d9d9d9; font-weight:500;line-height:45px;}
+#gnbM .gnbDiv .one.on{color:#fff; border-bottom:1px solid #005296;background: #005296; background-size:18px 18px;}
+#gnbM .gnbDiv .two{padding:5px 20px; border-bottom:1px solid #d9d9d9;background:#005296;height : auto!important}
+#gnbM .gnbDiv .two .twoD{color:#fff;font-size:15px; border-bottom:1px solid #295a9a;line-height:44px;padding-left: 5px;}
+#gnbM .gnbDiv .two .thr{padding:15px 15px 5px; border-bottom:1px solid #d9d9d9; background:#f7f7f7}
+#gnbM .gnbDiv .two .thr .thrD{font-size:13px; color:#fff; margin-bottom:10px}
+#gnbM .gnbDiv .two .overM {    line-height:20px; padding: 10px 0;}
+.dimdBg{display:none; position:absolute; top:0; left:0; width:100%; height:; background:rgba(0,0,0,0.5); z-index:4;}
+.dimdBg.on{display: block;}
+
+
+@media (max-width : 1420px) {
+#header .top_logo{padding: 0 10px;}
+}
+
+@media (max-width : 1300px) {
+#header #cssmenu{padding-right: 60px;}
+.all_menu_wr{padding-right: 60px;}
+.all_menu_btn{right: 0;}
+}
+@media (max-width : 1200px) {
+#header .top_logo{padding: 0 10px;height: 70px;line-height: 70px;}
+#header .top_logo .lab img{height: 41px;}
+#header .top_logo .uni img{height: 38px; padding-right: 60px;}
+#header .top_logo .right {gap: 10px;}
+#header .top_logo .right .rLogo1 img {height: 41px;}
+#header .top_logo .right .rLogo2 img {height: 35px;}
+#header .top_logo .right .rLogo3 img {height: 43px;}
+
+.nav{height: 55px;}
+#cssmenu > ul > li > a{font-size: 19px;line-height: 55px;}
+#cssmenu ul ul li a{font-size: 15px;}
+.all_menu_btn{width: 55px;height: 55px;}
+.all_menu_wr{padding-right: 55px;top: 55px;}
+.all_menu_wr .all_nav ul ul li a{font-size: 15px;}
+}
+@media (max-width : 1023px){
+#header{z-index: 999;}
+#header .top_logo{height: 60px;line-height: 60px;}
+#header .top_logo .uni{float: left;margin-left: 10px;}
+#header .top_logo .left {gap: 4px;}
+#header .top_logo .lab img{height: 35px;}
+#header .top_logo .uni img{height: 34px;}
+#header .top_logo .right {display: none;}
+.nav{display: none;}
+#gnbM,.mobileMenu{display: block;}
+}
+@media (max-width:480px) {
+.mobileMenu{padding-top: 16px;}
+.mobileMenu span{width: 35%;margin: 5px auto;}
+#header .top_logo .left {gap: 0px;}
+#header .top_logo .lab img{height: 28px;}
+#header .top_logo .uni img{height: 28px;}
+}
+/* @media (max-width:320px) {
+#header .top_logo .lab img{height: 23px;}
+#header .top_logo .uni img{height: 28px;}
+} */
+
+
+</style>
+
+
+<!-- header :s -->
+<script type="text/javascript" src="../js/dsso.default.js"></script>
+<div id="header">
+	<div class="top_logo">
+		<div class="left">
+			<a href="../index.php.html" class="lab"><img src="../images/common/h_logo1.png" alt="카이스트 AVE 연구실"></a>
+			<a href="https://www.kaist.ac.kr/kr/" target="_blank" class="uni"><img src="../images/common/h_logo2.png" alt="KAIST"></a>
+		</div>
+		<div class="right">
+			<a href="https://ieee-iv.org/2024/" target="_blank class=" rlogo1"=""><img src="../images/common/logo-r1.png" alt="JejuIV2024"></a>
+			<a href="#" class="rLogo2"><img src="../images/common/logo-r2.png" alt="ZetaMobility"></a>
+			<a href="#" class="rLogo3"><img src="../images/common/logo-r3.png" alt="The Autoware Foundation of Korea"></a>
+		</div>
+	</div>
+	<div class="nav">	
+		<div id="cssmenu">
+			<ul>
+				<li class="two"><a href="../sub2_1.php.html">Research</a>
+					<ul>
+						<li><a href="../sub2_1.php.html"><span>Autonomous Driving System</span></a></li>
+						<li><a href="../sub2_2.php.html"><span>Learning-based E2E</span></a></li>
+						<li><a href="../sub2_3.php.html"><span>Advanced Positioning Systems</span></a></li>
+						<li><a href="board.php.html?bo_table=sub2_4"><span>Projects</span></a></li>
+						<li><a href="board.php-1.html?bo_table=sub2_5"><span>Videos</span></a></li>
+					</ul>
+				</li>
+				<li class="one"><a href="board.php-2.html?bo_table=sub1_1">People</a>
+					<ul>
+						<li><a href="board.php-2.html?bo_table=sub1_1"><span>Professor</span></a></li>
+						<li><a href="board.php-3.html?bo_table=sub1_2"><span>Members</span></a></li>
+						<li><a href="board.php-4.html?bo_table=sub1_3"><span>Alumni</span></a></li>
+					</ul>
+				</li>
+				<li class="thr"><a href="board.php-5.html?bo_table=sub3_1">Publications</a>
+					<ul>
+						<li><a href="board.php-5.html?bo_table=sub3_1"><span>International Journals</span></a></li>
+						<li><a href="board.php-6.html?bo_table=sub3_2"><span>International Conferences</span></a></li>
+						<li><a href="board.php-7.html?bo_table=sub3_3"><span>Domestic Journals</span></a></li>
+						<li><a href="board.php-8.html?bo_table=sub3_4"><span>Domestic Conferences</span></a></li>
+						<li><a href="board.php-9.html?bo_table=sub3_5"><span>Patents</span></a></li>
+					</ul>
+				</li>
+				<li class="fou"><a href="board.php-10.html?bo_table=sub4_1">Lectures</a>
+					<ul>
+						<li><a href="board.php-10.html?bo_table=sub4_1"><span>Lectures</span></a></li>
+						<li><a href="board.php-11.html?bo_table=sub4_2"><span>Seminar</span></a></li>
+					</ul>
+				</li>
+				<li class="fiv"><a href="board.php-12.html?bo_table=sub5_1">Board</a>
+					<ul>
+						<li><a href="board.php-12.html?bo_table=sub5_1"><span>Lab board</span></a></li>
+						<li><a href="board.php-13.html?bo_table=sub5_2"><span>Gallery</span></a></li>
+					</ul>
+				</li>
+				<li class="fiv"><a href="../sub6_1.php.html">Contact</a>
+					<ul>
+						<li><a href="../sub6_1.php.html"><span>Contact</span></a></li>
+					</ul>
+				</li>
+			</ul>
+		<div class="all_menu_btn">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		</div>
+		<div class="all_menu_wr">
+			<div class="all_nav">
+			<ul>
+				<li class="one">
+					<ul>
+						<li><a href="board.php-2.html?bo_table=sub1_1"><span>Professor</span></a></li>
+						<li><a href="board.php-3.html?bo_table=sub1_2"><span>Members</span></a></li>
+						<li><a href="board.php-4.html?bo_table=sub1_3"><span>Alumni</span></a></li>
+					</ul>
+				</li>
+				<li class="two">
+					<ul>
+						<li><a href="../sub2_1.php.html">Autonomous Driving System<span></span></a></li>
+						<li><a href="../sub2_2.php.html">Learning-based E2E<span></span></a></li>
+						<li><a href="../sub2_3.php.html">Advanced Positioning Systems<span></span></a></li>
+						<li><a href="board.php.html?bo_table=sub2_4">Projects<span></span></a></li>
+						<li><a href="board.php-1.html?bo_table=sub2_5">Videos<span></span></a></li>
+					</ul>
+				</li>
+				<li class="thr">
+					<ul>
+						<li><a href="board.php-5.html?bo_table=sub3_1"><span>International Journals</span></a></li>
+						<li><a href="board.php-6.html?bo_table=sub3_2"><span>International Conferences</span></a></li>
+						<li><a href="board.php-7.html?bo_table=sub3_3"><span>Domestic Journals</span></a></li>
+						<li><a href="board.php-8.html?bo_table=sub3_4"><span>Domestic Conferences</span></a></li>
+						<li><a href="board.php-9.html?bo_table=sub3_5"><span>Patents</span></a></li>
+					</ul>
+				</li>
+				<li class="fou">
+					<ul>
+						<li><a href="board.php-10.html?bo_table=sub4_1"><span>Lectures</span></a></li>
+						<li><a href="board.php-11.html?bo_table=sub4_2"><span>Seminar</span></a></li>
+					</ul>
+				</li>
+				<li class="fiv">
+					<ul>
+						<li><a href="board.php-12.html?bo_table=sub5_1"><span>Lab board</span></a></li>
+						<li><a href="board.php-13.html?bo_table=sub5_2"><span>Gallery</span></a></li>
+					</ul>
+				</li>
+				<li class="six">
+					<ul>
+						<li><a href="../sub6_1.php.html"><span>Contact</span></a></li>
+					</ul>
+				</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+</div>
+ <script>
+      $( document ).ready( function() {
+        $( '.all_menu_btn' ).click( function() {
+          $( '.all_menu_wr' ).slideToggle();
+		  $( '.dimdBg' ).toggleClass( 'on' );
+		  $(this).toggleClass( 'on' );
+        } );
+      } );
+    </script>
+
+	<!--풀다운메뉴/모바일메뉴-->
+	<script type="text/javascript">/*모바일메뉴용*/
+		//<![CDATA[			
+		var oneNum = -1, twoNum = -1, thrNum = -1, fouNum = -1;
+		//]]>
+	</script>
+	<script type="text/javascript" src="../js/menucmn.js"></script>
+
+	<!--모바일 메뉴버튼 -->
+	<a href="javascript:" class="mobileMenu">
+		<span></span>
+		<span></span>
+		<span></span>
+	</a>
+	<!--//모바일 메뉴버튼 -->
+
+	<div style="display: none;" class="twoDbg"></div><!--전체 배경영역-->
+		<p class="dimdBg"></p>
+		<!-- 모바일 gnb -->
+		<div style="height: 1234px; right: -300px;" id="gnbM">
+			<!--탑메뉴-->
+			<div class="mUtil">
+				<a href="../index.php.html" style="margin-right:15px;">Home</a>
+			</div>
+			<!--//탑메뉴-->
+
+			<!--gnbDiv-->
+			<div class="gnbDiv">
+				<!--대메뉴1-->
+				<a href="javascript:" class="one">People</a>
+				<div style="display: none;" class="two">
+					<a href="board.php-2.html?bo_table=sub1_1">Professor</a>
+					<a href="board.php-3.html?bo_table=sub1_2">Members</a>
+					<a style="border-bottom: medium none;" href="board.php-4.html?bo_table=sub1_3">Alumni</a>
+				</div>
+				<!--대메뉴2-->
+				<a href="javascript:" class="one">Research</a>
+				<div style="display: none;" class="two">
+					<a href="../sub2_1.php.html">Autonomous Driving System</a>
+					<a href="../sub2_2.php.html">Learning-based E2E</a>
+					<a href="../sub2_3.php.html">Advanced Positioning Systems</a>
+					<a href="board.php.html?bo_table=sub2_4">Projects</a>
+					<a style="border-bottom: medium none;" href="board.php-1.html?bo_table=sub2_5">Videos</a>
+				</div>
+				<!--대메뉴3-->
+				<a href="javascript:" class="one">Publication</a>
+				<div style="display: none;" class="two">
+					<a href="board.php-5.html?bo_table=sub3_1">International Journals</a>
+					<a href="board.php-6.html?bo_table=sub3_2">International Conferences</a>
+					<a href="board.php-7.html?bo_table=sub3_3">Domestic Journals</a>
+					<a href="board.php-8.html?bo_table=sub3_4">Domestic Conferences</a>
+					<a style="border-bottom: medium none;" href="board.php-9.html?bo_table=sub3_5">Patents</a>
+				</div>
+				<!--대메뉴4-->
+				<a href="javascript:" class="one">Lectures</a>
+				<div style="display: none;" class="two">
+					<a href="board.php-10.html?bo_table=sub4_1">Lectures</a>
+					<a style="border-bottom: medium none;" href="board.php-11.html?bo_table=sub4_2">Seminar</a>
+				</div>
+				<!--대메뉴5-->
+				<a href="javascript:" class="one">Board</a>
+				<div style="display: none;" class="two">
+					<a href="board.php-12.html?bo_table=sub5_1">Lab board</a>
+					<a style="border-bottom: medium none;" href="board.php-13.html?bo_table=sub5_2">Gallery</a>
+				</div>
+			</div>
+			<!--//gnbDiv-->
+			<a href="javascript:" class="mobileMenuXbt">
+				<span class="x1"></span>	
+				<span class="x2"></span>	
+			</a><!--닫기버튼-->
+		</div>
+	<!-- //모바일 gnb -->	<!-- //header -->
+	</header>
+	<!-- } 상단메뉴 끝 -->
+
+	<section id="s_visual">
+		<!-- <div class="s_visual_bg"><img src="https://ave.kaist.ac.kr/images/sub/s_visual.jpg" alt=""></div> -->
+		<div class="sv_txt">
+			<h3>
+									Board							</h3>
+			<!-- <p><b>A</b>utonomous <b>VE</b>hicles and robotics <b>L</b>ab</p> -->
+		</div>
+	</section>
+
+	<!--서브메뉴-->
+	<div class="sub_menu">
+		<style type="text/css">
+/* 페이지인식-메인 */
+#page5 #menu01 > .box5_5_1{font-weight: 600; color: #005296;}
+#page5 #menu01 > .box5_5_1:after{content: ''; position: absolute; left: 50%; bottom: -3px; transform: translate(-50%, 0); width: 9px; height: 5px; background: #005296; z-index: 10;}
+</style>
+
+
+<script>
+$(document).ready(function(){
+    $(".btn_s_menu").click(function(){
+        $(".s_menu").toggle();
+    });
+
+	$(".vNav>ul>li").each(function(idx){
+		var line = $(".sub_menu .line");
+		var aThis = $(".vNav>ul>li").eq(idx);
+		aThis.on("mouseover", function(){
+			line.stop().animate({opacity:1, left:aThis.position().left+"px", width:aThis.children("a").innerWidth()+"px"},300);
+		});
+		aThis.on("mouseleave", function(){
+				line.stop().animate({opacity:"0", width:0},300);
+		});
+	});
+});
+</script>
+
+<div class="vNav" id="page5">
+	<ul>
+		<li id="menu01" class='active'><a href="board.php-12.html?bo_table=sub5_1" class="box5_5_1">Lab board</a></li>
+		<li id="menu02"><a href="board.php-13.html?bo_table=sub5_2" class="box5_5_2">Gallery</a></li>
+	</ul>
+</div>
+
+
+ <div class="m_sub_menu">
+    <button type="button" class="btn_s_menu">
+      <span title="[랩 세미나] 여름방학 세미나 진행 상황 &gt; Lab board">Lab board</span> <i class="arrow right"></i>
+    </button>
+    <ul class="s_menu">
+		<li id="menu01" class='active'><a href="board.php-12.html?bo_table=sub5_1" class="box5_5_1">Lab board</a></li>
+		<li id="menu02"><a href="board.php-13.html?bo_table=sub5_2" class="box5_5_2">Gallery</a></li>
+	</ul>
+  </div>	</div>
+
+	<section id="s_content">
+		<div class="s_area">
+			<div class="s_tit" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="800">
+				<h3 class="big">
+											Lab board									</h3>
+			</div>
+<script src="../js/viewimageresize.js"></script>
+
+<!-- 게시물 읽기 시작 { -->
+
+<article id="bo_v" style="width:100%">
+    <header>
+        <h2 id="bo_v_title">
+                        <span class="bo_v_tit">
+            [랩 세미나] 여름방학 세미나 진행 상황</span>
+        </h2>
+    </header>
+
+    <section id="bo_v_info">
+        <h2>페이지 정보</h2>
+        <div class="profile_info">
+        	<div class="pf_img"><img src="../img/no_profile.gif" alt="profile_image"></div>
+        	<div class="profile_info_ct">
+        		<p class="name"><span class="sound_only">작성자</span> <strong><span class="sv_member">최고관리자</span></strong></p>
+        		
+        		<p class="info">
+       		 	<span class="sound_only">댓글</span><strong class="comment"><a href="#bo_vc"> <i class="fa fa-commenting-o" aria-hidden="true"></i> 0건</a></strong>
+       		 	
+        		<span class="sound_only">조회</span><strong class="hit"><i class="fa fa-eye" aria-hidden="true"></i> 482회</strong>
+        		
+        		<strong class="if_date"><span class="sound_only">작성일</span><i class="fa fa-clock-o" aria-hidden="true"></i> 2021-08-11 00:17</strong>
+        		</p>
+    		</div>
+    	</div>
+
+		<!-- 게시물 상단 버튼 시작 { -->
+	    <div id="bo_v_top">
+	        
+	        <ul class="btn_bo_user bo_v_com">
+				<li><a href="board.php-1112.html?bo_table=sub5_1&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=3" class="btn_b01 btn" title="목록"><i class="fa fa-list" aria-hidden="true"></i><span class="sound_only">목록</span></a></li>
+	            	            	        		        </ul>
+	        <script>
+
+            jQuery(function($){
+                // 게시판 보기 버튼 옵션
+				$(".btn_more_opt.is_view_btn").on("click", function(e) {
+                    e.stopPropagation();
+				    $(".more_opt.is_view_btn").toggle();
+				})
+;
+                $(document).on("click", function (e) {
+                    if(!$(e.target).closest('.is_view_btn').length) {
+                        $(".more_opt.is_view_btn").hide();
+                    }
+                });
+            });
+            </script>
+	        	    </div>
+	    <!-- } 게시물 상단 버튼 끝 -->
+
+    </section>
+
+    <section id="bo_v_atc">
+        <h2 id="bo_v_atc_title">본문</h2>
+        <div id="bo_v_share">
+        		        	    </div>
+
+        <div id="bo_v_img">
+</div>
+
+        <!-- 본문 내용 시작 { -->
+        <div id="bo_v_con"><p><span style="font-size:10pt;"><b>[ 조상재 ]</b></span></p><p><br></p><p>- "Generalized BOC modulations for GNSS"</p><p><br></p><p>본 논문에서는 다른 GNSS 신호에 대한 간섭의 영향과 가우시안 노이즈 및 다중 경로 에러를 효과적으로 줄일 수 있는 Generalized Binary Offset Carrier(GBOC) 방식을 제시했다. GBOC신호 생성 함수의 매개변수를 적절하게 설정하면 매우 첨예한 첫번째 피크와 매우 작은 주변 피크 레벨을 갖는 ACF output을 출력하게 되어  GNSS 수신기의 측위 성능을 높이는 것을 확인했다. 위와 같은 다수의 장점으로 인해 제안된 GBOC 변조 방식은 미래 GNSS 신호기법의 한 후보로 제시될 수 있다.</p><p><br></p><p>Reference: Characterization and performance analysis of generalized BOC modulations for GNSS, Navigation, 2019, Fernando D. Nunes et al.</p><p><br></p><p>- "Next-Generation GNSS Signal Design"</p><p><br></p><p>In this chapter, it will explain a variety of typical spreading modulation techniques. Some have already been used in existing systems, and have received widespread attention in recent years, while others are less well-known. However, considering that in the next-generation GNSS implementations, new requirements and new constraints will constantly emerge and new modulation methods will be needed, this chapter is not meant to be regarded as a review of the development of navigation signal modulation technology, or an interpretation of the signal formats being used by several major satellite navigation systems. Instead, we regard the spreading modulations used in satellite navigation signals as general techniques and focus our discussion on the principles of these modulation techniques and the design ideas behind their generation processes. - BPSK, BOC, BCS, TMBOC, QMBOC, AltBOC, MSK Modulation</p><p><br></p><p>Reference: Spreading Modulation Techniques in Satellite Navigation Chap4</p><p><br></p><p><b><span style="font-size:10pt;">[ Aswin Nahrendra ]</span></b></p><p><br></p><p>- "MBPO(Model-based Policy Optimization) &amp; Meta-world"</p><p><br></p><p>MBPO - Due to the bias of model-generated data, designing effective model-based reinforcement learning is difficult. This paper proposed formulating and analyzing a model-based reinforcement learning algorithm with a guarantee of monotonic improvement at each step. This method cannot deal with unexpected situations or environment changes and it is merely just an improved version of the existing off-policy reinforcement learning. However, this method is meaningful that is sample-efficient. </p><p><br></p><p>Meta-reinforcement learning algorithms have advantages in enabling agents to learn new skills much more quickly, using prior experience to learn how to learn. Meta-world is an open-source simulated benchmark for meta RL and multi-task RL consisting of 50 distinct tasks.</p><p><br></p><p>Reference: When to Trust Your Model: Model-Based Policy Optimization, NeurIPS, 2019, Michael Janner et al. / Meta-World: A Benchmark and Evaluation for Multi-Task and Meta Reinforcement Learning, CoRL, 2019, Tianhe Yu et al.</p><p><br></p><p>- "MAML(Model-Agnostic Meta-Learning) &amp; GrBAL(Gradient Based Adaptative Learner)"</p><p>The goal of meta-learning is to train a model on varying tasks, so it can solve new tasks using only a small number of training samples. MAML uses a small amount of training data from a new task and then produce good generalization performance. However, this method only works for tasks with narrow distribution and requires large meta-training data.</p><p>Similary, GrBAL is a meta-learning based method that makes agent adapt to new tasks rapidly only with few data points. Instead of meta-training the policy, this method meta-train a dynamics model of the world using supervised learning, which works better than meta-training a policy directly. This method still using model-predictive control(MPC), not policy, but is is observed that GrBAL is works well because it is using an adapted dynamics model</p><p><br></p><p>Reference: Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks, ICML, 2017, Chelsea Finn / Adaptive Gradient-Based Meta-Learning Methods, NeurIPS, 2019, Mikhail Khodak</p><p><br></p><p>- "PEARL(Probabilistic Embeddings for Actor-Critic Reinforcement Learning)"</p><p><br></p><p>Meta RL could be particularly challenging because the agent has to not only adapt to the new incoming data but also find an efficient way to explore the new environment. Also, current meta-RL algorithms rely heavily on on-policy experience, which limits sample efficiency. However, PEARL is the method that can be used for off-policy RL by learning a probabilistic latent context. This method can adapt quickly to unseen tasks and can be applied on off-policy RL algorithms</p><p><br></p><p>Reference: Probabilistic Embeddings for Actor-Critic Reinforcement Learning, ICML, 2019, Kate Rakelly et al.</p><p><br></p><p>- "MIER(Model Identification and Experience Relabeling)"</p><p>Adaptation to unseen environments has been an interesting research focus in the reinforcement learning research. Conventional RL algorithms are only training a policy for a specific task and unable to adapt to new tasks. In this paper, a model identification scheme is proposed to leverage the ability of model-based RL to adapt to new task by quickly adapting the model network that is conditioned by a task context variable. Another scheme that is proposed here is the experience relabeling that is used to utilize previous experiences from the meta-training replay buffer to retrain the model for new task. </p><p>Therefore, data efficiency is leveraged because only few real-world interaction is required to retrain the model. </p><p><br></p><p>Reference: Meta-Reinforcement Learning Robust to Distributional Shift via Model Identification and Experience Relabeling, arXiv, 2020, Russell Mendonca et al.</p><p><br></p><p>- "FAMLE(Fast Adaptation through Meta-Learning Embeddings)"</p><p><br></p><p>In robotics application, the robot's uncertainty often occurs due to sensor errors or physical malfunction. In this paper, a Fast Adaptation with Meta-Learning Embeddings (FAMLE) scheme is introduced to deal with this problem. The idea is mainly based on MAML with model-based reinforcement learning, but, instead of only meta-learn the model, FAMLE also meta-learn a situation embeddings that acts as a task ID and used to condition the model. This situation embeddings iwill be adapted in the testing time for unseen situations, and therefore, significantly increses the adaptation process compared to MAML.</p><p><br></p><p>Reference: Fast Online Adaptation in Robotics through Meta-Learning Embeddings of Simulated Priors, arXiv, 2020, Rituraj Kaushik et al.</p><p><br></p><p>- BADGR: An Autonomous Self-Supervised Learning-Based Navigation System</p><p><br></p><p>Mobile robot navigation is usually regarded only as a geometric problem. Utilizing visual sensors such as LiDAR and camera and also inertial sensors such as IMU to avoid obstacles. However, in practice, there are some kind of obstacles that is actually not a blocking obstacle, e.g., tall grasses. This paper introduced a self-supervised learning framework to enable a mobile robot to navigate through urban and off-road environment by using only a single monocular camera. The images from monocular camera are self-labeled using information from LiDAR and IMU sensors and used to train a model network. This model network is used to  predict future events from the given camera image and actions. Therefore, giving good information about the future situations the mobile robot could face (collision, bumpy roads, etc.). With tens of hours of training data, BADGR can also generalize well to navigate through unseen environments.</p><p><br></p><p>Reference: Badgr: An autonomous self-supervised learning-based navigation system, arXiv, 2020, Kahn et al.</p><p><br></p><p><b><span style="font-size:10pt;">[ 정승환 ]</span></b></p><p><b><span style="font-size:10pt;"><br></span></b></p><p>- "End-To-End Driving" </p><p>최근 자율주행 자동차의 학습 및 운용 방식에는 크게 두가지 접근법이 있다. 하나는 자율주행에 필요로 하는 기능들을 사람이 정의한 Perception, Localization, Planning, Control Module로 구성된 Modular Approach이며 또 하나는, 센서 데이터를 사용자의 목적에 맞게 Module화를 진행하는 것 없이 바로 인공지능의 입력 값으로 사용하는 End-to-End 방식의 단일 학습 방법이다.</p><p>흔히 사용하되는 Modular Approach은 사람이 정의한 시나리오대로 작동하므로 각 모듈간의 상호의 존성 파악이 쉽고 예측가능한 범위내에서 작동한다. 또한, 사고발생시 신뢰성 높은 사고 경위를 파악할 수 있는 장점이 있다. 하지만, 각 Module 간의 상호 의존성을 파악하는 것은 상당히 복잡하며, 정의 하였다 하더라도 Module의 구성이 최적화 되지 않아 았을 수 있다. Computation Cost 측면에서도 각 모듈별로 시스템을 구성해야함으로 비싼 Computation Cost를 가지게 된다. End-To-End 방식은 여러분야에서 성공적으로 적용 되고 있다. 특히, Atari, Starcraft, Chess and Go에서는 이미 사람을 뛰어넘는 퍼포먼스를 보여주고 있다. End-To-End Driving Approach 또한 데이터를 충분히 모을 수 있다는 가정하에  사람이 정의한 Modular 방식을 뛰어넘는 성능을 보여줄 것이라 예상되고있다.</p><p><br></p><p> 이번 세미나에서는 Deep Neural Network를 통한 End-To-End Driving에대한 발전 과정에대한 소개를 시작으로 End-To-End Driving System Design, 해결해야할 문제점들에대해 다루고 강화학습의 적용방안에 대해 소개해보고자 한다.</p><p>Reference:1. Pomerleau, Dean A. "ALVINN: An Autonomous Land Vehicle in a Neural Network. 1989." URL <a href="http://repository." rel="nofollow">http://repository.</a> cmu. edu/compsci (2019).2. Ross, St?phane, Geoffrey Gordon, and Drew Bagnell. "A reduction of imitation learning and structured prediction to no-regret online learning." Proceedings of the fourteenth international conference on artificial intelligence and statistics. 2011.</p><p>3. Muller, Urs, et al. "Off-road obstacle avoidance through end-to-end learning." Advances in neural information processing systems. 2006.4. Bojarski, Mariusz, et al. "End to end learning for self-driving cars." arXiv preprint arXiv:1604.07316 (2016).5. Cheung, Ernest, et al. "STD-PD: generating synthetic training data for pedestrian detection in unannotated videos." arXiv preprint arXiv:1707.09100 (2017).</p><p>6. Codevilla, Felipe, et al. "End-to-end driving via conditional imitation learning." 2018 IEEE International Conference on Robotics and Automation (ICRA). IEEE, 2018.7. Hecker, Simon, Dengxin Dai, and Luc Van Gool. "End-to-end learning of driving models with surround-view cameras and route planners." Proceedings of the european conference on computer vision (eccv). 2018.8. Sobh, Ibrahim, et al. "End-to-end multi-modal sensors fusion system for urban automated driving." (2018).9. Bewley, Alex, et al. "Learning to drive from simulation without real world labels." 2019 International Conference on Robotics and Automation (ICRA). IEEE, 2019.</p><p>10. Zeng, Wenyuan, et al. "End-to-end interpretable neural motion planner." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2019.11. Chen, Jianyu, Shengbo Eben Li, and Masayoshi Tomizuka. "Interpretable end-to-end urban autonomous driving with latent deep reinforcement learning." arXiv preprint arXiv:2001.08726 (2020).</p><p><br></p><p>- "Representation Learning" </p><p>최근 Supervised Learning기반의 Deep Learning 기술들은 방대한 양의 Data를 기반으로 다양 한 Domain에서 우수한 퍼포먼스를 보여주고 있다. 이 방대한 데이터를 사용하기 위해서는 각 Sample 마다 Labeling을 진행해 주어야 해 많은 시간과 비용이 요구되어지고 있다. 실제로 학계에서 주로 사용되는 IMAGENET DATASET의 경우에도 약 120 만장으로 구성되어 있고 사람이 직접 Labeling을 진행하였다. 하지만, 현실에서는 Label이 되지 않은 데이터들이 더 많이 존재하기 때문에 이번 세미나 에서는 Label을 통해 학습하는 Supervised Learning의 방식이 아닌 데이터 간의 Representation을 자가 학습할 수 있는 Self Supervised Learning에 대한 방법론 및 대표적인 논논문들을 살펴보고자 한다.</p><p> </p><p>- Self-Supervised Learning : Self-supervised Learning은 입력 값 만을 사용하여 Deep Neural Network가 Pretext Task를 수행하면서 Image의 Visual Features을 잘 추출 할 수 있도록 학습하는 방법론을 얘기한다.</p><p>Reference:1. Dosovitskiy, Alexey, et al. "Discriminative unsupervised feature learning with exemplar convolutional neural networks." IEEE transactions on pattern analysis and machine intelligence 38.9 (2015): 1734-1747.2. Doersch, Carl, Abhinav Gupta, and Alexei A. Efros. "Unsupervised visual representation learning by context prediction." Proceedings of the IEEE international conference on computer vision. 2015.3. Noroozi, Mehdi, and Paolo Favaro. "Unsupervised learning of visual representations by solving jigsaw puzzles." European Conference on Computer Vision. Springer, Cham, 2016.4. Gidaris, Spyros, Praveer Singh, and Nikos Komodakis. "Unsupervised representation learning by predicting image rotations." arXiv preprint arXiv:1803.07728 (2018).5. Chen, Ting, et al. "A simple framework for contrastive learning of visual representations." arXiv preprint arXiv:2002.05709 (2020).6. Grill, Jean-Bastien, et al. "Bootstrap your own latent: A new approach to self-supervised learning." arXiv preprint arXiv:2006.07733 (2020).</p><p><br></p><p>- "VAE(Variational Autoencoder) &amp; beta-VAE" 현재 대부분의 인공지능에서 사용되는 데이터는 이미지의 Pixel Size처럼 High Dimension으로 표현되고있다. 이를 통해 Machine Learning 문제를 풀면 학습 또한 느릴 뿐만 아니라 좋은 성능을 가지지 못할 것이다. 하지만, High Dimension 데이터를 Low Dimension으로 표현하는 manifold가 존재하고 이 Low Dimension의 앞축된 데이터가 충분히 원본 데이터를 잘 표현할 수 있다면, 우리는 더 많은 문제들을 쉽게접근하고 해결할 수 있을것이다. (Manifold Hypothesis).</p><p> 이번 세미나에서는 앞서 언급한 Manifold Hypothesis를 기반으로 복잡한 입력 값을 다루기 쉬운 저차원 공간으로 낮추기 위하여 "사후확률 p(zx)을 다루기 쉬운 확률 분포인 q(z)로 근사하는 Variational AutoEncoder 기법"을 수학적으로 증명하고 분석해보면서 강화학습 알고리즘 설계 방향에 대해 설명하고, Variational AutoEncoder을 통하여 강화학습에서의 Agent가 어떻게 하면 Optimal Behavior를 학습할 수 있는지를 다뤄보고자 한다.</p><p>Reference:1. Kingma, Diederik P., and Max Welling. "Auto-encoding variational bayes." arXiv preprint arXiv:1312.6114 (2013).2. Higgins, Irina, et al. "beta-vae: Learning basic visual concepts with a constrained variational framework." (2016).3. Haarnoja, Tuomas, et al. "Reinforcement learning with deep energy-based policies." arXiv preprint arXiv:1702.08165 (2017).4. Chen, Ricky TQ, et al. "Isolating sources of disentanglement in variational autoencoders." Advances in Neural Information Processing Systems. 2018.5. CS 2285 : Deep Reinforcement Learning in Berkeley</p><p><br></p><p>- "Offline Reinforcement Learning" 최근 Supervised Learning기반의 Deep Learning 기술들은 방대한 양의 Data를 기반으로 다양 한 Domain에서 우수한 퍼포먼스를 보여주고 있다. 최신 인공지능 기술들은 방대한 양의 저장된 데이터를 통한 Offline Learning 기반 학습방식으로 의료, 자율주행, 로봇 등 다양한 Domain에서 우수한 Performance를 보여주고 있다. 전통적인 강화학습 기술들은 환경과 매 순간마다 Interaction을 진행하여 얻은 경험들을 통하여 학습하는 Online Learning 기반으로 발전해왔고 사람의 퍼포먼스를 뛰어넘는 결과들을 보여주고있다. 하지만, 이러한 Online Learning 방식의 강화학습은 때로는 실제 환경에서 학습시키기에는 상당한 시간비용이 들게되고 한번 실험하는데 위험이 커 여러번 진행하기 힘든경우에는 한계점을보이고 있다.</p><p> 이번 세미나에서는 전통적인 강화학습방식이 왜 저장된 데이터를 사용하는 Offline Learning으로 학습이 힘든지, 그중에서도 Data distribution 측면으로 발표를 진행하고, 이를 극복하기 위한 방법인 Importance sampling, Policy constraint, conservative q-learning 기법을 소개한다.</p><p>Reference : Conservative Q-Learning for Offline Reinforcement Learning. arXiv preprint arXiv:2006.04779, 2020, Kumar, Aviral, et al.Offline reinforcement learning: Tutorial, review, and perspectives on open problems. arXiv preprint arXiv:2005.01643, 2020 ,Levine, Sergey, et al.</p><p><br></p><p><b><span style="font-size:10pt;">[ 백동희 ]</span></b></p><p><br></p><p>- "Sensor Fusion Overview of Camera, LiDAR and RADAR in Autonomous Vehicle"</p><p><br></p><p>자율주행 자동차의 인지 기능(객체 인식, 분류 및 객체까지의 거리 감지)에 있어서 핵심적인 기능을 하는 3가지 센서: 카메라, 라이다, 레이더가 있다. 카메라와 라이다의 경우, 높은 해상도를 이용하여 객체 및 객체까지의 거리를 인식하는 네트워크가 꾸준히 발전해오고 있다(EfficientDet, PointNet 등). 자율주행 자동차에 있어서 인지 기능은 안전과 직결되므로 어떤 상황에서든 강건하고 정확하게 동작하는 것을 필요로 한다. 하지만 카메라나 라이다를 단독으로 사용하는 경우, 비가 오거나 눈이 오는 궂은 날씨 환경에서는 객체 인식 네트워크의 성능이 큰 폭으로 떨어진다. 반대로 레이더는 우천 및 야간 환경에 대해서 강건하게 동작하지만 낮은 해상도를 가지고 있다. 따라서 최근에는 강건한 객체 인식을 위하여 카메라, 라이다 및 레이더의 센서 융합을 통해서 네트워크를 설계하는 연구가 빠르게 진행되고 있다. 이번 세미나를 통해, 최근 자율주행 자동차에서 센서 융합 네트워크를 설계 방식 및 효과를 소개하고, 발전 방향을 살펴보고자 한다.</p><p><br></p><p>Reference: Multi-sensor Fusion in Automated Driving: A Survey, IEEE Access, 2019, Zhangjing Wang et al.</p></div>
+                <!-- } 본문 내용 끝 -->
+
+        
+
+        <!--  추천 비추천 시작 { -->
+                <!-- }  추천 비추천 끝 -->
+    </section>
+
+    
+    
+        
+        <ul class="bo_v_nb">
+        <li class="btn_prv"><span class="nb_tit"><i class="fa fa-chevron-up" aria-hidden="true"></i> 이전글</span><a href="board.php-1385.html?bo_table=sub5_1&amp;wr_id=35&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=3">[랩 세미나] 가을학기 세미나 진행 상황</a> <span class="nb_date">21.08.11</span></li>        <li class="btn_next"><span class="nb_tit"><i class="fa fa-chevron-down" aria-hidden="true"></i> 다음글</span><a href="board.php-1560.html?bo_table=sub5_1&amp;wr_id=33&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=3">2020 자율주행자동차 경진대회 (산업통상자원부 주최) 본선진출</a>  <span class="nb_date">21.08.11</span></li>    </ul>
+    
+    
+<script>
+// 글자수 제한
+var char_min = parseInt(0); // 최소
+var char_max = parseInt(0); // 최대
+</script>
+<button type="button" class="cmt_btn"><span class="total"><b>댓글</b> 0</span><span class="cmt_more"></span></button>
+<!-- 댓글 시작 { -->
+<section id="bo_vc">
+    <h2>댓글목록</h2>
+        <p id="bo_vc_empty">등록된 댓글이 없습니다.</p>
+</section>
+<!-- } 댓글 끝 -->
+
+<!-- } 댓글 쓰기 끝 --><script src="../js/md5.js"></script>
+</article>
+<!-- } 게시판 읽기 끝 -->
+
+<script>
+
+function board_move(href)
+{
+    window.open(href, "boardmove", "left=50, top=50, width=500, height=550, scrollbars=1");
+}
+</script>
+
+<script>
+$(function() {
+    $("a.view_image").click(function() {
+        window.open(this.href, "large_image", "location=yes,links=no,toolbar=no,top=10,left=10,width=10,height=10,resizable=yes,scrollbars=no,status=no");
+        return false;
+    });
+
+    // 추천, 비추천
+    $("#good_button, #nogood_button").click(function() {
+        var $tx;
+        if(this.id == "good_button")
+            $tx = $("#bo_v_act_good");
+        else
+            $tx = $("#bo_v_act_nogood");
+
+        excute_good(this.href, $(this), $tx);
+        return false;
+    });
+
+    // 이미지 리사이즈
+    $("#bo_v_atc").viewimageresize();
+});
+
+function excute_good(href, $el, $tx)
+{
+    $.post(
+        href,
+        { js: "on" },
+        function(data) {
+            if(data.error) {
+                alert(data.error);
+                return false;
+            }
+
+            if(data.count) {
+                $el.find("strong").text(number_format(String(data.count)));
+                if($tx.attr("id").search("nogood") > -1) {
+                    $tx.text("이 글을 비추천하셨습니다.");
+                    $tx.fadeIn(200).delay(2500).fadeOut(200);
+                } else {
+                    $tx.text("이 글을 추천하셨습니다.");
+                    $tx.fadeIn(200).delay(2500).fadeOut(200);
+                }
+            }
+        }, "json"
+    );
+}
+</script>
+<!-- } 게시글 읽기 끝 -->
+
+
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="area">
+			<div class="f_logo">
+				<img src="../images/common/f_logo.png" alt="">
+			</div>
+			<div class="f_txt">
+				<p>The Cho Chun Shik Graduate School of Mobility, KAIST<br>
+				Munji-ro, Yuseong-gu, Daejeon 193, South Korea<br>
+				Tel : +82-42-350-1285 Email : avelab@kaist.ac.kr</p>
+				<h6>Copyright ⓒ 2021 AVE Lab All rights Reserved. <a href="http://dsso.kr/" target="_blank">designed by dsso.kr</a></h6>
+			</div>
+		</div>
+	</footer>
+
+</div>
+
+
+
+<button type="button" id="top_btn">
+	<i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sound_only">상단으로</span>
+</button>
+<script>
+$(function() {
+	$("#top_btn").on("click", function() {
+		$("html, body").animate({scrollTop:0}, '500');
+		return false;
+	});
+});
+</script>
+
+
+
+
+<!-- } 하단 끝 -->
+
+<script>
+$(function() {
+    // 폰트 리사이즈 쿠키있으면 실행
+    font_resize("container", get_cookie("ck_font_resize_rmv_class"), get_cookie("ck_font_resize_add_class"));
+});
+</script>
+
+
+
+<!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+<!--[if lte IE 7]>
+<script>
+$(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+        $(this).css("z-index", count);
+        $(this).css("position", "relative");
+        count = count - 1;
+    });
+});
+</script>
+<![endif]-->
+
+
+</body>
+</html>
+
+<!-- 사용스킨 : lab_board -->

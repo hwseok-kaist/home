@@ -1,0 +1,736 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+
+<!-- https -> http 리소스 호출 가능하도록 -->
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>High Sensitivity and Fast Acquisition Signal Processing Techniques for GNSS Receivers > International Journals | AVE Lab</title>
+<link rel="stylesheet" href="../css/default.css?ver=191202">
+<link rel="stylesheet" href="../js/font-awesome/css/font-awesome.min.css?ver=191202">
+<link rel="stylesheet" href="../css/slick.css?ver=191202">
+<link rel="stylesheet" href="../aos%402.3.1/dist/aos.css?ver=191202">
+<link rel="stylesheet" href="../npm/xeicon%402.3.3/xeicon.min.css?ver=191202">
+<link rel="stylesheet" href="../skin/board/publication/style.css?ver=191202">
+<!--[if lte IE 8]>
+<script src="https://ave.kaist.ac.kr/js/html5.js"></script>
+<![endif]-->
+<script>
+// 자바스크립트에서 사용하는 전역변수 선언
+var g5_url       = "https://ave.kaist.ac.kr";
+var g5_bbs_url   = "https://ave.kaist.ac.kr/bbs";
+var g5_is_member = "";
+var g5_is_admin  = "";
+var g5_is_mobile = "";
+var g5_bo_table  = "sub3_1";
+var g5_sca       = "";
+var g5_editor    = "smarteditor2";
+var g5_cookie_domain = "";
+</script>
+
+
+<!-- 트랜지션 디폴트 세팅 -->
+<script type="text/javascript">
+$(window).load(function(){
+	$(".img, .img *, a, a *").css(
+		"transition","all .6s linear",
+		"-webkit-transition","all .6s linear",
+		"-moz-transition","all .6s linear"
+	);
+});
+</script>
+
+
+
+
+
+<script src="../ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/jquery.menu.js?ver=191202"></script>
+<script src="../js/common.js?ver=191202"></script>
+<script src="../js/wrest.js?ver=191202"></script>
+<script src="../js/placeholders.min.js?ver=191202"></script>
+<script src="../js/slick.min.js?ver=191202"></script>
+<script src="../aos%402.3.1/dist/aos.js?ver=191202"></script>
+</head>
+<body>
+
+
+
+<script>
+	AOS.init();
+</script>
+
+
+
+<div class="wrap">
+
+	<!-- 상단메뉴 시작 { -->
+	<header>
+		<style>
+#header{position: relative;z-index: 999;background: #fff;}
+#header .top_logo{height: 90px;line-height: 90px;background: #fff;max-width:1400px;margin: 0 auto;position: relative;}
+#header .top_logo::after{display: block;clear: both;content: '';}
+#header .top_logo .left {display: flex; align-items: center; gap: 10px; float: left; justify-content: space-between; width: 100%;}
+#header .top_logo .right {display: flex; align-items: center; gap: 13px; float: right; display: none;}
+#header .top_logo .lab{float: left; }
+/*#header .top_logo .uni{float: right;}*/
+#header .top_logo .uni img{height: 50px;}
+
+.nav {position: relative; width: 100%;background: #e3e3e3;  height:60px;}
+.nav h1 {position:absolute; left:0; overflow:hidden;top: 50%;transform: translateY(-50%);}
+.nav h1 a {float:left; margin : 5px 0;}
+.nav h1 a img {width : 100%;}
+.nav h2{position:absolute; right:0; top: 50%;transform: translateY(-50%);}
+
+#header #cssmenu {max-width:1400px;margin:0 auto;z-index:999; position: relative;}
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a,
+#cssmenu #menu-button {margin: 0;padding: 0;border: 0;list-style: none;line-height: 1;display: block;position: relative;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+#cssmenu:after,
+#cssmenu > ul:after {content: ".";display: block; clear: both;visibility: hidden;line-height: 0;height: 0;}
+#cssmenu #menu-button {display: none;}
+#cssmenu > ul > li {float : left;width: 16.66%;}
+#cssmenu > ul > li > a {text-align: center;display : block;width: 100%;line-height: 60px;font-size: 22px;text-decoration: none;letter-spacing:-0.8px;font-weight : 600;color: #333;}
+#cssmenu > ul > li:hover > a {}
+#cssmenu ul ul {position: absolute;left: -9999px;}
+#cssmenu.align-right ul ul {text-align: right;}
+#cssmenu ul ul{width:100%;}
+#cssmenu ul ul li{height: 0; -webkit-transition: all .25s ease;-moz-transition: all .25s ease; -ms-transition: all .25s ease; -o-transition: all .25s ease; transition: all .25s ease;}
+#cssmenu li:hover > ul {left: 0;}
+#cssmenu li:hover > ul > li {height: auto;}
+#cssmenu ul ul ul {margin-left: 100%;top: 0;}
+#cssmenu ul ul li a {opacity: 0.9;text-align: center; padding: 18px; width: 100%; font-size: 18px; text-decoration: none; color: rgba(255,255,255,0.6); font-weight: 400; background: rgba(0,82,150,.8); line-height: 1.3;position: relative;}
+#cssmenu ul ul li a span{position: relative;-webkit-transition: .3s;-moz-transition: .3s;-ms-transition: .3s;-o-transition: .3s;transition: .3s;}
+#cssmenu ul ul li a span::before{content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); 
+	width: 9px; height: 10px; background: url('../images/common/nav_arrow.png') 0 0 no-repeat; opacity: 0;}
+
+@keyframes nav_arrow{
+	from{left: 0; opacity: 0.5;}
+	to{left: -8px; opacity:1;}
+}
+
+#cssmenu ul ul li:hover > a,
+#cssmenu ul ul li a:hover {opacity: 1;background: #0a5fad;color: #fff;}
+#cssmenu ul ul li a:hover span{padding-left: 16px;}
+#cssmenu ul ul li:hover a span::before{opacity: 1; animation:nav_arrow 0.5s alternate infinite ease;}
+#cssmenu ul ul li.has-sub > a:after {position: absolute;top: 16px;right: 11px;width: 8px;height: 2px;display: block;background: #ddd;content: '';}
+#cssmenu.align-right ul ul li.has-sub > a:after {right: auto;left: 11px;}
+#cssmenu ul ul li.has-sub > a:before {position: absolute;top: 13px;right: 14px;display: block;width: 2px;height: 8px;background: #ddd;content: '';
+-webkit-transition: all .25s ease; -moz-transition: all .25s ease; -ms-transition: all .25s ease; -o-transition: all .25s ease; transition: all .25s ease;}
+#cssmenu.align-right ul ul li.has-sub > a:before {right: auto;left: 14px;}
+#cssmenu ul ul > li.has-sub:hover > a:before {top: 17px;height: 0;}
+
+.all_menu_btn{background:#005296;position: absolute;right: -60px;width: 60px;height: 60px;text-align: center;top: 0;padding: 17px 6px;line-height: 0;cursor: pointer;}
+.all_menu_btn span{width: 22px;height: 2px;margin:5px auto;display: block;background: #fff;-webkit-transition: .3s;-moz-transition: .3s;-ms-transition: .3s;-o-transition: .3s;transition: .3s;position: relative;}
+
+.all_menu_btn.on span:nth-of-type(2){width: 0;}
+.all_menu_btn.on span:nth-of-type(1){transform:rotate(45deg);top: 7px;}
+.all_menu_btn.on span:nth-of-type(3){transform:rotate(-45deg);top: -7px;}
+
+.all_menu_wr{background: #eee;border-top: 1px solid #f1f1f1;position: absolute;top: 60px;width: 100%;z-index: 5;z-index: 1000;display: none;}
+.all_menu_wr .all_nav{max-width:1400px;margin: 0 auto;text-align: center;}
+.all_menu_wr .all_nav ul::after{clear: both;display: block;content: '';}
+.all_menu_wr .all_nav > ul {padding: 30px 0 50px;}
+.all_menu_wr .all_nav > ul > li{float: left;width: 16.66%;font-size: 18px;font-weight: 500;display: inline-block;}
+.all_menu_wr .all_nav > ul > li > a{font-size: 0;}
+.all_menu_wr .all_nav ul ul {}
+.all_menu_wr .all_nav ul ul li{}
+.all_menu_wr .all_nav ul ul li a{font-size: 17px;color: #666;display: inline-block;width: 100%;font-weight: normal;padding: 7px 0;}
+.all_menu_wr .all_nav ul ul li a:hover{text-decoration: underline;color: #333;}
+
+
+/*모바일메뉴*/
+.mobileMenu{display:none; position:absolute; top:0; right:0; width:60px;height: 60px;background:#005296;z-index: 1001;padding-top: 12px;}
+.mobileMenu span {display: block; width:50%; height:2px; background:#fff; margin:7px auto;}
+
+#gnbM .mobileMenuXbt{position:absolute; top:32px; right:18px;width: 25px;}
+#gnbM .mobileMenuXbt span{width: 100%;position: relative;display: block;height: 1px;background: #444;transform:rotate(45deg)}
+#gnbM .mobileMenuXbt span.x1{transform:rotate(135deg);top: 1px;}
+
+#gnbM{display:none; position:absolute; top:0; right:-250px; width:300px; background:#e3e3e3; z-index:99999;}
+#gnbM .mUtil{padding:0 15px; height:60px; line-height:60px; font-size:17px; letter-spacing:-1px}
+#gnbM .mUtil a{color:#444;}
+#gnbM .mUtil span{margin:0 6px; color:#2572a7}
+#gnbM .gnbDiv{margin-top: 20px;}
+#gnbM .gnbDiv a{display:block;padding: 12px 8px;color: #b5c1d0;font-size: 14px; font-weight: 500;border-bottom: 1px solid #295a9a;}
+#gnbM .gnbDiv .one{padding:0 15px; font-size:16px; color:#333; border-bottom:1px solid #d9d9d9; font-weight:500;line-height:45px;}
+#gnbM .gnbDiv .one.on{color:#fff; border-bottom:1px solid #005296;background: #005296; background-size:18px 18px;}
+#gnbM .gnbDiv .two{padding:5px 20px; border-bottom:1px solid #d9d9d9;background:#005296;height : auto!important}
+#gnbM .gnbDiv .two .twoD{color:#fff;font-size:15px; border-bottom:1px solid #295a9a;line-height:44px;padding-left: 5px;}
+#gnbM .gnbDiv .two .thr{padding:15px 15px 5px; border-bottom:1px solid #d9d9d9; background:#f7f7f7}
+#gnbM .gnbDiv .two .thr .thrD{font-size:13px; color:#fff; margin-bottom:10px}
+#gnbM .gnbDiv .two .overM {    line-height:20px; padding: 10px 0;}
+.dimdBg{display:none; position:absolute; top:0; left:0; width:100%; height:; background:rgba(0,0,0,0.5); z-index:4;}
+.dimdBg.on{display: block;}
+
+
+@media (max-width : 1420px) {
+#header .top_logo{padding: 0 10px;}
+}
+
+@media (max-width : 1300px) {
+#header #cssmenu{padding-right: 60px;}
+.all_menu_wr{padding-right: 60px;}
+.all_menu_btn{right: 0;}
+}
+@media (max-width : 1200px) {
+#header .top_logo{padding: 0 10px;height: 70px;line-height: 70px;}
+#header .top_logo .lab img{height: 41px;}
+#header .top_logo .uni img{height: 38px; padding-right: 60px;}
+#header .top_logo .right {gap: 10px;}
+#header .top_logo .right .rLogo1 img {height: 41px;}
+#header .top_logo .right .rLogo2 img {height: 35px;}
+#header .top_logo .right .rLogo3 img {height: 43px;}
+
+.nav{height: 55px;}
+#cssmenu > ul > li > a{font-size: 19px;line-height: 55px;}
+#cssmenu ul ul li a{font-size: 15px;}
+.all_menu_btn{width: 55px;height: 55px;}
+.all_menu_wr{padding-right: 55px;top: 55px;}
+.all_menu_wr .all_nav ul ul li a{font-size: 15px;}
+}
+@media (max-width : 1023px){
+#header{z-index: 999;}
+#header .top_logo{height: 60px;line-height: 60px;}
+#header .top_logo .uni{float: left;margin-left: 10px;}
+#header .top_logo .left {gap: 4px;}
+#header .top_logo .lab img{height: 35px;}
+#header .top_logo .uni img{height: 34px;}
+#header .top_logo .right {display: none;}
+.nav{display: none;}
+#gnbM,.mobileMenu{display: block;}
+}
+@media (max-width:480px) {
+.mobileMenu{padding-top: 16px;}
+.mobileMenu span{width: 35%;margin: 5px auto;}
+#header .top_logo .left {gap: 0px;}
+#header .top_logo .lab img{height: 28px;}
+#header .top_logo .uni img{height: 28px;}
+}
+/* @media (max-width:320px) {
+#header .top_logo .lab img{height: 23px;}
+#header .top_logo .uni img{height: 28px;}
+} */
+
+
+</style>
+
+
+<!-- header :s -->
+<script type="text/javascript" src="../js/dsso.default.js"></script>
+<div id="header">
+	<div class="top_logo">
+		<div class="left">
+			<a href="../index.php.html" class="lab"><img src="../images/common/h_logo1.png" alt="카이스트 AVE 연구실"></a>
+			<a href="https://www.kaist.ac.kr/kr/" target="_blank" class="uni"><img src="../images/common/h_logo2.png" alt="KAIST"></a>
+		</div>
+		<div class="right">
+			<a href="https://ieee-iv.org/2024/" target="_blank class=" rlogo1"=""><img src="../images/common/logo-r1.png" alt="JejuIV2024"></a>
+			<a href="#" class="rLogo2"><img src="../images/common/logo-r2.png" alt="ZetaMobility"></a>
+			<a href="#" class="rLogo3"><img src="../images/common/logo-r3.png" alt="The Autoware Foundation of Korea"></a>
+		</div>
+	</div>
+	<div class="nav">	
+		<div id="cssmenu">
+			<ul>
+				<li class="two"><a href="../sub2_1.php.html">Research</a>
+					<ul>
+						<li><a href="../sub2_1.php.html"><span>Autonomous Driving System</span></a></li>
+						<li><a href="../sub2_2.php.html"><span>Learning-based E2E</span></a></li>
+						<li><a href="../sub2_3.php.html"><span>Advanced Positioning Systems</span></a></li>
+						<li><a href="board.php.html?bo_table=sub2_4"><span>Projects</span></a></li>
+						<li><a href="board.php-1.html?bo_table=sub2_5"><span>Videos</span></a></li>
+					</ul>
+				</li>
+				<li class="one"><a href="board.php-2.html?bo_table=sub1_1">People</a>
+					<ul>
+						<li><a href="board.php-2.html?bo_table=sub1_1"><span>Professor</span></a></li>
+						<li><a href="board.php-3.html?bo_table=sub1_2"><span>Members</span></a></li>
+						<li><a href="board.php-4.html?bo_table=sub1_3"><span>Alumni</span></a></li>
+					</ul>
+				</li>
+				<li class="thr"><a href="board.php-5.html?bo_table=sub3_1">Publications</a>
+					<ul>
+						<li><a href="board.php-5.html?bo_table=sub3_1"><span>International Journals</span></a></li>
+						<li><a href="board.php-6.html?bo_table=sub3_2"><span>International Conferences</span></a></li>
+						<li><a href="board.php-7.html?bo_table=sub3_3"><span>Domestic Journals</span></a></li>
+						<li><a href="board.php-8.html?bo_table=sub3_4"><span>Domestic Conferences</span></a></li>
+						<li><a href="board.php-9.html?bo_table=sub3_5"><span>Patents</span></a></li>
+					</ul>
+				</li>
+				<li class="fou"><a href="board.php-10.html?bo_table=sub4_1">Lectures</a>
+					<ul>
+						<li><a href="board.php-10.html?bo_table=sub4_1"><span>Lectures</span></a></li>
+						<li><a href="board.php-11.html?bo_table=sub4_2"><span>Seminar</span></a></li>
+					</ul>
+				</li>
+				<li class="fiv"><a href="board.php-12.html?bo_table=sub5_1">Board</a>
+					<ul>
+						<li><a href="board.php-12.html?bo_table=sub5_1"><span>Lab board</span></a></li>
+						<li><a href="board.php-13.html?bo_table=sub5_2"><span>Gallery</span></a></li>
+					</ul>
+				</li>
+				<li class="fiv"><a href="../sub6_1.php.html">Contact</a>
+					<ul>
+						<li><a href="../sub6_1.php.html"><span>Contact</span></a></li>
+					</ul>
+				</li>
+			</ul>
+		<div class="all_menu_btn">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		</div>
+		<div class="all_menu_wr">
+			<div class="all_nav">
+			<ul>
+				<li class="one">
+					<ul>
+						<li><a href="board.php-2.html?bo_table=sub1_1"><span>Professor</span></a></li>
+						<li><a href="board.php-3.html?bo_table=sub1_2"><span>Members</span></a></li>
+						<li><a href="board.php-4.html?bo_table=sub1_3"><span>Alumni</span></a></li>
+					</ul>
+				</li>
+				<li class="two">
+					<ul>
+						<li><a href="../sub2_1.php.html">Autonomous Driving System<span></span></a></li>
+						<li><a href="../sub2_2.php.html">Learning-based E2E<span></span></a></li>
+						<li><a href="../sub2_3.php.html">Advanced Positioning Systems<span></span></a></li>
+						<li><a href="board.php.html?bo_table=sub2_4">Projects<span></span></a></li>
+						<li><a href="board.php-1.html?bo_table=sub2_5">Videos<span></span></a></li>
+					</ul>
+				</li>
+				<li class="thr">
+					<ul>
+						<li><a href="board.php-5.html?bo_table=sub3_1"><span>International Journals</span></a></li>
+						<li><a href="board.php-6.html?bo_table=sub3_2"><span>International Conferences</span></a></li>
+						<li><a href="board.php-7.html?bo_table=sub3_3"><span>Domestic Journals</span></a></li>
+						<li><a href="board.php-8.html?bo_table=sub3_4"><span>Domestic Conferences</span></a></li>
+						<li><a href="board.php-9.html?bo_table=sub3_5"><span>Patents</span></a></li>
+					</ul>
+				</li>
+				<li class="fou">
+					<ul>
+						<li><a href="board.php-10.html?bo_table=sub4_1"><span>Lectures</span></a></li>
+						<li><a href="board.php-11.html?bo_table=sub4_2"><span>Seminar</span></a></li>
+					</ul>
+				</li>
+				<li class="fiv">
+					<ul>
+						<li><a href="board.php-12.html?bo_table=sub5_1"><span>Lab board</span></a></li>
+						<li><a href="board.php-13.html?bo_table=sub5_2"><span>Gallery</span></a></li>
+					</ul>
+				</li>
+				<li class="six">
+					<ul>
+						<li><a href="../sub6_1.php.html"><span>Contact</span></a></li>
+					</ul>
+				</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+</div>
+ <script>
+      $( document ).ready( function() {
+        $( '.all_menu_btn' ).click( function() {
+          $( '.all_menu_wr' ).slideToggle();
+		  $( '.dimdBg' ).toggleClass( 'on' );
+		  $(this).toggleClass( 'on' );
+        } );
+      } );
+    </script>
+
+	<!--풀다운메뉴/모바일메뉴-->
+	<script type="text/javascript">/*모바일메뉴용*/
+		//<![CDATA[			
+		var oneNum = -1, twoNum = -1, thrNum = -1, fouNum = -1;
+		//]]>
+	</script>
+	<script type="text/javascript" src="../js/menucmn.js"></script>
+
+	<!--모바일 메뉴버튼 -->
+	<a href="javascript:" class="mobileMenu">
+		<span></span>
+		<span></span>
+		<span></span>
+	</a>
+	<!--//모바일 메뉴버튼 -->
+
+	<div style="display: none;" class="twoDbg"></div><!--전체 배경영역-->
+		<p class="dimdBg"></p>
+		<!-- 모바일 gnb -->
+		<div style="height: 1234px; right: -300px;" id="gnbM">
+			<!--탑메뉴-->
+			<div class="mUtil">
+				<a href="../index.php.html" style="margin-right:15px;">Home</a>
+			</div>
+			<!--//탑메뉴-->
+
+			<!--gnbDiv-->
+			<div class="gnbDiv">
+				<!--대메뉴1-->
+				<a href="javascript:" class="one">People</a>
+				<div style="display: none;" class="two">
+					<a href="board.php-2.html?bo_table=sub1_1">Professor</a>
+					<a href="board.php-3.html?bo_table=sub1_2">Members</a>
+					<a style="border-bottom: medium none;" href="board.php-4.html?bo_table=sub1_3">Alumni</a>
+				</div>
+				<!--대메뉴2-->
+				<a href="javascript:" class="one">Research</a>
+				<div style="display: none;" class="two">
+					<a href="../sub2_1.php.html">Autonomous Driving System</a>
+					<a href="../sub2_2.php.html">Learning-based E2E</a>
+					<a href="../sub2_3.php.html">Advanced Positioning Systems</a>
+					<a href="board.php.html?bo_table=sub2_4">Projects</a>
+					<a style="border-bottom: medium none;" href="board.php-1.html?bo_table=sub2_5">Videos</a>
+				</div>
+				<!--대메뉴3-->
+				<a href="javascript:" class="one">Publication</a>
+				<div style="display: none;" class="two">
+					<a href="board.php-5.html?bo_table=sub3_1">International Journals</a>
+					<a href="board.php-6.html?bo_table=sub3_2">International Conferences</a>
+					<a href="board.php-7.html?bo_table=sub3_3">Domestic Journals</a>
+					<a href="board.php-8.html?bo_table=sub3_4">Domestic Conferences</a>
+					<a style="border-bottom: medium none;" href="board.php-9.html?bo_table=sub3_5">Patents</a>
+				</div>
+				<!--대메뉴4-->
+				<a href="javascript:" class="one">Lectures</a>
+				<div style="display: none;" class="two">
+					<a href="board.php-10.html?bo_table=sub4_1">Lectures</a>
+					<a style="border-bottom: medium none;" href="board.php-11.html?bo_table=sub4_2">Seminar</a>
+				</div>
+				<!--대메뉴5-->
+				<a href="javascript:" class="one">Board</a>
+				<div style="display: none;" class="two">
+					<a href="board.php-12.html?bo_table=sub5_1">Lab board</a>
+					<a style="border-bottom: medium none;" href="board.php-13.html?bo_table=sub5_2">Gallery</a>
+				</div>
+			</div>
+			<!--//gnbDiv-->
+			<a href="javascript:" class="mobileMenuXbt">
+				<span class="x1"></span>	
+				<span class="x2"></span>	
+			</a><!--닫기버튼-->
+		</div>
+	<!-- //모바일 gnb -->	<!-- //header -->
+	</header>
+	<!-- } 상단메뉴 끝 -->
+
+	<section id="s_visual">
+		<!-- <div class="s_visual_bg"><img src="https://ave.kaist.ac.kr/images/sub/s_visual.jpg" alt=""></div> -->
+		<div class="sv_txt">
+			<h3>
+									Publications							</h3>
+			<!-- <p><b>A</b>utonomous <b>VE</b>hicles and robotics <b>L</b>ab</p> -->
+		</div>
+	</section>
+
+	<!--서브메뉴-->
+	<div class="sub_menu">
+		<style type="text/css">
+/* 페이지인식-메인 */
+#page3 #menu01 > .box3_3_1{font-weight: 600; color: #005296;}
+#page3 #menu01 > .box3_3_1:after{content: ''; position: absolute; left: 50%; bottom: -3px; transform: translate(-50%, 0); width: 9px; height: 5px; background: #005296; z-index: 10;}
+</style>
+
+
+<script>
+$(document).ready(function(){
+    $(".btn_s_menu").click(function(){
+        $(".s_menu").toggle();
+    });
+
+	$(".vNav>ul>li").each(function(idx){
+		var line = $(".sub_menu .line");
+		var aThis = $(".vNav>ul>li").eq(idx);
+		aThis.on("mouseover", function(){
+			line.stop().animate({opacity:1, left:aThis.position().left+"px", width:aThis.children("a").innerWidth()+"px"},300);
+		});
+		aThis.on("mouseleave", function(){
+				line.stop().animate({opacity:"0", width:0},300);
+		});
+	});
+});
+</script>
+
+<div class="vNav" id="page3">
+	<ul>
+		<li id="menu01" class='active'><a href="board.php-5.html?bo_table=sub3_1" class="box3_3_1">International Journals</a></li>
+		<li id="menu02"><a href="board.php-6.html?bo_table=sub3_2" class="box3_3_2">International Conferences</a></li>
+		<li id="menu03"><a href="board.php-7.html?bo_table=sub3_3" class="box3_3_3">Domestic Journals</a></li>
+		<li id="menu04"><a href="board.php-8.html?bo_table=sub3_4" class="box3_3_4">Domestic Conferences</a></li>
+		<li id="menu05"><a href="board.php-9.html?bo_table=sub3_5" class="box3_3_5">Patents</a></li>
+	</ul>
+</div>
+
+
+ <div class="m_sub_menu">
+    <button type="button" class="btn_s_menu">
+      <span title="High Sensitivity and Fast Acquisition Signal Processing Techniques for GNSS Receivers &gt; International Journals">International Journals</span> <i class="arrow right"></i>
+    </button>
+    <ul class="s_menu">
+		<li id="menu01" class='active'><a href="board.php-5.html?bo_table=sub3_1" class="box3_3_1">International Journals</a></li>
+		<li id="menu02"><a href="board.php-6.html?bo_table=sub3_2" class="box3_3_2">International Conferences</a></li>
+		<li id="menu03"><a href="board.php-7.html?bo_table=sub3_3" class="box3_3_3">Domestic Journals</a></li>
+		<li id="menu04"><a href="board.php-8.html?bo_table=sub3_4" class="box3_3_4">Domestic Conferences</a></li>
+		<li id="menu05"><a href="board.php-9.html?bo_table=sub3_5" class="box3_3_5">Patents</a></li>
+	</ul>
+  </div>	</div>
+
+	<section id="s_content">
+		<div class="s_area">
+			<div class="s_tit" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="800">
+				<h3 class="big">
+											International Journals									</h3>
+			</div>
+<script src="../js/viewimageresize.js"></script>
+
+<!-- 게시물 읽기 시작 { -->
+
+
+
+<article id="bo_v" style="width:100%">
+
+
+<div class="publication_oldver">
+	<table class="tb_basic">
+		<colgroup>
+			<col width="120">
+			<col width="">
+		</colgroup>
+		<thead>
+			<tr>
+				<th colspan="2">High Sensitivity and Fast Acquisition Signal Processing Techniques for GNSS Receivers</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>Year</th>
+				<td>2017</td>
+			</tr>
+			<tr>
+			  <th>Month</th>
+			  <td></td>
+			</tr>
+			<tr>
+			  <th>Journal</th>
+			  <td>September 2017 / IEEE Signal Processing Magazine [SCI . IF 9.654, JCR Top 1.54%], vol. 34, no. 5, pp. 59-71</td>
+			</tr>
+			<!--<tr>
+			  <th>Vol</th>
+			  <td>September 2017</td>
+			</tr>
+			<tr>
+			  <th>Page</th>
+			  <td></td>
+			</tr>
+			<tr>
+			  <th>Impact factor</th>
+			  <td></td>
+			</tr>-->
+			<tr>
+				<th>Author</th>
+				<td>Seung-Hyun Kong</td>
+			</tr>
+
+
+    
+        <!-- 첨부파일 시작 { -->
+    <section id="bo_v_file">
+               <tr>
+			  <th>File</th>
+               <td><a href="High_Sensitivity_and_Fast_Acquisition_Signal_Processing_Techniques_for_GNSS_Receivers_From_fundamentals_to_state-of-the-art_GNSS_acquisition_technologies-2.pdf?bo_table=sub3_1&amp;wr_id=21&amp;no=1&amp;page=3" class="view_file_download">
+                    <img src="../skin/board/publication/img/icon_file.gif" alt="첨부">
+                    <strong>High_Sensitivity_and_Fast_Acquisition_Signal_Processing_Techniques_for_GNSS_Receivers_From_fundamentals_to_state-of-the-art_GNSS_acquisition_technologies.pdf</strong>
+                     (1.8M)
+                </a>
+                <span class="bo_v_file_cnt">7회 다운로드</span>
+                <span>DATE : 2021-07-15 20:41:41</span>
+				</td>
+		 </tr>
+            </section>
+    <!-- } 첨부파일 끝 -->
+    
+         <!-- 관련링크 시작 { -->
+    <section id="bo_v_link">
+                <tr>
+            <th>Link</th>
+             <td><a href="https://ave.kaist.ac.kr/bbs/link.php?bo_table=sub3_1&wr_id=21&no=1&page=3" target="_blank">
+                    <img src="../skin/board/publication/img/icon_link.gif" alt="관련링크">
+                    <strong>https://ieeexplore.ieee.org/document/8026189</strong>
+                </a>
+                <span class="bo_v_link_cnt">410회 연결</span>
+            </td>
+        </tr>
+            </section>
+    <!-- } 관련링크 끝 -->
+    
+			<tr>
+			  <td colspan="2"><div id="bo_v_img">
+<a href="view_image.php-202.html?bo_table=sub3_1&amp;fn=2415452358_n2eVyRTZ_9bbbe90334f0f414962093ae5923618bd0691870.JPG" target="_blank" class="view_image"><img src="../data/file/sub3_1/2415452358_n2eVyRTZ_9bbbe90334f0f414962093ae5923618bd0691870.JPG" alt="" width="536" height="306"></a></div>
+<p><span style="color:rgb(51,51,51);font-family:sans-serif;font-size:15px;background-color:rgb(255,255,255);">Higher sensitivity and faster acquisition can be two conflicting goals for a global navigation satellite system (GNSS) acquisition function, and both of the goals must be considered in the development of GNSS signal processing techniques to meet the demands for location-based services (LBSs) in GNSS-challenged environments. This article introduces the fundamentals of GNSS acquisition functions and various GNSS acquisition techniques for new GNSS signals and investigates recent acquisition techniques achieving high sensitivity and fast acquisition. It provides useful information for engineers who study state-of-the-art GNSS signal acquisition techniques and want to understand the challenges involved in improving GNSS acquisition sensitivity and acquisition time.</span> </p></td>
+		  </tr>
+		</tbody>
+	</table>
+</div>
+
+
+
+
+    
+
+    <!-- 게시물 상단 버튼 시작 { -->
+    <div id="bo_v_top">
+        
+        <ul class="bo_v_left">
+                                                                    </ul>
+
+        <ul class="bo_v_com">
+           <li><a href="board.php-133.html?bo_table=sub3_1&amp;page=3" class="btn_b01 btn"><i class="fa fa-list" aria-hidden="true"></i> 목록</a></li>
+                                </ul>
+
+                <ul class="bo_v_nb">
+            <li class="btn_prv"><span class="nb_tit"><i class="fa fa-caret-up" aria-hidden="true"></i> 이전글</span><a href="board.php-1233.html?bo_table=sub3_1&amp;wr_id=22&amp;page=3">Driver ECG Measuring System with a Conductive Fabric-Based Dry Electrode</a> <!--<span class="nb_date">21.07.15</span>--></li>            <li class="btn_next"><span class="nb_tit"><i class="fa fa-caret-down" aria-hidden="true"></i> 다음글</span><a href="board.php-421.html?bo_table=sub3_1&amp;wr_id=19&amp;page=3">Driver Status Monitoring Systems for Smart Vehicles using Physiological Sensors</a> <!-- <span class="nb_date">21.07.15</span>--></li>        </ul>
+                    </div>
+    <!-- } 게시물 상단 버튼 끝 -->
+
+</article>
+<!-- } 게시판 읽기 끝 -->
+
+<script>
+
+function board_move(href)
+{
+    window.open(href, "boardmove", "left=50, top=50, width=500, height=550, scrollbars=1");
+}
+</script>
+
+<script>
+$(function() {
+    $("a.view_image").click(function() {
+        window.open(this.href, "large_image", "location=yes,links=no,toolbar=no,top=10,left=10,width=10,height=10,resizable=yes,scrollbars=no,status=no");
+        return false;
+    });
+
+    // 추천, 비추천
+    $("#good_button, #nogood_button").click(function() {
+        var $tx;
+        if(this.id == "good_button")
+            $tx = $("#bo_v_act_good");
+        else
+            $tx = $("#bo_v_act_nogood");
+
+        excute_good(this.href, $(this), $tx);
+        return false;
+    });
+
+    // 이미지 리사이즈
+    $("#bo_v_atc").viewimageresize();
+});
+
+function excute_good(href, $el, $tx)
+{
+    $.post(
+        href,
+        { js: "on" },
+        function(data) {
+            if(data.error) {
+                alert(data.error);
+                return false;
+            }
+
+            if(data.count) {
+                $el.find("strong").text(number_format(String(data.count)));
+                if($tx.attr("id").search("nogood") > -1) {
+                    $tx.text("이 글을 비추천하셨습니다.");
+                    $tx.fadeIn(200).delay(2500).fadeOut(200);
+                } else {
+                    $tx.text("이 글을 추천하셨습니다.");
+                    $tx.fadeIn(200).delay(2500).fadeOut(200);
+                }
+            }
+        }, "json"
+    );
+}
+</script>
+<!-- } 게시글 읽기 끝 -->
+
+
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="area">
+			<div class="f_logo">
+				<img src="../images/common/f_logo.png" alt="">
+			</div>
+			<div class="f_txt">
+				<p>The Cho Chun Shik Graduate School of Mobility, KAIST<br>
+				Munji-ro, Yuseong-gu, Daejeon 193, South Korea<br>
+				Tel : +82-42-350-1285 Email : avelab@kaist.ac.kr</p>
+				<h6>Copyright ⓒ 2021 AVE Lab All rights Reserved. <a href="http://dsso.kr/" target="_blank">designed by dsso.kr</a></h6>
+			</div>
+		</div>
+	</footer>
+
+</div>
+
+
+
+<button type="button" id="top_btn">
+	<i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sound_only">상단으로</span>
+</button>
+<script>
+$(function() {
+	$("#top_btn").on("click", function() {
+		$("html, body").animate({scrollTop:0}, '500');
+		return false;
+	});
+});
+</script>
+
+
+
+
+<!-- } 하단 끝 -->
+
+<script>
+$(function() {
+    // 폰트 리사이즈 쿠키있으면 실행
+    font_resize("container", get_cookie("ck_font_resize_rmv_class"), get_cookie("ck_font_resize_add_class"));
+});
+</script>
+
+
+
+<!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+<!--[if lte IE 7]>
+<script>
+$(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+        $(this).css("z-index", count);
+        $(this).css("position", "relative");
+        count = count - 1;
+    });
+});
+</script>
+<![endif]-->
+
+
+</body>
+</html>
+
+<!-- 사용스킨 : publication -->
